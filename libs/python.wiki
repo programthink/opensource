@@ -16,7 +16,7 @@
 
 = 1 算法 =
 
-== 1.1 字符串处理 ==
+== 1.1 字符串 ==
 
 === 1.1.1 正则表达式 ===
 
@@ -42,14 +42,14 @@ print(chardet.detect(bytes))
 
 === 1.1.3 （其它） ===
 
-<h4>StringIO / cStringIO</h4>
+<h4>StringIO & cStringIO</h4>
 
 以读写文件的方式来操作字符串（有点类似于内存文件）。
 
 cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现的，提供 Unicode 兼容性。
 
 
-== 1.2 编码/解码 ==
+== 1.2 编码 & 解码 ==
 
 === 1.2.1 base64 ===
 
@@ -59,17 +59,17 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 
 标准库，提供 Base16、Base32、Base64 格式的编码和解码。
 
-=== 1.2.2 uuencode ===
+=== 1.2.2 UUencode ===
 
-[https://en.wikipedia.org/wiki/Uuencode uuencode] 出现于早期的 Unix 系统。用于把二进制编码为文本，以便通过邮件系统发送。
+[https://en.wikipedia.org/wiki/Uuencode UUencode] 出现于早期的 Unix 系统。用于把二进制编码为文本，以便通过邮件系统发送。
 
 <h4>uu</h4>
 
-标准库，提供 uuencode 格式的编码和解码。
+标准库，提供 UUencode 格式的编码和解码。
 
 === 1.2.3 BinHex ===
 
-[https://en.wikipedia.org/wiki/BinHex BinHex] 起先用于 Mac OS 系统，类似于 uuencode
+[https://en.wikipedia.org/wiki/BinHex BinHex] 起先用于 Mac OS 系统，类似于 UUencode。
 
 <h4>binhex</h4>
 
@@ -80,11 +80,11 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 
 <h4>math</h4>
 
-这个标准库顾名思义，封装了常用的数学函数（开方、指数、对数、三角函数、等）
+顾名思义，这个标准库封装了常用的数学函数（开方、指数、对数、三角函数......）。
 
 <h4>random</h4>
 
-这个标准库顾名思义，是用来进行随机数生成的
+顾名思义，这个标准库是用来进行随机数生成滴。
 
 代码示例
 <source lang="python">
@@ -99,40 +99,10 @@ random.randint(0, 100)
 这个标准库封装了跟有理数（分数）相关的运算
 
 
-== 1.4 安全类 ==
-
-<h4>hashlib</h4>
-
-在 Python 2.5 版本加入到标准库中。通过它，你可以很方便地计算各种散列值。
-
-它支持的哈希算法有：MD5 SHA1 SHA224 SHA256 SHA384 SHA512
-
-关于散列算法，俺写过一篇扫盲（在“[http://program-think.blogspot.com/2013/02/file-integrity-check.html 这里]”）。
-
-代码示例
-<source lang="python">
-&#35; 计算字符串的 SHA1 散列值
-import hashlib
-sha1 = hashlib.sha1("Hello, world").hexdigest()
-</source>
-
-<h4>PyCrypto</h4>
-
-官网：[http://www.dlitz.net/software/pycrypto/]
-
-这个库包含了常见的对称加密算法（DES、AES、IDEA 等）、公钥加密算法（RSA、DSA 等）、散列算法（MD5、SHA1、RIPEMD 等）。
-
-<h4>pyOpenSSL</h4>
-
-官网：[http://pyopenssl.sourceforge.net/]
-
-OpenSSL 在加密领域可是大名鼎鼎。这个库使用 Python 对 OpenSSL 进行很薄的封装。
-
-
 ----
 
 
-= 2 跨编程语言 =
+= 2 跨语言编程 =
 
 Python 可以很容易地跟其它编程语言整合。整合之后，就可以在 Python 代码中使用其它编程语言的函数、模块、库，非常爽！
 
@@ -451,7 +421,7 @@ PyWebKitGtk 则提供了对 WebKitGtk 的 Python 封装。
 ----
 
 
-= 5 网络编程 =
+= 5 网络 =
 
 == 5.1 标准协议 ==
 
@@ -528,7 +498,30 @@ Jabber（又称 XMPP）是IM（即时通信）协议的标准。这是用 Python
 
 IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库。
 
-== 5.2 网络开发框架 ==
+== 5.2 自定义协议 ==
+
+<h4>Protocol Buffers</h4>
+
+官网：[https://developers.google.com/protocol-buffers/]
+
+[https://en.wikipedia.org/wiki/Protocol_Buffers Protocol Buffers] 是 Google 开发的一个跨语言的库，用于网络传输业务数据时的“编码/解码”。
+
+其优点是：跨多种语言、高性能、向前兼容、向后兼容。俺前几年写过一篇博文推荐 protobuf（在“[http://program-think.blogspot.com/2009/05/opensource-review-protocol-buffers.html 这里]”）。
+
+作为 Protocol Buffers 的发明者，Google 默认实现了三种编程语言（C++、Java、Python）对它的支持。
+
+<h4>Apache Thrift</h4>
+
+官网：[https://thrift.apache.org/]
+
+来自于 Apache 社区，提供了一种跨语言的通讯机制。
+
+程序员通过 Thrift 的“接口定义语言”定义通讯协议格式，然后 Thrift 根据协议格式自动帮你生成服务端和客户端代码。
+
+（在这个方面，它有点类似于 Google 的 Protocol Buffers）
+
+
+== 5.3 网络开发框架 ==
 
 <h4>Twisted</h4>
 
@@ -790,7 +783,7 @@ Person.createTable()
 
 = 7 桌面 GUI 开发 =
 
-== 7.1 GUI 框架 / 组件库 ==
+== 7.1 GUI 框架 ==
 
 === 7.1.1 基于 Tk ===
 
@@ -1032,11 +1025,46 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 ----
 
 
-= 8 处理文件格式 =
+= 8 信息安全 =
 
-== 8.1 结构化数据格式 ==
+== 8.1 密码学  ==
 
-=== 8.1.1 CSV ===
+<h4>hashlib</h4>
+
+在 Python 2.5 版本加入到标准库中。通过它，你可以很方便地计算各种散列值。
+
+它支持的哈希算法有：MD5 SHA1 SHA224 SHA256 SHA384 SHA512
+
+关于散列算法，俺写过一篇扫盲（在“[http://program-think.blogspot.com/2013/02/file-integrity-check.html 这里]”）。
+
+代码示例
+<source lang="python">
+&#35; 计算字符串的 SHA1 散列值
+import hashlib
+sha1 = hashlib.sha1("Hello, world").hexdigest()
+</source>
+
+<h4>PyCrypto</h4>
+
+官网：[http://www.dlitz.net/software/pycrypto/]
+
+这个库包含了常见的对称加密算法（DES、AES、IDEA 等）、公钥加密算法（RSA、DSA 等）、散列算法（MD5、SHA1、RIPEMD 等）。
+
+<h4>pyOpenSSL</h4>
+
+官网：[http://pyopenssl.sourceforge.net/]
+
+OpenSSL 在加密领域可是大名鼎鼎。这个库使用 Python 对 OpenSSL 进行很薄的封装。
+
+
+----
+
+
+= 9 处理文件格式 =
+
+== 9.1 结构化数据格式 ==
+
+=== 9.1.1 CSV ===
 
 [https://en.wikipedia.org/wiki/Comma-separated_values CSV] 是一种历史悠久的结构化数据存储格式。其效果类似于一张数据库二维表。
 
@@ -1044,7 +1072,7 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 标准库，提供 CSV 格式文件的读写。
 
-=== 8.1.2 JSON ===
+=== 9.1.2 JSON ===
 
 JSON 格式源自 JavaScript，如今在 Web 开发中广为应用。
 
@@ -1067,7 +1095,7 @@ json.loads("""["foo", {"bar":["baz", null, 1.0, 2]}]""")
 &#35; [u"foo", {u"bar": [u"baz", None, 1.0, 2]}]
 </source>
 
-=== 8.1.3 YAML ===
+=== 9.1.3 YAML ===
 
 [https://en.wikipedia.org/wiki/YAML YAML] 是一种类似于 json 的结构化数据格式。它在确保可读性的基础上，提供了超越 json 的灵活性和扩展性。
 
@@ -1077,34 +1105,22 @@ json.loads("""["foo", {"bar":["baz", null, 1.0, 2]}]""")
 
 pyyaml 提供了 Python 对 YAML 的封装。
 
-=== 8.1.4 Protocol Buffers ===
 
-[https://en.wikipedia.org/wiki/Protocol_Buffers Protocol Buffers] 是 Google 开发的一个跨语言的库，用于网络传输业务数据时的“编码/解码”。
+== 9.2 压缩文件 / 打包文件 ==
 
-其优点是：跨多种语言、高性能、向前兼容、向后兼容。俺前几年写过一篇博文推荐 protobuf（在“[http://program-think.blogspot.com/2009/05/opensource-review-protocol-buffers.html 这里]”）。
-
-<h4>protobuf</h4>
-
-官网：[https://developers.google.com/protocol-buffers/]
-
-作为 Protocol Buffers 的发明者，Google 默认实现了三种编程语言（C++、Java、Python）对它的支持。
-
-
-== 8.2 处理压缩文件 / 打包文件 ==
-
-=== 8.2.1 zip ===
+=== 9.2.1 zip ===
 
 <h4>zipfile</h4>
 
 处理 zip 格式的标准库。
 
-=== 8.2.2 bzip2（bz2） ===
+=== 9.2.2 bzip2（bz2） ===
 
 <h4>bz2</h4>
 
 处理 bzip2 格式的标准库。
 
-=== 8.2.3 gzip（gz） ===
+=== 9.2.3 gzip（gz） ===
 
 <h4>gzip</h4>
 
@@ -1114,13 +1130,13 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 处理 gzip 格式的标准库。
 
-=== 8.2.4 tar ===
+=== 9.2.4 tar ===
 
 <h4>tarfile</h4>
 
 处理 tar 格式的标准库。
 
-=== 8.2.5 7zip（7z） ===
+=== 9.2.5 7zip（7z） ===
 
 <h4>PyLZMA</h4>
 
@@ -1128,7 +1144,7 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 处理 7zip 格式的第三方库。
 
-=== 8.2.6 rar ===
+=== 9.2.6 rar ===
 
 <h4>rarfile</h4>
 
@@ -1136,16 +1152,16 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 处理 rar 格式的第三方库。
 
-=== 8.2.7 msi ===
+=== 9.2.7 msi ===
 
 <h4>msilib</h4>
 
 处理 msi 格式的标准库，从 Python 2.5 版本开始提供。
 
 
-== 8.3 处理标记语言 ==
+== 9.3 标记语言 ==
 
-=== 8.3.1 XML ===
+=== 9.3.1 XML ===
 
 <h4>xml.dom & xml.miniDom & xml.etree.ElementTree</h4>
 
@@ -1163,14 +1179,14 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 功能很强，支持 XPath 1.0、XSLT 1.0、扩展 EXSLT、等。还可以用来解析 HTML 格式。
 
-=== 8.3.2 HTML ===
+=== 9.3.2 HTML ===
 
 <h4>HTMLParser</h4>
 
 以回调方式解析 HTML/XHTML 文件内容的标准库。
 
 
-== 8.4 处理图片 ==
+== 9.4 图片 ==
 
 <h4>Python Imaging Library（PIL）</h4>
 
@@ -1211,7 +1227,7 @@ with Image(filename="mona-lisa.png") as img :
 </source>
 
 
-== 8.5 处理 PDF ==
+== 9.5 PDF ==
 
 <h4>pyfpdf</h4>
 
@@ -1261,9 +1277,9 @@ pyPdf 目前已经不继续升级维护了。PyPDF2 是 pyPdf 的 fork 并继续
 可以提取 PDF 文件属性以及每页的文本，支持把内容输出为 HTML 格式。
 
 
-== 8.6 处理 Office 文档 ==
+== 9.6 MS Office 文档 ==
 
-=== 8.6.1 Word（doc、docx） ===
+=== 9.6.1 Word（doc、docx） ===
 
 <h4>PyWin32</h4>
 
@@ -1271,7 +1287,7 @@ pyPdf 目前已经不继续升级维护了。PyPDF2 是 pyPdf 的 fork 并继续
 
 PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Word（本地需要安装 Office）。
 
-=== 8.6.2 Excel（xls、xlsx） ===
+=== 9.6.2 Excel（xls、xlsx） ===
 
 <h4>pyExcelerator</h4>
 
@@ -1285,7 +1301,7 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 
 PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Excel（本地需要安装 Office）。
 
-=== 8.6.3 Power Point（ppt、pptx） ===
+=== 9.6.3 Power Point（ppt、pptx） ===
 
 <h4>python-pptx</h4>
 
@@ -1300,16 +1316,7 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Excel（本地需要安装 Office）。
 
 
-== 8.7 处理 CHM ==
-
-<h4>PyCHM</h4>
-
-官网：[http://gnochm.sourceforge.net/pychm.html]
-
-这是基于 [http://www.jedrea.com/chmlib/ chmlib] 的 Python 封装库。可以提取 CHM 文件的属性以及每个页面的内容。
-
-
-== 8.8 处理 RTF ==
+== 9.7 RTF ==
 
 <h4>PyRTF</h4>
 
@@ -1318,10 +1325,19 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 这个 Python 库可以用来处理 RTF（富文本格式）文档。
 
 
+== 9.8 CHM ==
+
+<h4>PyCHM</h4>
+
+官网：[http://gnochm.sourceforge.net/pychm.html]
+
+这是基于 [http://www.jedrea.com/chmlib/ chmlib] 的 Python 封装库。可以提取 CHM 文件的属性以及每个页面的内容。
+
+
 ----
 
 
-= 9 游戏开发 =
+= 10 游戏开发 =
 
 <h4>PyGame</h4>
 
@@ -1345,7 +1361,7 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 ----
 
 
-= 10 数值计算 / 科学计算 =
+= 11 数值计算 / 科学计算 =
 
 <h4>NumPy</h4>
 
@@ -1379,7 +1395,7 @@ SciPy 依赖 NumPy 提供的多维数组。相比 NumPy，SciPy 提供了更高�
 ----
 
 
-= 11 其它 =
+= 12 其它 =
 
 一些不方便归类的，暂时放到这里。
 
