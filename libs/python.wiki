@@ -8,6 +8,8 @@
 
 本页面列出的各种 Python 库/模块，如果注明了官网的网址，说明这个库是第三方的；否则就是 Python 语言内置的标准库。
 
+如果你发现本页面的开源库有错漏之处，有 GitHub 帐号的同学，可以给俺发 issue；没帐号的同学，可以去[http://program-think.blogspot.com/ 俺博客]留言。
+
 
 ----
 
@@ -33,10 +35,10 @@ chardet 可以猜测任意一段文本的字符集编码。对于编码类型未
 chardet 既可以作为模块来使用，也可以作为命令行工具来使用。
 
 代码示例
-<pre>
+<source lang="python">
 import chardet
 print(chardet.detect(bytes))
-</pre>
+</source>
 
 === 1.1.3 （其它） ===
 
@@ -85,12 +87,12 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 这个标准库顾名思义，是用来进行随机数生成的
 
 代码示例
-<pre>
-# 生成 0-100 的随机数
+<source lang="python">
+&#35; 生成 0-100 的随机数
 import random
 random.seed()
 random.randint(0, 100)
-</pre>
+</source>
 
 ==== fractions ====
 
@@ -108,11 +110,11 @@ random.randint(0, 100)
 关于散列算法，俺写过一篇扫盲（在“[http://program-think.blogspot.com/2013/02/file-integrity-check.html 这里]”）。
 
 代码示例
-<pre>
-# 计算字符串的 SHA1 散列值
+<source lang="python">
+&#35; 计算字符串的 SHA1 散列值
 import hashlib
-sha1 = hashlib.sha1('Hello world').hexdigest()
-</pre>
+sha1 = hashlib.sha1("Hello, world").hexdigest()
+</source>
 
 ==== PyCrypto ====
 
@@ -143,20 +145,20 @@ ctypes 在 Python 2.5 版本加入到标准库中。
 通过它，你可以很方便地调用 C/C++ 动态库导出的函数，可以在 Python 中使用各种 C/C++ 的数据类型（比如指针）。
 
 代码示例
-<pre>
-# 调用 Linux/Unix 系统的标准 C 函数，获取当前时间
+<source lang="python">
+&#35; 调用 Linux/Unix 系统的标准 C 函数，获取当前时间
 from ctypes import *
-libc = CDLL('libc.so.6')
+libc = CDLL("libc.so.6")
 time = libc.time(None)
 
-# 调用 Windows 系统 API，弹出消息提示框
+&#35; 调用 Windows 系统 API，弹出消息提示框
 from ctypes import c_int, WINFUNCTYPE, windll
 from ctypes.wintypes import HWND, LPCSTR, UINT
 prototype = WINFUNCTYPE(c_int, HWND, LPCSTR, LPCSTR, UINT)
-paramflags = (1, 'hwnd', 0), (1, 'text', 'Hi'), (1, 'caption', None), (1, 'flags', 0)
-MessageBox = prototype(('MessageBoxA', windll.user32), paramflags)
-MessageBox(text='Hello world'，flags=2)
-</pre>
+paramflags = (1, "hwnd", 0), (1, "text", "Hi"), (1, "caption", None), (1, "flags", 0)
+MessageBox = prototype(("MessageBoxA", windll.user32), paramflags)
+MessageBox(text="Hello, world", flags=2)
+</source>
 
 ==== SWIG ====
 
@@ -213,35 +215,35 @@ MessageBox(text='Hello world'，flags=2)
 相对于 os 标准库，shutil 标准库提供了一些比较高级的文件和目录操作（目录递归复制、目录递归删除、目录压缩打包、等）
 
 代码示例
-<pre>
-# 递归删除某个目录
+<source lang="python">
+&#35; 递归删除某个目录
 import shutil
 shutil.rmtree(xxxx)
-</pre>
+</source>
 
 ==== glob ====
 
 这个标准库用于查找文件（支持通配符）
 
 代码示例
-<pre>
-# 获取当前目录所有 txt 文件
+<source lang="python">
+&#35; 获取当前目录所有 txt 文件
 import glob
-files = glob.glob('./*.txt')
-</pre>
+files = glob.glob("./*.txt")
+</source>
 
 ==== fnmatch ====
 
 这个标准库用于匹配文件名（支持通配符）
 
 代码示例
-<pre>
-# 列出当前目录所有 txt 文件
+<source lang="python">
+&#35; 列出当前目录所有 txt 文件
 import os, fnmatch
-for file in os.listdir('.') :
-    if fnmatch.fnmatch(file, '*.txt') :
+for file in os.listdir(".") :
+    if fnmatch.fnmatch(file, "*.txt") :
         print(file)
-</pre>
+</source>
 
 ==== tempfile ====
 
@@ -264,21 +266,20 @@ for file in os.listdir('.') :
 提供了内存映射文件的支持。
 
 代码示例
-<pre>
-# 利用 mmap 在父子进程间交换数据
+<source lang="python">
+&#35; 利用 mmap 在父子进程间交换数据
 import os
 import mmap
 
 map = mmap.mmap(-1, 13)
-map.write("Hello world")
+map.write("Hello, world")
 
 pid = os.fork()
-
-if pid == 0: # 子进程
+if pid == 0:  &#35; 子进程
     map.seek(0)
     print(map.readline())
     map.close()
-</pre>
+</source>
 
 == 3.3 Windows 系统相关 ==
 
@@ -339,13 +340,13 @@ py2exe 的功能类似 PyInstaller，但只支持 Windows 平台。
 Python2 的模块名是 httplib 和 httplib2；到 Python3，模块名改为 http.request 和 urllib.parse
 
 代码示例
-<pre>
-# 读取指定 URL 的网页内容
+<source lang="python">
+&#35; 读取指定 URL 的网页内容
 import urllib
-handle = urllib.urlopen('http://www.google.com')
+handle = urllib.urlopen("http://www.google.com")
 page = handle.read()
 handle.close()
-</pre>
+</source>
 
 == 4.2 Web Server ==
 
@@ -356,17 +357,17 @@ handle.close()
 Python2 的模块名叫 SimpleHTTPServer；到 Python3 模块名改为 http.server
 
 代码示例
-<pre>
-#一个极简单的 HTTP 服务
+<source lang="python">
+&#35; 一个极简单的 HTTP 服务
 import SocketServer
 import SimpleHTTPServer
 
 PORT = 8000
 Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-httpd = SocketServer.TCPServer(('', PORT), Handler)
-print('serving at port %d' % PORT)
+httpd = SocketServer.TCPServer(("", PORT), Handler)
+print("serving at port %d" % PORT)
 httpd.serve_forever()
-</pre>
+</source>
 
 == 4.3 Web 开发框架 ==
 
@@ -409,11 +410,11 @@ Pyjamas 甚至能用来开发桌面 GUI 应用。
 操纵当前系统的默认浏览器，访问指定 URL 的页面。
 
 代码示例
-<pre>
-# 用默认浏览器打开 Google 主页
+<source lang="python">
+&#35; 用默认浏览器打开 Google 主页
 import webbrowser
-webbrowser.open('http://www.google.com')
-</pre>
+webbrowser.open("http://www.google.com")
+</source>
 
 ==== pyv8 ====
 
@@ -422,21 +423,21 @@ webbrowser.open('http://www.google.com')
 [https://developers.google.com/v8/ v8] 是 Google 开发的 JavaScript 解释引擎。这是对 v8 引擎的 Python 封装。
 
 代码示例
-<pre>
+<source lang="python">
 import PyV8
 
 ctxt1 = PyV8.JSContext()
 ctxt1.enter()
-ctxt1.eval('1+2')  # 对 JS 表达式求值
+ctxt1.eval("1+2")  &#35; 对 JS 表达式求值
 
-class Global(PyV8.JSClass) :  # 定义一个兼容 JS 的类
+class Global(PyV8.JSClass) :  &#35; 定义一个兼容 JS 的类
     def hello(self) :
-        print('Hello world')
+        print("Hello, world")
 
-ctxt2 = PyV8.JSContext(Global()) # 创建一个 JS 上下文，传入 Global 类的对象
+ctxt2 = PyV8.JSContext(Global())  &#35; 创建一个 JS 上下文，传入 Global 类的对象
 ctxt2.enter()                    
-ctxt2.eval('hello()')  # 调用 hello() 函数
-</pre>
+ctxt2.eval("hello()")  &#35; 调用 hello() 函数
+</source>
 
 ==== PyWebKitGtk ====
 
@@ -465,13 +466,13 @@ PyWebKitGtk 则提供了对 WebKitGtk 的 Python 封装。
 搞网络安全的网友应该会喜欢这个库。
 
 代码示例
-<pre>
-# 传统的 ping 扫描（网络层）
-ans,unans = sr(IP(dst='192.168.1.1-254')/ICMP())
+<source lang="python">
+&#35; 传统的 ping 扫描（网络层）
+ans,unans = sr(IP(dst="192.168.1.1-254")/ICMP())
 
-# 局域网内的 ARP 扫描（链路层）
-ans,unans = srp(Ether(dst='ff:ff:ff:ff:ff:ff')/ARP(pdst='192.168.1.0/24'), timeout=2)
-</pre>
+&#35; 局域网内的 ARP 扫描（链路层）
+ans,unans = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst="192.168.1.0/24"), timeout=2)
+</source>
 
 === 5.1.2 传输层 ===
 
@@ -538,8 +539,8 @@ IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库�
 它的某些设计类似于 C++ 的 [https://en.wikipedia.org/wiki/Adaptive_Communication_Environment ACE] 框架。除了能用来进行传输层（TCP UDP）的开发，还提供了若干应用层协议（HTTP、XMPP、SSH、IRC、等）的支持。
 
 代码示例
-<pre>
-# 实现一个简单的 Echo 服务，监听在 12345 端口
+<source lang="python">
+&#35; 实现一个简单的 Echo 服务，监听在 12345 端口
 from twisted.internet import protocol, reactor
 
 class Echo(protocol.Protocol) :
@@ -552,7 +553,7 @@ class EchoFactory(protocol.Factory) :
 
 reactor.listenTCP(12345, EchoFactory())
 reactor.run()
-</pre>
+</source>
 
 
 ----
@@ -575,20 +576,22 @@ reactor.run()
 pyODBC 封装了 ODBC API，通过它可以访问各种数据库（只要有 ODBC 驱动即可）。
 
 代码示例
-<pre>
-# 查询某个 ODBC 数据源的某个表
+<source lang="python">
+&#35; 查询某个 ODBC 数据源的某个表
 import pyodbc
-conn = pyodbc.connect('DSN=xxx;PWD=password')
+conn = pyodbc.connect("DSN=xxx;PWD=password")
 cursor = conn.cursor()
-cursor.execute('SELECT field1 FROM table1')
+cursor.execute("SELECT field1 FROM table1")
+
 while True :
     row = cursor.fetchone()
     if not row :
         break
     print(row)
+
 cursor.close()
 conn.close()
-</pre>
+</source>
 
 ==== ceODBC ====
 
@@ -630,20 +633,22 @@ IronPython 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/ADO.
 操作 MySQL 的第三方库。
 
 代码示例
-<pre>
-# 查询某个 MySQL 数据库的某个表
+<source lang="python">
+&#35; 查询某个 MySQL 数据库的某个表
 import MySQLdb
-conn = MySQLdb.connect(db='test', passwd='password')
+conn = MySQLdb.connect(db="test", passwd="password")
 cursor = conn.cursor()
-cursor.execute('SELECT field1 FROM table1')
+cursor.execute("SELECT field1 FROM table1")
+
 while True :
     row = cursor.fetchone()
     if not row :
         break
     print(row)
+
 cursor.close()
 conn.close()
-</pre>
+</source>
 
 === 6.2.2 PostgreSQL ===
 
@@ -693,16 +698,16 @@ sqlite3 从 Python 2.5 版本开始加入到标准库中。通过它，你可以
 [https://en.wikipedia.org/wiki/SQLite SQLite] 是一个很优秀的轻量级数据库，俺前几年写过一篇博文推荐它（在“[http://program-think.blogspot.com/2009/04/how-to-use-sqlite.html 这里]”）。
 
 代码示例
-<pre>
-# 创建一个内存数据库，建表并插入记录
+<source lang="python">
+&#35; 创建一个内存数据库，建表并插入记录
 import sqlite3
-conn = sqlite3.connect(':memory:')
+conn = sqlite3.connect(":memory:")
 cursor = conn.cursor()
-cursor.execute('CREATE TABLE person (name text, age int)')
-cursor.execute('''INSERT INTO stocks VALUES ('TOM',20)''')
+cursor.execute("CREATE TABLE person (name text, age int)")
+cursor.execute("INSERT INTO stocks VALUES ('TOM',20)")
 conn.commit()
 conn.close()
-</pre>
+</source>
 
 === 6.2.7 Berkeley DB ===
 
@@ -721,44 +726,44 @@ conn.close()
 SQLAlchemy 支持的数据库有：MySQL、PostgreSQL、Sqlite、Oracle、MS SQL Server、Firebird、Sybase SQL Server、Informix、等。
 
 代码示例
-<pre>
-# 通过对象的方式创建两张依赖关系的表
+<source lang="python">
+&#35; 通过对象的方式创建两张依赖关系的表
 from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relation, sessionmaker
- 
+
 Base = declarative_base()
- 
+
 class Movie(Base) :
-    __tablename__ = 'movies'
- 
+    &#95;&#95;tablename&#95;&#95; = "movies"
+
     id = Column(Integer, primary_key=True)
     title = Column(String(255), nullable=False)
     year = Column(Integer)
-    directed_by = Column(Integer, ForeignKey('directors.id'))
-    director = relation('Director', backref='movies', lazy=False)
- 
-    def __init__(self, title=None, year=None) :
+    directed_by = Column(Integer, ForeignKey("directors.id"))
+    director = relation("Director", backref="movies", lazy=False)
+
+    def &#95;&#95;init&#95;&#95;(self, title=None, year=None) :
         self.title = title
         self.year = year
 
-    def __repr__(self) :
-        return 'Movie(%r, %r, %r)' % (self.title, self.year, self.director)
+    def &#95;&#95;repr&#95;&#95;(self) :
+        return "Movie(%r, %r, %r)" % (self.title, self.year, self.director)
  
 class Director(Base) :
-    __tablename__ = 'directors'
+    &#95;&#95;tablename&#95;&#95; = "directors"
  
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False, unique=True)
  
-    def __init__(self, name=None) :
+    def &#95;&#95;init&#95;&#95;(self, name=None) :
         self.name = name
  
-    def __repr__(self) :
-        return 'Director(%r)' % (self.name)
+    def &#95;&#95;repr&#95;&#95;(self) :
+        return "Director(%r)" % (self.name)
  
-Base.metadata.create_all(create_engine('dbms://user:pwd@host/dbname'))
-</pre>
+Base.metadata.create_all(create_engine("dbms://user:pwd@host/dbname"))
+</source>
 
 ==== SQLObject ====
 
@@ -767,17 +772,17 @@ Base.metadata.create_all(create_engine('dbms://user:pwd@host/dbname'))
 SQLObject 支持的数据库有：MySQL、PostgreSQL、Sqlite、MS SQL Server、Firebird、Sybase SQL Server、SAP DB、等。
 
 代码示例
-<pre>
-# 通过对象的方式创建表
+<source lang="python">
+&#35; 通过对象的方式创建表
 from sqlobject import *
-sqlhub.processConnection = connectionForURI('sqlite:/:memory:')
+sqlhub.processConnection = connectionForURI("sqlite:/:memory:")
 
 class Person(SQLObject) :
     first_name = StringCol()
     last_name = StringCol()
 
 Person.createTable()
-</pre>
+</source>
 
 
 ----
@@ -798,16 +803,16 @@ Person.createTable()
 Python2 的模块名叫 Tkinter，到 Python3 模块名改为 tkinter
 
 代码示例
-<pre>
-# 用 Tkinter 写 Hello world
+<source lang="python">
+&#35; 用 Tkinter 写 Hello world
 from Tkinter import *
 
-if __name__ == '__main__' :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     root = Tk()
-    label = Label(root, text='Hello world')
+    label = Label(root, text="Hello, world")
     label.pack()
     root.mainloop()
-</pre>
+</source>
 
 === 7.1.2 基于 wxWidgets ===
 
@@ -822,8 +827,8 @@ if __name__ == '__main__' :
 [https://github.com/limodou/ulipad Ulipad]（知名的国产的 Python IDE）就是基于 wxPython 开发的。
 
 代码示例
-<pre>
-# 用 wxPython 写 Hello world
+<source lang="python">
+&#35; 用 wxPython 写 Hello world
 import wx
 
 class Frame(wx.Frame) :
@@ -831,15 +836,15 @@ class Frame(wx.Frame) :
 
 class App(wx.App) :
     def OnInit(self) :
-        self.frame = Frame(parent=None, title='Hello world')
+        self.frame = Frame(parent=None, title="Hello, world")
         self.frame.Show()
         self.SetTopWindow(self.frame)
         return True
 
-if __name__ == '__main__' :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     app = App()
     app.MainLoop()
-</pre>
+</source>
 
 ==== PythonCard ====
 
@@ -858,22 +863,22 @@ if __name__ == '__main__' :
 这是 Python 对 GTK 的封装。
 
 代码示例
-<pre>
-# 用 PyGTK 写 Hello world
+<source lang="python">
+&#35; 用 PyGTK 写 Hello world
 import pygtk
-pygtk.require('2.0')
+pygtk.require("2.0")
 import gtk
 
 class HelloWorld :
-    def __init__(self) :
+    def &#95;&#95;init&#95;&#95;(self) :
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-        self.window.connect('delete_event', self.delete_event)
-        self.window.connect('destroy', self.destroy)
+        self.window.connect("delete_event", self.delete_event)
+        self.window.connect("destroy", self.destroy)
         self.window.set_border_width(10)
 
-        self.button = gtk.Button('Hello world')
-        self.button.connect('clicked', self.hello, None)
-        self.button.connect_object('clicked', gtk.Widget.destroy, self.window)
+        self.button = gtk.Button("Hello, world")
+        self.button.connect("clicked", self.hello, None)
+        self.button.connect_object("clicked", gtk.Widget.destroy, self.window)
         self.window.add(self.button)
 
         self.button.show()
@@ -883,19 +888,19 @@ class HelloWorld :
         gtk.main()
 
     def hello(self, widget, data=None) :
-        print('Hello world')
+        print("Hello, world")
 
     def delete_event(self, widget, event, data=None) :
-        print('delete event occurred')
+        print("delete event occurred")
         return False
 
     def destroy(self, widget, data=None) :
         gtk.main_quit()
 
-if __name__ == '__main__' :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     hello = HelloWorld()
     hello.main()
-</pre>
+</source>
 
 === 7.1.4 基于 Qt ===
 
@@ -908,20 +913,20 @@ if __name__ == '__main__' :
 这是 Python 对 Qt 的封装。
 
 代码示例
-<pre>
-# 用 pyQt 写 Hello world
+<source lang="python">
+&#35; 用 pyQt 写 Hello world
 import sys
 from PyQt4.QtGui import *
 
-if __name__ == '__main__' :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     app = QApplication(sys.argv)
     window = QWidget()
 
     window.resize(320, 240)
-    window.setWindowTitle('Hello world')
+    window.setWindowTitle("Hello, world")
     window.show()
     sys.exit(app.exec_())
-</pre>
+</source>
 
 ==== PySide ====
 
@@ -1048,19 +1053,19 @@ JSON 格式源自 JavaScript，如今在 Web 开发中广为应用。
 标准库，提供 JSON 格式的编码和解码。
 
 代码示例
-<pre>
+<source lang="python">
 import json
 
-json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}])
-# JSON 编码
-# 得到如下字符串
-# '["foo", {"bar": ["baz", null, 1.0, 2]}]'
+json.dumps(["foo", {"bar": ("baz", None, 1.0, 2)}])
+&#35; JSON 编码
+&#35; 得到如下字符串
+&#35; """["foo", {"bar": ["baz", null, 1.0, 2]}]"""
 
-json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]')
-# JSON 解码
-# 得到如下对象
-# [u'foo', {u'bar': [u'baz', None, 1.0, 2]}]
-</pre>
+json.loads("""["foo", {"bar":["baz", null, 1.0, 2]}]""")
+&#35; JSON 解码
+&#35; 得到如下对象
+&#35; [u"foo", {u"bar": [u"baz", None, 1.0, 2]}]
+</source>
 
 === 8.1.3 YAML ===
 
@@ -1176,13 +1181,13 @@ pyyaml 提供了 Python 对 YAML 的封装。
 它可以对图像进行各种常见的处理（格式转换、旋转、缩放、剪切、等）。
 
 代码示例
-<pre>
-# 旋转某图片并显示
+<source lang="python">
+&#35; 旋转某图片并显示
 from PIL import Image
-im = Image.open('xxx.jpg')
+im = Image.open("xxx.jpg")
 im = im.rotate(90)
 im.show()
-</pre>
+</source>
 
 ==== Wand ====
 
@@ -1191,19 +1196,19 @@ im.show()
 它通过前面提到 ctypes 实现了对 [https://en.wikipedia.org/wiki/ImageMagick ImageMagick] 的封装（ImageMagick 是最强大的开源图片处理工具集）。
 
 代码示例
-<pre>
+<source lang="python">
 from wand.image import Image
 from wand.display import display
 
-with Image(filename='mona-lisa.png') as img :
+with Image(filename="mona-lisa.png") as img :
     print(img.size)
     for r in 1, 2, 3 :
         with img.clone() as i :
             i.resize(int(i.width * r * 0.25), int(i.height * r * 0.25))
             i.rotate(90 * r)
-            i.save(filename='mona-lisa-{0}.png'.format(r))
+            i.save(filename="mona-lisa-{0}.png".format(r))
             display(i)
-</pre>
+</source>
 
 
 == 8.5 处理 PDF ==
@@ -1217,19 +1222,19 @@ with Image(filename='mona-lisa.png') as img :
 支持的功能比较全（嵌入字体、嵌入图片），文档也比较详细。
 
 代码示例
-<pre>
-# 这是个简单 Hello World 示例
+<source lang="python">
+&#35; 这是个简单 Hello World 示例
 from fpdf import FPDF
 
 pdf = FPDF()
 pdf.add_page()
-pdf.set_font('Arial', 'B', 16)
-pdf.cell(40, 10, 'Hello World')
-pdf.output('test.pdf', 'F')
-</pre>
+pdf.set_font("Arial", "B", 16)
+pdf.cell(40, 10, "Hello, World")
+pdf.output("test.pdf", "F")
+</source>
 
-<pre>
-# 支持写入 HTML 语法。目前支持几种常见的 HTML tag
+<source lang="python">
+&#35; 支持写入 HTML 语法。目前支持几种常见的 HTML tag
 from pyfpdf import FPDF, HTMLMixin
 
 class MyFPDF(FPDF, HTMLMixin) :
@@ -1238,8 +1243,8 @@ class MyFPDF(FPDF, HTMLMixin) :
 pdf = MyFPDF()
 pdf.add_page()
 pdf.write_html(html)
-pdf.output('test.pdf', 'F')
-</pre>
+pdf.output("test.pdf", "F")
+</source>
 
 ==== pyPdf & PyPDF2 ====
 
@@ -1349,20 +1354,20 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 NumPy 提供了功能强大、性能很高的数值数组，可以用来进行各种数值计算（包括矩阵运算）。
 
 代码示例
-<pre>
-# 以下是传统 Python 写法，冗长且速度较慢
+<source lang="python">
+&#35; 以下是传统 Python 写法，冗长且速度较慢
 a = range(10000000)
 b = range(10000000)
 c = []
 for i in range(len(a)) :
     c.append(a[i] + b[i])
 
-# 以下是 NumPy 的写法，简洁且速度飞快
+&#35; 以下是 NumPy 的写法，简洁且速度飞快
 import numpy as np
 a = np.arange(10000000)
 b = np.arange(10000000)
 c = a + b
-</pre>
+</source>
 
 ==== SciPy ====
 
@@ -1384,4 +1389,4 @@ SciPy 依赖 NumPy 提供的多维数组。相比 NumPy，SciPy 提供了更高�
 
 这是一个用 Python 写的 Python 解释器（有点绕口令）。
 
-PyPy 支持 JIT（Just-in-time compilation）和沙箱技术，可做到'''比 CPython 更快的运行速度'''。
+PyPy 支持 JIT（Just-in-time compilation）和沙箱技术，可做到【比 CPython 更快的运行速度】。
