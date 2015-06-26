@@ -8,7 +8,7 @@
 
 本页面列出的各种 Python 库/模块，如果注明了官网的网址，说明这个库是第三方的；否则就是 Python 语言内置的标准库。
 
-如果你发现本页面的开源库有错漏之处，有 GitHub 帐号的同学，可以给俺发 issue；没帐号的同学，可以去[http://program-think.blogspot.com/ 俺博客]留言。
+如果你发现本页面的开源库有错漏之处，有 GitHub 帐号的同学，可以[https://github.com/programthink/opensource/issues 给俺发 issue]；没帐号的同学，可以去[http://program-think.blogspot.com/ 俺博客]留言。
 
 
 ----
@@ -28,7 +28,7 @@
 
 <h4>chardet</h4>
 
-官网：[https://github.com/erikrose/chardet]
+Home：[https://github.com/erikrose/chardet]
 
 chardet 可以猜测任意一段文本的字符集编码。对于编码类型未知的文本，它会很有用。
 
@@ -86,9 +86,8 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 
 顾名思义，这个标准库是用来进行随机数生成滴。
 
-代码示例
+代码示例——生成 0-100 的随机数
 <source lang="python">
-&#35; 生成 0-100 的随机数
 import random
 random.seed()
 random.randint(0, 100)
@@ -114,9 +113,8 @@ ctypes 在 Python 2.5 版本加入到标准库中。
 
 通过它，你可以很方便地调用 C/C++ 动态库导出的函数，可以在 Python 中使用各种 C/C++ 的数据类型（比如指针）。
 
-代码示例
+代码示例——调用 Linux/Unix 系统的标准 C 函数，获取当前时间
 <source lang="python">
-&#35; 调用 Linux/Unix 系统的标准 C 函数，获取当前时间
 from ctypes import *
 libc = CDLL("libc.so.6")
 time = libc.time(None)
@@ -130,15 +128,17 @@ MessageBox = prototype(("MessageBoxA", windll.user32), paramflags)
 MessageBox(text="Hello, world", flags=2)
 </source>
 
-<h4>SWIG</h4>
+<h4>SWIG（Simplified Wrapper and Interface Generator）</h4>
 
-官网：[http://swig.org/]
+Home：[http://swig.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/SWIG 英文]
 
 这是一个很老牌的、有名气的工具，它可以把多种语言（Java、Python、C#、Ruby、PHP、Perl、Lua、Go、等）整合到 C/C++ 中。
 
 <h4>Cython</h4>
 
-官网：[http://cython.org/]
+Home：[http://cython.org/]
 
 这个工具可以让你用 Python 的语法写扩展模块的代码，然后它帮你把 Python 代码编译为本地动态库（机器码）。
 
@@ -148,7 +148,9 @@ MessageBox(text="Hello, world", flags=2)
 
 <h4>Jython</h4>
 
-官网：[http://www.jython.org/]
+Home：[http://www.jython.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Jython 英文]、[https://zh.wikipedia.org/wiki/Jython 中文]
 
 通过 Jython 可以让 Python 代码运行在 JVM 上，并且可以调用其它的 JVM 语言的代码（比如 Java、Scale）
 
@@ -156,7 +158,9 @@ MessageBox(text="Hello, world", flags=2)
 
 <h4>IronPython</h4>
 
-官网：[http://ironpython.net/]
+Home：[http://ironpython.net/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/IronPython 英文]、[https://zh.wikipedia.org/wiki/IronPython 中文]
 
 通过 IronPython 可以让 Python 代码运行在 dotNET 平台上，并且可以调用其它的 dotNET 语言的代码（比如 C# F#）
 
@@ -164,7 +168,7 @@ MessageBox(text="Hello, world", flags=2)
 
 <h4>PyObjC</h4>
 
-官网：[http://pyobjc.sourceforge.net/]
+Home：[http://pyobjc.sourceforge.net/]
 
 这是用 Python 封装 Mac OS X 上的 Objective-C 库。
 
@@ -184,9 +188,8 @@ MessageBox(text="Hello, world", flags=2)
 
 相对于 os 标准库，shutil 标准库提供了一些比较高级的文件和目录操作（目录递归复制、目录递归删除、目录压缩打包、等）
 
-代码示例
+代码示例——递归删除某个目录
 <source lang="python">
-&#35; 递归删除某个目录
 import shutil
 shutil.rmtree(xxxx)
 </source>
@@ -195,21 +198,22 @@ shutil.rmtree(xxxx)
 
 这个标准库用于查找文件（支持通配符）
 
-代码示例
+代码示例——获取当前目录所有 txt 文件
 <source lang="python">
-&#35; 获取当前目录所有 txt 文件
 import glob
-files = glob.glob("./*.txt")
+
+for file in glob.glob("./*.txt") :
+    print(file)
 </source>
 
 <h4>fnmatch</h4>
 
 这个标准库用于匹配文件名（支持通配符）
 
-代码示例
+代码示例——列出当前目录所有 txt 文件
 <source lang="python">
-&#35; 列出当前目录所有 txt 文件
 import os, fnmatch
+
 for file in os.listdir(".") :
     if fnmatch.fnmatch(file, "*.txt") :
         print(file)
@@ -235,9 +239,8 @@ for file in os.listdir(".") :
 
 提供了内存映射文件的支持。
 
-代码示例
+代码示例——利用 mmap 在父子进程间交换数据
 <source lang="python">
-&#35; 利用 mmap 在父子进程间交换数据
 import os
 import mmap
 
@@ -255,7 +258,7 @@ if pid == 0:  &#35; 子进程
 
 <h4>PyWin32</h4>
 
-官网：[http://python.net/crew/mhammond/win32/]
+Home：[http://python.net/crew/mhammond/win32/]
 
 这个第三方库封装了 Windows API 及 COM API。通过它可以方便地用 Python 进行 Windows 编程（调用 COM 组件、编写 Windows 服务、等）。
 
@@ -269,7 +272,7 @@ if pid == 0:  &#35; 子进程
 
 <h4>PyInstaller</h4>
 
-官网：[http://www.pyinstaller.org/]
+Home：[http://www.pyinstaller.org/]
 
 PyInstaller 可以把你的 Python 代码制作成独立运行的程序（不依赖 Python 环境就可以运行）。
 
@@ -277,19 +280,21 @@ PyInstaller 可以把你的 Python 代码制作成独立运行的程序（不依
 
 <h4>py2exe</h4>
 
-官网：[http://www.py2exe.org/]
+Home：[http://www.py2exe.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Py2exe 英文]
 
 py2exe 的功能类似 PyInstaller，但只支持 Windows 平台。
 
 <h4>py2app</h4>
 
-官网：[https://bitbucket.org/ronaldoussoren/py2app]
+Home：[https://bitbucket.org/ronaldoussoren/py2app]
 
 它很类似于 [http://www.py2exe.org/ py2exe]，差别在于 [http://www.py2exe.org/ py2exe] 支持 Windows 平台，而 [https://bitbucket.org/ronaldoussoren/py2app py2app] 支持 Mac OS X 平台。
 
 <h4>EasyInstall & Setuptools</h4>
 
-官网：[https://pypi.python.org/pypi/setuptools]
+Home：[https://pypi.python.org/pypi/setuptools]
 
 这套工具可以帮助你进行第三方库的管理（下载、编译、安装、升级、卸载）
 
@@ -309,14 +314,14 @@ py2exe 的功能类似 PyInstaller，但只支持 Windows 平台。
 
 Python2 的模块名是 httplib 和 httplib2；到 Python3，模块名改为 http.request 和 urllib.parse
 
-代码示例
+代码示例——读取指定 URL 的网页内容
 <source lang="python">
-&#35; 读取指定 URL 的网页内容
 import urllib
 handle = urllib.urlopen("http://www.google.com")
 page = handle.read()
 handle.close()
 </source>
+
 
 == 4.2 Web Server ==
 
@@ -326,9 +331,8 @@ handle.close()
 
 Python2 的模块名叫 SimpleHTTPServer；到 Python3 模块名改为 http.server
 
-代码示例
+代码示例——一个极简单的 HTTP 服务
 <source lang="python">
-&#35; 一个极简单的 HTTP 服务
 import SocketServer
 import SimpleHTTPServer
 
@@ -339,11 +343,16 @@ print("serving at port %d" % PORT)
 httpd.serve_forever()
 </source>
 
+
 == 4.3 Web 开发框架 ==
+
+（Python 的 Web 框架数不胜数，俺只挑选几个代表性的）
 
 <h4>Django</h4>
 
-官网：[https://www.djangoproject.com/]
+Home：[https://www.djangoproject.com/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Django_(web_framework) 英文]、[https://zh.wikipedia.org/wiki/Django 中文]
 
 在 Python 社区，Django 是目前最有影响力的 Web 开发框架。该框架很重型，内置了 Web 服务端开发常用的组件（比如：ORM、用户管理）。
 
@@ -353,15 +362,18 @@ Django 应用范围很广，比如 Google 的 Web 开发平台 GAE 就支持它�
 
 <h4>TurboGears</h4>
 
-官网：[http://www.turbogears.org/]
+Home：[http://www.turbogears.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/TurboGears 英文]、[https://zh.wikipedia.org/wiki/TurboGears 中文]
 
 又一个重型的 Web 开发框架，名气仅次于 Django。
+
 
 == 4.4 Web前端 & JS整合 ==
 
 <h4>Pyjamas & pyjs</h4>
 
-官网：[http://pyjs.org/]
+Home：[http://pyjs.org/]
 
 这是从 GWT（Google Web Toolkit）移植的第三方库。提供了 Python 到 JS 的编译，AJAX 框架等功能。
 
@@ -369,7 +381,7 @@ Pyjamas 甚至能用来开发桌面 GUI 应用。
 
 <h4>pyjaco</h4>
 
-官网：[https://github.com/chrivers/pyjaco]
+Home：[https://github.com/chrivers/pyjaco]
 
 这也是一个 Python 到 JavaScript 的编译工具。
 
@@ -379,16 +391,15 @@ Pyjamas 甚至能用来开发桌面 GUI 应用。
 
 操纵当前系统的默认浏览器，访问指定 URL 的页面。
 
-代码示例
+代码示例——用默认浏览器打开 Google 主页
 <source lang="python">
-&#35; 用默认浏览器打开 Google 主页
 import webbrowser
 webbrowser.open("http://www.google.com")
 </source>
 
 <h4>pyv8</h4>
 
-官网：[https://pypi.python.org/pypi/PyV8]
+Home：[https://pypi.python.org/pypi/PyV8]
 
 [https://developers.google.com/v8/ v8] 是 Google 开发的 JavaScript 解释引擎。这是对 v8 引擎的 Python 封装。
 
@@ -411,7 +422,7 @@ ctxt2.eval("hello()")  &#35; 调用 hello() 函数
 
 <h4>PyWebKitGtk</h4>
 
-官网：[https://github.com/jmalonzo/pywebkitgtk]
+Home：[https://github.com/jmalonzo/pywebkitgtk]
 
 [http://webkitgtk.org/ WebKitGtk] 是一个基于 WebKit 的 Web 渲染引擎。
 
@@ -429,7 +440,9 @@ PyWebKitGtk 则提供了对 WebKitGtk 的 Python 封装。
 
 <h4>Scapy</h4>
 
-官网：[http://www.secdev.org/projects/scapy/]
+Home：[http://www.secdev.org/projects/scapy/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Scapy 英文]
 
 这是一个底层的网络库，可以在不同协议层次构造网络数据包（包括链路层、网络层、传输层），还支持 Sniffer 抓包。
 
@@ -480,21 +493,21 @@ Python 标准库很早就提供了对 socket 编程的支持。
 
 <h4>PycURL</h4>
 
-官网：[http://pycurl.sourceforge.net/]
+Home：[http://pycurl.sourceforge.net/]
 
-cURL 是一个功能很强的网络库/网络工具，支持 N 多应用层协议。这是用 Python 封装的第三方库。
+[https://en.wikipedia.org/wiki/Curl cURL] 是一个功能很强的网络库/网络工具，支持 N 多应用层协议。pycurl 提供了 Python 的封装。
 
 关于 cURL，俺前几年写过一篇博文推荐它（在“[http://program-think.blogspot.com/2009/03/opensource-review-curl-library.html 这里]”）。
 
 <h4>jabber.py</h4>
 
-官网：[http://jabberpy.sourceforge.net/]
+Home：[http://jabberpy.sourceforge.net/]
 
 Jabber（又称 XMPP）是IM（即时通信）协议的标准。这是用 Python 封装的第三方库。
 
 <h4>irclib</h4>
 
-官网：[https://bitbucket.org/jaraco/irc]
+Home：[https://bitbucket.org/jaraco/irc]
 
 IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库。
 
@@ -502,9 +515,11 @@ IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库�
 
 <h4>Protocol Buffers</h4>
 
-官网：[https://developers.google.com/protocol-buffers/]
+Home：[https://developers.google.com/protocol-buffers/]
 
-[https://en.wikipedia.org/wiki/Protocol_Buffers Protocol Buffers] 是 Google 开发的一个跨语言的库，用于网络传输业务数据时的“编码/解码”。
+Wikipedia：[https://en.wikipedia.org/wiki/Protocol_Buffers 英文]
+
+这是 Google 开发的一个跨语言的库，用于网络传输业务数据时的“编码/解码”。
 
 其优点是：跨多种语言、高性能、向前兼容、向后兼容。俺前几年写过一篇博文推荐 protobuf（在“[http://program-think.blogspot.com/2009/05/opensource-review-protocol-buffers.html 这里]”）。
 
@@ -512,7 +527,9 @@ IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库�
 
 <h4>Apache Thrift</h4>
 
-官网：[https://thrift.apache.org/]
+Home：[https://thrift.apache.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Apache_Thrift 英文]
 
 来自于 Apache 社区，提供了一种跨语言的通讯机制。
 
@@ -525,15 +542,16 @@ IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库�
 
 <h4>Twisted</h4>
 
-官网：[http://twistedmatrix.com/]
+Home：[http://twistedmatrix.com/]
 
-这是一个基于 Python 网络通讯开发框架，有十多年历史，名气很大。
+Wikipedia：[https://en.wikipedia.org/wiki/Twisted_%28software%29 英文]
+
+这是一个基于 Python 网络通讯开发框架，诞生于2002年，名气很大。
 
 它的某些设计类似于 C++ 的 [https://en.wikipedia.org/wiki/Adaptive_Communication_Environment ACE] 框架。除了能用来进行传输层（TCP UDP）的开发，还提供了若干应用层协议（HTTP、XMPP、SSH、IRC、等）的支持。
 
-代码示例
+代码示例——实现一个简单的 Echo 服务，监听在 12345 端口
 <source lang="python">
-&#35; 实现一个简单的 Echo 服务，监听在 12345 端口
 from twisted.internet import protocol, reactor
 
 class Echo(protocol.Protocol) :
@@ -564,13 +582,12 @@ reactor.run()
 
 <h4>pyODBC</h4>
 
-官网：[https://github.com/mkleehammer/pyodbc]
+Home：[https://github.com/mkleehammer/pyodbc]
 
 pyODBC 封装了 ODBC API，通过它可以访问各种数据库（只要有 ODBC 驱动即可）。
 
-代码示例
+代码示例——查询某个 ODBC 数据源的某个表
 <source lang="python">
-&#35; 查询某个 ODBC 数据源的某个表
 import pyodbc
 conn = pyodbc.connect("DSN=xxx;PWD=password")
 cursor = conn.cursor()
@@ -588,7 +605,7 @@ conn.close()
 
 <h4>ceODBC</h4>
 
-官网：[http://ceodbc.sourceforge.net/]
+Home：[http://ceodbc.sourceforge.net/]
 
 又一个封装 ODBC API 的第三方库
 
@@ -596,23 +613,17 @@ conn.close()
 
 <h4>Jython</h4>
 
-官网：[http://www.jython.org/]
-
-Jython 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Jdbc JDBC] 操作数据库。
+Jython 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Jdbc JDBC] 操作数据库。
 
 === 6.1.3 ADO & ADO.NET ===
 
 <h4>PyWin32</h4>
 
-官网：[http://python.net/crew/mhammond/win32/]
-
-PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/ActiveX_Data_Objects ADO] 操作数据库。
+PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/ActiveX_Data_Objects ADO] 操作数据库。
 
 <h4>IronPython</h4>
 
-官网：[http://ironpython.net/]
-
-IronPython 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/ADO.NET ADO.NET] 操作数据库。
+IronPython 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/ADO.NET ADO.NET] 操作数据库。
 
 
 == 6.2 特定数据库 ==
@@ -621,13 +632,12 @@ IronPython 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/ADO.
 
 <h4>MySQL for Python</h4>
 
-官网：[http://mysql-python.sourceforge.net/]
+Home：[http://mysql-python.sourceforge.net/]
 
 操作 MySQL 的第三方库。
 
-代码示例
+代码示例——查询某个 MySQL 数据库的某个表
 <source lang="python">
-&#35; 查询某个 MySQL 数据库的某个表
 import MySQLdb
 conn = MySQLdb.connect(db="test", passwd="password")
 cursor = conn.cursor()
@@ -647,13 +657,13 @@ conn.close()
 
 <h4>psycopg</h4>
 
-官网：[http://initd.org/psycopg/]
+Home：[http://initd.org/psycopg/]
 
 操作 PostgreSQL 的第三方库。
 
 <h4>psycopg</h4>
 
-官网：[http://www.pygresql.org/]
+Home：[http://www.pygresql.org/]
 
 操作 PostgreSQL 的第三方库。
 
@@ -661,7 +671,7 @@ conn.close()
 
 <h4>cx_Oracle</h4>
 
-官网：[http://cx-oracle.sourceforge.net/]
+Home：[http://cx-oracle.sourceforge.net/]
 
 操作 Oracle 的第三方库。
 
@@ -669,7 +679,7 @@ conn.close()
 
 <h4>pymssql</h4>
 
-官网：[http://pymssql.org/]
+Home：[http://pymssql.org/]
 
 操作微软 SQL Server 的第三方库。
 
@@ -677,7 +687,7 @@ conn.close()
 
 <h4>ibm-db</h4>
 
-官网：[https://pypi.python.org/pypi/ibm_db]
+Home：[https://pypi.python.org/pypi/ibm_db]
 
 操作 DB2 的第三方库。
 
@@ -690,9 +700,8 @@ sqlite3 从 Python 2.5 版本开始加入到标准库中。通过它，你可以
 
 [https://en.wikipedia.org/wiki/SQLite SQLite] 是一个很优秀的轻量级数据库，俺前几年写过一篇博文推荐它（在“[http://program-think.blogspot.com/2009/04/how-to-use-sqlite.html 这里]”）。
 
-代码示例
+代码示例——创建一个内存数据库，建表并插入记录
 <source lang="python">
-&#35; 创建一个内存数据库，建表并插入记录
 import sqlite3
 conn = sqlite3.connect(":memory:")
 cursor = conn.cursor()
@@ -706,7 +715,7 @@ conn.close()
 
 <h4>PyBSDDB</h4>
 
-官网：[http://www.jcea.es/programacion/pybsddb.htm]
+Home：[http://www.jcea.es/programacion/pybsddb.htm]
 
 操作 Berkeley DB 的第三方库。
 
@@ -714,13 +723,14 @@ conn.close()
 
 <h4>SQLAlchemy</h4>
 
-官网：[http://www.sqlalchemy.org/]
+Home：[http://www.sqlalchemy.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/SQLAlchemy 英文]、[https://zh.wikipedia.org/wiki/SQLAlchemy 中文]
 
 SQLAlchemy 支持的数据库有：MySQL、PostgreSQL、Sqlite、Oracle、MS SQL Server、Firebird、Sybase SQL Server、Informix、等。
 
-代码示例
+代码示例——通过对象的方式创建两张依赖关系的表
 <source lang="python">
-&#35; 通过对象的方式创建两张依赖关系的表
 from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relation, sessionmaker
@@ -760,13 +770,14 @@ Base.metadata.create_all(create_engine("dbms://user:pwd@host/dbname"))
 
 <h4>SQLObject</h4>
 
-官网：[http://sqlobject.org/]
+Home：[http://sqlobject.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/SQLObject 英文]
 
 SQLObject 支持的数据库有：MySQL、PostgreSQL、Sqlite、MS SQL Server、Firebird、Sybase SQL Server、SAP DB、等。
 
-代码示例
+代码示例——通过对象的方式创建表
 <source lang="python">
-&#35; 通过对象的方式创建表
 from sqlobject import *
 sqlhub.processConnection = connectionForURI("sqlite:/:memory:")
 
@@ -795,9 +806,8 @@ Person.createTable()
 
 Python2 的模块名叫 Tkinter，到 Python3 模块名改为 tkinter
 
-代码示例
+代码示例——用 Tkinter 写 Hello world
 <source lang="python">
-&#35; 用 Tkinter 写 Hello world
 from Tkinter import *
 
 if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
@@ -813,15 +823,16 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 <h4>wxPython</h4>
 
-官网：[http://www.wxpython.org/]
+Home：[http://www.wxpython.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/WxPython 英文]、[https://zh.wikipedia.org/wiki/WxPython 中文]
 
 在所有的 wxWidgets 的 Python 封装库中，这个是名气最大的。
 
 [https://github.com/limodou/ulipad Ulipad]（知名的国产的 Python IDE）就是基于 wxPython 开发的。
 
-代码示例
+代码示例——用 wxPython 写 Hello world
 <source lang="python">
-&#35; 用 wxPython 写 Hello world
 import wx
 
 class Frame(wx.Frame) :
@@ -841,7 +852,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 <h4>PythonCard</h4>
 
-官网：[http://pythoncard.sourceforge.net/]
+Home：[http://pythoncard.sourceforge.net/]
 
 又一个基于 wxWidgets 的 GUI 库。
 
@@ -851,13 +862,14 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 <h4>PyGTK</h4>
 
-官网：[http://www.pygtk.org/]
+Home：[http://www.pygtk.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/PyGTK 英文]
 
 这是 Python 对 GTK 的封装。
 
-代码示例
+代码示例——用 PyGTK 写 Hello world
 <source lang="python">
-&#35; 用 PyGTK 写 Hello world
 import pygtk
 pygtk.require("2.0")
 import gtk
@@ -901,13 +913,14 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 <h4>PyQt</h4>
 
-官网：[http://www.riverbankcomputing.com/software/pyqt/]
+Home：[http://www.riverbankcomputing.com/software/pyqt/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/PyQt]、[https://zh.wikipedia.org/wiki/PyQt 中文]
 
 这是 Python 对 Qt 的封装。
 
-代码示例
+代码示例——用 pyQt 写 Hello world
 <source lang="python">
-&#35; 用 pyQt 写 Hello world
 import sys
 from PyQt4.QtGui import *
 
@@ -923,17 +936,17 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 <h4>PySide</h4>
 
-官网：[http://www.pyside.org/]
+Home：[http://www.pyside.org/]
 
 这也是 Python 对 Qt 的封装。
 
 === 7.1.5 基于 FLTK ===
 
-[https://en.wikipedia.org/wiki/FLTK FLTK] 全称是（ Fast Light Tool Kit），由 C++ 开发的跨平台、轻量级界面组件库。
+[https://en.wikipedia.org/wiki/FLTK FLTK] 全称是（Fast Light Tool Kit），由 C++ 开发的跨平台、轻量级界面组件库。
 
 <h4>PyFLTK</h4>
 
-官网：[http://pyfltk.sourceforge.net/]
+Home：[http://pyfltk.sourceforge.net/]
 
 这是 Python 对 FLTK 的封装。
 
@@ -941,41 +954,35 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 <h4>PyWin32</h4>
 
-官网：[http://python.net/crew/mhammond/win32/]
-
-PyWin32 前面提到过。它可以提供原生的 Windows GUI 界面。
+PyWin32 前面已经介绍过。它可以提供原生的 Windows GUI 界面。
 
 <h4>IronPython</h4>
 
-官网：[http://ironpython.net/]
-
-IronPython 前面提到过。它可以提供 dotNET 的 GUI 界面。
+IronPython 前面已经介绍过。它可以提供 dotNET 的 GUI 界面。
 
 === 7.1.7 基于 JVM 平台 ===
 
 <h4>Jython</h4>
 
-官网：[http://www.jython.org/]
-
-Jython 前面提到过。它可以提供基于 Java 的 [https://en.wikipedia.org/wiki/Swing_%28Java%29 Swing] 界面。
+Jython 前面已经介绍过。它可以提供基于 Java 的 [https://en.wikipedia.org/wiki/Swing_%28Java%29 Swing] 界面。
 
 === 7.1.8 （其它） ===
 
 <h4>EasyGUI</h4>
 
-官网：[http://easygui.sourceforge.net/]
+Home：[http://easygui.sourceforge.net/]
 
 EasyGUI 这是一个很轻量级的库。跟其它 GUI 不同之处在于——它没有“事件驱动”。
 
 <h4>PyGUI</h4>
 
-官网：[http://www.cosc.canterbury.ac.nz/greg.ewing/python_gui/]
+Home：[http://www.cosc.canterbury.ac.nz/greg.ewing/python_gui/]
 
 PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/crew/mhammond/win32/ PyWin32]（Windows 平台）、[http://www.pygtk.org/ PyGTK]（Linux 平台）、[http://pyobjc.sourceforge.net/ PyObjC]（Mac OS X 平台）。
 
 <h4>Kivy</h4>
 
-官网：[http://kivy.org/]
+Home：[http://kivy.org/]
 
 跨平台的多媒体框架和界面库，用来开发比较炫的界面。
 
@@ -983,7 +990,7 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 <h4>OcempGUI</h4>
 
-官网：[http://ocemp.sourceforge.net/gui.html]
+Home：[http://ocemp.sourceforge.net/gui.html]
 
 基于 PyGame 的一个跨平台 GUI 库（PyGame 下面会提到）。
 
@@ -991,7 +998,9 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 <h4>matplotlib</h4>
 
-官网：[http://matplotlib.org/]
+Home：[http://matplotlib.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Matplotlib 英文]
 
 这是一个有名的图形库，主要用来绘制数学相关的图形。
 
@@ -999,25 +1008,25 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 <h4>Gnuplot.py</h4>
 
-官网：[http://gnuplot-py.sourceforge.net/]
+Home：[http://gnuplot-py.sourceforge.net/]
 
 这是 Python 对 [http://www.gnuplot.info/ gnuplot] 的封装。gnuplot 的效果图在“[http://www.gnuplot.info/screenshots/index.html 这里]”。
 
 <h4>PyQtGraph</h4>
 
-官网：[http://www.pyqtgraph.org/]
+Home：[http://www.pyqtgraph.org/]
 
 这是一个纯 Python 的库，依赖于 PyQt4 / PySide。效果图在“[http://www.pyqtgraph.org/images/plotting_sm.png 这里]”。
 
 <h4>PyX</h4>
 
-官网：[http://pyx.sourceforge.net/]
+Home：[http://pyx.sourceforge.net/]
 
 这个库可以跟 TeX / LaTeX 无缝整合，支持导出为 PostScript / PDF 格式。适合用来制作报表。效果图在“[http://pyx.sourceforge.net/gallery/index.html 这里]”。
 
 <h4>Chaco</h4>
 
-官网：[http://code.enthought.com/chaco/]
+Home：[http://code.enthought.com/chaco/]
 
 这是一个商业公司维护的库，主要提供2维图表。效果图在“[http://docs.enthought.com/chaco/user_manual/annotated_examples.html 这里]”。
 
@@ -1037,24 +1046,23 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 关于散列算法，俺写过一篇扫盲（在“[http://program-think.blogspot.com/2013/02/file-integrity-check.html 这里]”）。
 
-代码示例
+代码示例——计算字符串的 SHA1 散列值
 <source lang="python">
-&#35; 计算字符串的 SHA1 散列值
 import hashlib
 sha1 = hashlib.sha1("Hello, world").hexdigest()
 </source>
 
 <h4>PyCrypto</h4>
 
-官网：[http://www.dlitz.net/software/pycrypto/]
+Home：[http://www.dlitz.net/software/pycrypto/]
 
 这个库包含了常见的对称加密算法（DES、AES、IDEA 等）、公钥加密算法（RSA、DSA 等）、散列算法（MD5、SHA1、RIPEMD 等）。
 
 <h4>pyOpenSSL</h4>
 
-官网：[http://pyopenssl.sourceforge.net/]
+Home：[http://pyopenssl.sourceforge.net/]
 
-OpenSSL 在加密领域可是大名鼎鼎。这个库使用 Python 对 OpenSSL 进行很薄的封装。
+[https://en.wikipedia.org/wiki/OpenSSL OpenSSL] 在加密领域可是大名鼎鼎。这个库使用 Python 对 OpenSSL 进行很薄的封装。
 
 
 ----
@@ -1080,7 +1088,7 @@ JSON 格式源自 JavaScript，如今在 Web 开发中广为应用。
 
 标准库，提供 JSON 格式的编码和解码。
 
-代码示例
+代码示例——编码/解码 JSON 字符串
 <source lang="python">
 import json
 
@@ -1101,7 +1109,7 @@ json.loads("""["foo", {"bar":["baz", null, 1.0, 2]}]""")
 
 <h4>PyYAML</h4>
 
-官网：[http://pyyaml.org/]
+Home：[http://pyyaml.org/]
 
 pyyaml 提供了 Python 对 YAML 的封装。
 
@@ -1140,7 +1148,7 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 <h4>PyLZMA</h4>
 
-官网：[http://www.joachim-bauch.de/projects/pylzma/]
+Home：[http://www.joachim-bauch.de/projects/pylzma/]
 
 处理 7zip 格式的第三方库。
 
@@ -1148,7 +1156,7 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 <h4>rarfile</h4>
 
-官网：[http://rarfile.berlios.de/]
+Home：[http://rarfile.berlios.de/]
 
 处理 rar 格式的第三方库。
 
@@ -1173,7 +1181,7 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 <h4>lxml</h4>
 
-官网：[http://lxml.de/]
+Home：[http://lxml.de/]
 
 著名的 C 语言库 libxml 和 libxslt 的 Python 封装。
 
@@ -1190,15 +1198,16 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 <h4>Python Imaging Library（PIL）</h4>
 
-官网：[http://www.pythonware.com/products/pil/]
+Home：[http://www.pythonware.com/products/pil/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Python_Imaging_Library 英文]
 
 这是一个很有名气的 Python 图像处理库，支持常见图像文件格式（BMP、JPG、GIF、PNG、等）。
 
 它可以对图像进行各种常见的处理（格式转换、旋转、缩放、剪切、等）。
 
-代码示例
+代码示例——旋转某图片并显示
 <source lang="python">
-&#35; 旋转某图片并显示
 from PIL import Image
 im = Image.open("xxx.jpg")
 im = im.rotate(90)
@@ -1207,7 +1216,7 @@ im.show()
 
 <h4>Wand</h4>
 
-官网：[http://docs.wand-py.org/]
+Home：[http://docs.wand-py.org/]
 
 它通过前面提到 ctypes 实现了对 [https://en.wikipedia.org/wiki/ImageMagick ImageMagick] 的封装（ImageMagick 是最强大的开源图片处理工具集）。
 
@@ -1231,15 +1240,14 @@ with Image(filename="mona-lisa.png") as img :
 
 <h4>pyfpdf</h4>
 
-官网：[https://github.com/reingart/pyfpdf]
+Home：[https://github.com/reingart/pyfpdf]
 
 这是 [http://www.fpdf.org/ FPDF] 的 Python 移植库，用来生成 PDF 文档。
 
 支持的功能比较全（嵌入字体、嵌入图片），文档也比较详细。
 
-代码示例
+代码示例——简单的 Hello World 示例
 <source lang="python">
-&#35; 这是个简单 Hello World 示例
 from fpdf import FPDF
 
 pdf = FPDF()
@@ -1264,7 +1272,7 @@ pdf.output("test.pdf", "F")
 
 <h4>pyPdf & PyPDF2</h4>
 
-官网：[http://pybrary.net/pyPdf/] & [http://knowah.github.com/PyPDF2/]
+Home：[http://pybrary.net/pyPdf/] & [http://knowah.github.com/PyPDF2/]
 
 pyPdf 目前已经不继续升级维护了。PyPDF2 是 pyPdf 的 fork 并继续增加新功能。
 
@@ -1272,9 +1280,9 @@ pyPdf 目前已经不继续升级维护了。PyPDF2 是 pyPdf 的 fork 并继续
 
 <h4>PDFMiner</h4>
 
-官网：[http://www.unixuser.org/~euske/python/pdfminer/]
+Home：[http://www.unixuser.org/~euske/python/pdfminer/]
 
-可以提取 PDF 文件属性以及每页的文本，支持把内容输出为 HTML 格式。
+它可以提取 PDF 文件属性以及每页的文本，支持把内容输出为 HTML 格式。
 
 
 == 9.6 MS Office 文档 ==
@@ -1283,53 +1291,47 @@ pyPdf 目前已经不继续升级维护了。PyPDF2 是 pyPdf 的 fork 并继续
 
 <h4>PyWin32</h4>
 
-官网：[http://python.net/crew/mhammond/win32/]
-
-PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Word（本地需要安装 Office）。
+PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Word（本地需要安装 Office）。
 
 === 9.6.2 Excel（xls、xlsx） ===
 
 <h4>pyExcelerator</h4>
 
-官网：[http://sourceforge.net/projects/pyexcelerator/]
+Home：[http://sourceforge.net/projects/pyexcelerator/]
 
-该库可以支持 Office Excel（97/2000/XP/2003）以及 OpenOffice Calc 的文档。无需依赖外部软件。
+它可以支持 Office Excel（97/2000/XP/2003）以及 OpenOffice Calc 的文档。无需依赖外部软件。
 
 <h4>PyWin32</h4>
 
-官网：[http://python.net/crew/mhammond/win32/]
-
-PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Excel（本地需要安装 Office）。
+PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Excel（本地需要安装 Office）。
 
 === 9.6.3 Power Point（ppt、pptx） ===
 
 <h4>python-pptx</h4>
 
-官网：[https://github.com/scanny/python-pptx]
+Home：[https://github.com/scanny/python-pptx]
 
-该库可以用来生成 pptx（Open XML PowerPoint）格式的文档。
+它可以用来生成 pptx（Open XML PowerPoint）格式的文档。
 
 <h4>PyWin32</h4>
 
-官网：[http://python.net/crew/mhammond/win32/]
-
-PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Excel（本地需要安装 Office）。
+PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Excel（本地需要安装 Office）。
 
 
 == 9.7 RTF ==
 
 <h4>PyRTF</h4>
 
-官网：[http://pyrtf.sourceforge.net/]
+Home：[http://pyrtf.sourceforge.net/]
 
-这个 Python 库可以用来处理 RTF（富文本格式）文档。
+它可以用来处理 RTF（富文本格式）文档。
 
 
 == 9.8 CHM ==
 
 <h4>PyCHM</h4>
 
-官网：[http://gnochm.sourceforge.net/pychm.html]
+Home：[http://gnochm.sourceforge.net/pychm.html]
 
 这是基于 [http://www.jedrea.com/chmlib/ chmlib] 的 Python 封装库。可以提取 CHM 文件的属性以及每个页面的内容。
 
@@ -1341,19 +1343,21 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 
 <h4>PyGame</h4>
 
-官网：[http://www.pygame.org/]
+Home：[http://www.pygame.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Pygame 英文]、[https://zh.wikipedia.org/wiki/Pygame 中文]
 
 跨平台的 Python 第三方库，用来辅助游戏开发的，名气非常大。
 
 <h4>PyOpenGL</h4>
 
-官网：[http://pyopengl.sourceforge.net/]
+Home：[http://pyopengl.sourceforge.net/]
 
 封装 [https://en.wikipedia.org/wiki/OpenGL OpenGL] 的 Python 第三方库。
 
 <h4>Python-Ogre</h4>
 
-官网：[http://www.python-ogre.org/]
+Home：[http://www.python-ogre.org/]
 
 封装 [https://en.wikipedia.org/wiki/OGRE OGRE]（3D 渲染引擎）的 Python 第三方库。
 
@@ -1365,9 +1369,11 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 
 <h4>NumPy</h4>
 
-官网：[http://www.numpy.org/]
+Home：[http://www.numpy.org/]
 
-NumPy 提供了功能强大、性能很高的数值数组，可以用来进行各种数值计算（包括矩阵运算）。
+Wikipedia：[https://en.wikipedia.org/wiki/NumPy 英文]、[https://zh.wikipedia.org/wiki/NumPy 中文]
+
+它提供了功能强大、性能很高的数值数组，可以用来进行各种数值计算（包括矩阵运算）。
 
 代码示例
 <source lang="python">
@@ -1387,7 +1393,9 @@ c = a + b
 
 <h4>SciPy</h4>
 
-官网：[http://www.scipy.org/]
+Home：[http://www.scipy.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/SciPy 英文]、[https://zh.wikipedia.org/wiki/SciPy 中文]
 
 SciPy 依赖 NumPy 提供的多维数组。相比 NumPy，SciPy 提供了更高层的数学运算模块（统计、线性代数、积分、常微分方程求解、傅立叶变换、信号处理、等），被广泛用于科研和工程领域。
 
@@ -1401,8 +1409,10 @@ SciPy 依赖 NumPy 提供的多维数组。相比 NumPy，SciPy 提供了更高�
 
 <h4>PyPy</h4>
 
-官网：[http://www.pypy.org/]
+Home：[http://www.pypy.org/]
 
-这是一个用 Python 写的 Python 解释器（有点绕口令）。
+Wikipedia：[https://en.wikipedia.org/wiki/PyPy 英文]、[https://zh.wikipedia.org/wiki/PyPy 中文]
+
+它是一个用 Python 写的 Python 解释器（有点绕口令）。
 
 PyPy 支持 JIT（Just-in-time compilation）和沙箱技术，可做到【比 CPython 更快的运行速度】。
