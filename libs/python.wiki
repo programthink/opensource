@@ -20,13 +20,13 @@
 
 === 1.1.1 正则表达式 ===
 
-==== re ====
+<h4>re</h4>
 
 正则表达式的标准库，提供基于正则的匹配和替换。
 
 === 1.1.2 字符集 ===
 
-==== chardet ====
+<h4>chardet</h4>
 
 官网：[https://github.com/erikrose/chardet]
 
@@ -42,7 +42,7 @@ print(chardet.detect(bytes))
 
 === 1.1.3 （其它） ===
 
-==== StringIO / cStringIO ====
+<h4>StringIO / cStringIO</h4>
 
 以读写文件的方式来操作字符串（有点类似于内存文件）。
 
@@ -55,7 +55,7 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 
 [https://en.wikipedia.org/wiki/Base64 Base64] 是一组编码算法的总称。用于把二进制数据编码为文本。
 
-==== base64 ====
+<h4>base64</h4>
 
 标准库，提供 Base16、Base32、Base64 格式的编码和解码。
 
@@ -63,7 +63,7 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 
 [https://en.wikipedia.org/wiki/Uuencode uuencode] 出现于早期的 Unix 系统。用于把二进制编码为文本，以便通过邮件系统发送。
 
-==== uu ====
+<h4>uu</h4>
 
 标准库，提供 uuencode 格式的编码和解码。
 
@@ -71,18 +71,18 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 
 [https://en.wikipedia.org/wiki/BinHex BinHex] 起先用于 Mac OS 系统，类似于 uuencode
 
-==== binhex ====
+<h4>binhex</h4>
 
 标准库，提供 BinHex 格式的编码和解码。
 
 
 == 1.3 数学类 ==
 
-==== math ====
+<h4>math</h4>
 
 这个标准库顾名思义，封装了常用的数学函数（开方、指数、对数、三角函数、等）
 
-==== random ====
+<h4>random</h4>
 
 这个标准库顾名思义，是用来进行随机数生成的
 
@@ -94,14 +94,14 @@ random.seed()
 random.randint(0, 100)
 </source>
 
-==== fractions ====
+<h4>fractions</h4>
 
 这个标准库封装了跟有理数（分数）相关的运算
 
 
 == 1.4 安全类 ==
 
-==== hashlib ====
+<h4>hashlib</h4>
 
 在 Python 2.5 版本加入到标准库中。通过它，你可以很方便地计算各种散列值。
 
@@ -116,13 +116,13 @@ import hashlib
 sha1 = hashlib.sha1("Hello, world").hexdigest()
 </source>
 
-==== PyCrypto ====
+<h4>PyCrypto</h4>
 
 官网：[http://www.dlitz.net/software/pycrypto/]
 
 这个库包含了常见的对称加密算法（DES、AES、IDEA 等）、公钥加密算法（RSA、DSA 等）、散列算法（MD5、SHA1、RIPEMD 等）。
 
-==== pyOpenSSL ====
+<h4>pyOpenSSL</h4>
 
 官网：[http://pyopenssl.sourceforge.net/]
 
@@ -138,7 +138,7 @@ Python 可以很容易地跟其它编程语言整合。整合之后，就可以�
 
 == 2.1 整合 C / C++ 语言 ==
 
-==== ctypes ====
+<h4>ctypes</h4>
 
 ctypes 在 Python 2.5 版本加入到标准库中。
 
@@ -160,13 +160,13 @@ MessageBox = prototype(("MessageBoxA", windll.user32), paramflags)
 MessageBox(text="Hello, world", flags=2)
 </source>
 
-==== SWIG ====
+<h4>SWIG</h4>
 
 官网：[http://swig.org/]
 
 这是一个很老牌的、有名气的工具，它可以把多种语言（Java、Python、C#、Ruby、PHP、Perl、Lua、Go、等）整合到 C/C++ 中。
 
-==== Cython ====
+<h4>Cython</h4>
 
 官网：[http://cython.org/]
 
@@ -176,7 +176,7 @@ MessageBox(text="Hello, world", flags=2)
 
 == 2.2 整合 JVM 平台 ==
 
-==== Jython ====
+<h4>Jython</h4>
 
 官网：[http://www.jython.org/]
 
@@ -184,7 +184,7 @@ MessageBox(text="Hello, world", flags=2)
 
 == 2.3 整合 dotNet 平台 ==
 
-==== IronPython ====
+<h4>IronPython</h4>
 
 官网：[http://ironpython.net/]
 
@@ -192,7 +192,7 @@ MessageBox(text="Hello, world", flags=2)
 
 == 2.4 整合 Objective-C 语言 ==
 
-==== PyObjC ====
+<h4>PyObjC</h4>
 
 官网：[http://pyobjc.sourceforge.net/]
 
@@ -204,13 +204,13 @@ MessageBox(text="Hello, world", flags=2)
 
 = 3 操作系统相关 =
 
-==== os ====
+<h4>os</h4>
 
 这是一个非常基本的标准库，提供了常见的操作系统相关操作。
 
 == 3.1 文件和目录操作 ==
 
-==== shutil ====
+<h4>shutil</h4>
 
 相对于 os 标准库，shutil 标准库提供了一些比较高级的文件和目录操作（目录递归复制、目录递归删除、目录压缩打包、等）
 
@@ -221,7 +221,7 @@ import shutil
 shutil.rmtree(xxxx)
 </source>
 
-==== glob ====
+<h4>glob</h4>
 
 这个标准库用于查找文件（支持通配符）
 
@@ -232,7 +232,7 @@ import glob
 files = glob.glob("./*.txt")
 </source>
 
-==== fnmatch ====
+<h4>fnmatch</h4>
 
 这个标准库用于匹配文件名（支持通配符）
 
@@ -245,23 +245,23 @@ for file in os.listdir(".") :
         print(file)
 </source>
 
-==== tempfile ====
+<h4>tempfile</h4>
 
 使用这个标准库，可以安全地生成临时文件或临时目录。
 
 == 3.2 本地进程间通信（IPC） ==
 
-==== subprocess & multiprocessing ====
+<h4>subprocess & multiprocessing</h4>
 
 用于进程管理的标准库，可以启动子进程，通过标准输入输出跟子进程交互。
 
 其中 multiprocessing 是 2.6 版本加入到标准库的。
 
-==== signal ====
+<h4>signal</h4>
 
 用于进程信号处理的标准库。
 
-==== mmap ====
+<h4>mmap</h4>
 
 提供了内存映射文件的支持。
 
@@ -283,7 +283,7 @@ if pid == 0:  &#35; 子进程
 
 == 3.3 Windows 系统相关 ==
 
-==== PyWin32 ====
+<h4>PyWin32</h4>
 
 官网：[http://python.net/crew/mhammond/win32/]
 
@@ -291,13 +291,13 @@ if pid == 0:  &#35; 子进程
 
 == 3.4 Linux & Unix 系统相关 ==
 
-==== syslog ====
+<h4>syslog</h4>
 
 通过这个标准库，可以很方便地跟 POSIX 的 syslog 服务进行交互。
 
 == 3.5 程序打包 ==
 
-==== PyInstaller ====
+<h4>PyInstaller</h4>
 
 官网：[http://www.pyinstaller.org/]
 
@@ -305,19 +305,19 @@ PyInstaller 可以把你的 Python 代码制作成独立运行的程序（不依
 
 该工具支持多种操作系统，包括：Windows、Linux、Mac OS X、Solaris、AIX、等。
 
-==== py2exe ====
+<h4>py2exe</h4>
 
 官网：[http://www.py2exe.org/]
 
 py2exe 的功能类似 PyInstaller，但只支持 Windows 平台。
 
-==== py2app ====
+<h4>py2app</h4>
 
 官网：[https://bitbucket.org/ronaldoussoren/py2app]
 
 它很类似于 [http://www.py2exe.org/ py2exe]，差别在于 [http://www.py2exe.org/ py2exe] 支持 Windows 平台，而 [https://bitbucket.org/ronaldoussoren/py2app py2app] 支持 Mac OS X 平台。
 
-==== EasyInstall & Setuptools ====
+<h4>EasyInstall & Setuptools</h4>
 
 官网：[https://pypi.python.org/pypi/setuptools]
 
@@ -333,7 +333,7 @@ py2exe 的功能类似 PyInstaller，但只支持 Windows 平台。
 
 == 4.1 HTTP 协议 ==
 
-==== httplib & httplib2 & http.request & urllib.parse ====
+<h4>httplib & httplib2 & http.request & urllib.parse</h4>
 
 这几个库可以进行各种 HTTP 客户端请求（GET、POST、等）。
 
@@ -350,7 +350,7 @@ handle.close()
 
 == 4.2 Web Server ==
 
-==== SimpleHTTPServer & http.server ====
+<h4>SimpleHTTPServer & http.server</h4>
 
 提供轻量级 HTTP Server 的标准库。
 
@@ -371,7 +371,7 @@ httpd.serve_forever()
 
 == 4.3 Web 开发框架 ==
 
-==== Django ====
+<h4>Django</h4>
 
 官网：[https://www.djangoproject.com/]
 
@@ -381,7 +381,7 @@ Django 应用范围很广，比如 Google 的 Web 开发平台 GAE 就支持它�
 
 而且它完全支持前面提到的 Jython 运行环境，可以运行在任何 J2EE 服务器上。
 
-==== TurboGears ====
+<h4>TurboGears</h4>
 
 官网：[http://www.turbogears.org/]
 
@@ -389,7 +389,7 @@ Django 应用范围很广，比如 Google 的 Web 开发平台 GAE 就支持它�
 
 == 4.4 Web前端 & JS整合 ==
 
-==== Pyjamas & pyjs ====
+<h4>Pyjamas & pyjs</h4>
 
 官网：[http://pyjs.org/]
 
@@ -397,7 +397,7 @@ Django 应用范围很广，比如 Google 的 Web 开发平台 GAE 就支持它�
 
 Pyjamas 甚至能用来开发桌面 GUI 应用。
 
-==== pyjaco ====
+<h4>pyjaco</h4>
 
 官网：[https://github.com/chrivers/pyjaco]
 
@@ -405,7 +405,7 @@ Pyjamas 甚至能用来开发桌面 GUI 应用。
 
 == 4.5 浏览器整合 ==
 
-==== webbrowser ====
+<h4>webbrowser</h4>
 
 操纵当前系统的默认浏览器，访问指定 URL 的页面。
 
@@ -416,7 +416,7 @@ import webbrowser
 webbrowser.open("http://www.google.com")
 </source>
 
-==== pyv8 ====
+<h4>pyv8</h4>
 
 官网：[https://pypi.python.org/pypi/PyV8]
 
@@ -439,7 +439,7 @@ ctxt2.enter()
 ctxt2.eval("hello()")  &#35; 调用 hello() 函数
 </source>
 
-==== PyWebKitGtk ====
+<h4>PyWebKitGtk</h4>
 
 官网：[https://github.com/jmalonzo/pywebkitgtk]
 
@@ -457,7 +457,7 @@ PyWebKitGtk 则提供了对 WebKitGtk 的 Python 封装。
 
 === 5.1.1 链路层 & 网络层 ===
 
-==== Scapy ====
+<h4>Scapy</h4>
 
 官网：[http://www.secdev.org/projects/scapy/]
 
@@ -476,39 +476,39 @@ ans,unans = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst="192.168.1.0/24"), timeo
 
 === 5.1.2 传输层 ===
 
-==== socket ====
+<h4>socket</h4>
 
 Python 标准库很早就提供了对 socket 编程的支持。
 
 这个标准库是对伯克利套接字进行简单的封装，其 API 基本上跟 BSD SOCKET 一一对应。
 
-==== asyncore ====
+<h4>asyncore</h4>
 
 这个标准库提供了异步 SOCKET 的支持。
 
-==== asynchat ====
+<h4>asynchat</h4>
 
 这个标准库基于上述的 asyncore，提供更高层的 API，简化异步通讯编程。
 
 === 5.1.3 应用层 ===
 
-==== ftplib ====
+<h4>ftplib</h4>
 
 封装 FTP 协议（文件传输）的标准库
 
-==== smtplib ====
+<h4>smtplib</h4>
 
 封装 SMTP 协议（邮件发送）的标准库
 
-==== imaplib ====
+<h4>imaplib</h4>
 
 封装 IMAP 协议（邮件接收）的标准库
 
-==== poplib ====
+<h4>poplib</h4>
 
 封装 POP3 协议（邮件接收）的标准库
 
-==== PycURL ====
+<h4>PycURL</h4>
 
 官网：[http://pycurl.sourceforge.net/]
 
@@ -516,13 +516,13 @@ cURL 是一个功能很强的网络库/网络工具，支持 N 多应用层协�
 
 关于 cURL，俺前几年写过一篇博文推荐它（在“[http://program-think.blogspot.com/2009/03/opensource-review-curl-library.html 这里]”）。
 
-==== jabber.py ====
+<h4>jabber.py</h4>
 
 官网：[http://jabberpy.sourceforge.net/]
 
 Jabber（又称 XMPP）是IM（即时通信）协议的标准。这是用 Python 封装的第三方库。
 
-==== irclib ====
+<h4>irclib</h4>
 
 官网：[https://bitbucket.org/jaraco/irc]
 
@@ -530,7 +530,7 @@ IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库�
 
 == 5.2 网络开发框架 ==
 
-==== Twisted ====
+<h4>Twisted</h4>
 
 官网：[http://twistedmatrix.com/]
 
@@ -569,7 +569,7 @@ reactor.run()
 
 === 6.1.1 ODBC ===
 
-==== pyODBC ====
+<h4>pyODBC</h4>
 
 官网：[https://github.com/mkleehammer/pyodbc]
 
@@ -593,7 +593,7 @@ cursor.close()
 conn.close()
 </source>
 
-==== ceODBC ====
+<h4>ceODBC</h4>
 
 官网：[http://ceodbc.sourceforge.net/]
 
@@ -601,7 +601,7 @@ conn.close()
 
 === 6.1.2 JDBC ===
 
-==== Jython ====
+<h4>Jython</h4>
 
 官网：[http://www.jython.org/]
 
@@ -609,13 +609,13 @@ Jython 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Jdbc JDB
 
 === 6.1.3 ADO & ADO.NET ===
 
-==== PyWin32 ====
+<h4>PyWin32</h4>
 
 官网：[http://python.net/crew/mhammond/win32/]
 
 PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/ActiveX_Data_Objects ADO] 操作数据库。
 
-==== IronPython ====
+<h4>IronPython</h4>
 
 官网：[http://ironpython.net/]
 
@@ -626,7 +626,7 @@ IronPython 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/ADO.
 
 === 6.2.1 MySQL ===
 
-==== MySQL for Python ====
+<h4>MySQL for Python</h4>
 
 官网：[http://mysql-python.sourceforge.net/]
 
@@ -652,13 +652,13 @@ conn.close()
 
 === 6.2.2 PostgreSQL ===
 
-==== psycopg ====
+<h4>psycopg</h4>
 
 官网：[http://initd.org/psycopg/]
 
 操作 PostgreSQL 的第三方库。
 
-==== psycopg ====
+<h4>psycopg</h4>
 
 官网：[http://www.pygresql.org/]
 
@@ -666,7 +666,7 @@ conn.close()
 
 === 6.2.3 Oracle ===
 
-==== cx_Oracle ====
+<h4>cx_Oracle</h4>
 
 官网：[http://cx-oracle.sourceforge.net/]
 
@@ -674,7 +674,7 @@ conn.close()
 
 === 6.2.4 MS SQL Server ===
 
-==== pymssql ====
+<h4>pymssql</h4>
 
 官网：[http://pymssql.org/]
 
@@ -682,7 +682,7 @@ conn.close()
 
 === 6.2.5 IBM DB2 ===
 
-==== ibm-db ====
+<h4>ibm-db</h4>
 
 官网：[https://pypi.python.org/pypi/ibm_db]
 
@@ -691,7 +691,7 @@ conn.close()
 
 === 6.2.6 SQLite ===
 
-==== sqlite3 ====
+<h4>sqlite3</h4>
 
 sqlite3 从 Python 2.5 版本开始加入到标准库中。通过它，你可以很方便地操作 SQLite 数据库。
 
@@ -711,7 +711,7 @@ conn.close()
 
 === 6.2.7 Berkeley DB ===
 
-==== PyBSDDB ====
+<h4>PyBSDDB</h4>
 
 官网：[http://www.jcea.es/programacion/pybsddb.htm]
 
@@ -719,7 +719,7 @@ conn.close()
 
 == 6.3 ORM（Object-Relational Mapping） ==
 
-==== SQLAlchemy ====
+<h4>SQLAlchemy</h4>
 
 官网：[http://www.sqlalchemy.org/]
 
@@ -765,7 +765,7 @@ class Director(Base) :
 Base.metadata.create_all(create_engine("dbms://user:pwd@host/dbname"))
 </source>
 
-==== SQLObject ====
+<h4>SQLObject</h4>
 
 官网：[http://sqlobject.org/]
 
@@ -796,7 +796,7 @@ Person.createTable()
 
 [https://en.wikipedia.org/wiki/Tk_(framework) Tk] 是一个跨平台的界面组件库。
 
-==== Tkinter / tkinter ====
+<h4>Tkinter / tkinter</h4>
 
 这是 Python 内置的标准库，封装了 Tcl/Tk 界面库。
 
@@ -818,7 +818,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 [https://en.wikipedia.org/wiki/WxWidgets wxWidgets] 是 C++ 开发的跨平台框架（不仅包括 GUI，还有其它功能）。
 
-==== wxPython ====
+<h4>wxPython</h4>
 
 官网：[http://www.wxpython.org/]
 
@@ -846,7 +846,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     app.MainLoop()
 </source>
 
-==== PythonCard ====
+<h4>PythonCard</h4>
 
 官网：[http://pythoncard.sourceforge.net/]
 
@@ -856,7 +856,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 [https://en.wikipedia.org/wiki/GTK%2B GTK+] 全称是（GIMP Toolkit），由 C 开发的跨平台界面组件库。
 
-==== PyGTK ====
+<h4>PyGTK</h4>
 
 官网：[http://www.pygtk.org/]
 
@@ -906,7 +906,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 [https://en.wikipedia.org/wiki/Qt_(toolkit) Qt] 是 C++ 开发的跨平台框架（不仅包括 GUI，还有其它功能）。
 
-==== PyQt ====
+<h4>PyQt</h4>
 
 官网：[http://www.riverbankcomputing.com/software/pyqt/]
 
@@ -928,7 +928,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     sys.exit(app.exec_())
 </source>
 
-==== PySide ====
+<h4>PySide</h4>
 
 官网：[http://www.pyside.org/]
 
@@ -938,7 +938,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 [https://en.wikipedia.org/wiki/FLTK FLTK] 全称是（ Fast Light Tool Kit），由 C++ 开发的跨平台、轻量级界面组件库。
 
-==== PyFLTK ====
+<h4>PyFLTK</h4>
 
 官网：[http://pyfltk.sourceforge.net/]
 
@@ -946,13 +946,13 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 === 7.1.6 基于 Windows 平台 ===
 
-==== PyWin32 ====
+<h4>PyWin32</h4>
 
 官网：[http://python.net/crew/mhammond/win32/]
 
 PyWin32 前面提到过。它可以提供原生的 Windows GUI 界面。
 
-==== IronPython ====
+<h4>IronPython</h4>
 
 官网：[http://ironpython.net/]
 
@@ -960,7 +960,7 @@ IronPython 前面提到过。它可以提供 dotNET 的 GUI 界面。
 
 === 7.1.7 基于 JVM 平台 ===
 
-==== Jython ====
+<h4>Jython</h4>
 
 官网：[http://www.jython.org/]
 
@@ -968,19 +968,19 @@ Jython 前面提到过。它可以提供基于 Java 的 [https://en.wikipedia.or
 
 === 7.1.8 （其它） ===
 
-==== EasyGUI ====
+<h4>EasyGUI</h4>
 
 官网：[http://easygui.sourceforge.net/]
 
 EasyGUI 这是一个很轻量级的库。跟其它 GUI 不同之处在于——它没有“事件驱动”。
 
-==== PyGUI ====
+<h4>PyGUI</h4>
 
 官网：[http://www.cosc.canterbury.ac.nz/greg.ewing/python_gui/]
 
 PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/crew/mhammond/win32/ PyWin32]（Windows 平台）、[http://www.pygtk.org/ PyGTK]（Linux 平台）、[http://pyobjc.sourceforge.net/ PyObjC]（Mac OS X 平台）。
 
-==== Kivy ====
+<h4>Kivy</h4>
 
 官网：[http://kivy.org/]
 
@@ -988,7 +988,7 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 除了支持桌面操作系统，还支持 Android / iOS，支持多点触摸。
 
-==== OcempGUI ====
+<h4>OcempGUI</h4>
 
 官网：[http://ocemp.sourceforge.net/gui.html]
 
@@ -996,7 +996,7 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 == 7.2 图表/报表 ==
 
-==== matplotlib ====
+<h4>matplotlib</h4>
 
 官网：[http://matplotlib.org/]
 
@@ -1004,25 +1004,25 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 它跟后面提到的 [http://www.scipy.org/ SciPy] 整合可以起到类似 MATLAB 的效果。效果图在“[http://matplotlib.org/users/screenshots.html 这里]”。
 
-==== Gnuplot.py ====
+<h4>Gnuplot.py</h4>
 
 官网：[http://gnuplot-py.sourceforge.net/]
 
 这是 Python 对 [http://www.gnuplot.info/ gnuplot] 的封装。gnuplot 的效果图在“[http://www.gnuplot.info/screenshots/index.html 这里]”。
 
-==== PyQtGraph ====
+<h4>PyQtGraph</h4>
 
 官网：[http://www.pyqtgraph.org/]
 
 这是一个纯 Python 的库，依赖于 PyQt4 / PySide。效果图在“[http://www.pyqtgraph.org/images/plotting_sm.png 这里]”。
 
-==== PyX ====
+<h4>PyX</h4>
 
 官网：[http://pyx.sourceforge.net/]
 
 这个库可以跟 TeX / LaTeX 无缝整合，支持导出为 PostScript / PDF 格式。适合用来制作报表。效果图在“[http://pyx.sourceforge.net/gallery/index.html 这里]”。
 
-==== Chaco ====
+<h4>Chaco</h4>
 
 官网：[http://code.enthought.com/chaco/]
 
@@ -1040,7 +1040,7 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 [https://en.wikipedia.org/wiki/Comma-separated_values CSV] 是一种历史悠久的结构化数据存储格式。其效果类似于一张数据库二维表。
 
-==== csv ====
+<h4>csv</h4>
 
 标准库，提供 CSV 格式文件的读写。
 
@@ -1048,7 +1048,7 @@ PyGUI 是一个更高层的 GUI 库，底层分别封装了 [http://python.net/c
 
 JSON 格式源自 JavaScript，如今在 Web 开发中广为应用。
 
-==== json ====
+<h4>json</h4>
 
 标准库，提供 JSON 格式的编码和解码。
 
@@ -1071,7 +1071,7 @@ json.loads("""["foo", {"bar":["baz", null, 1.0, 2]}]""")
 
 [https://en.wikipedia.org/wiki/YAML YAML] 是一种类似于 json 的结构化数据格式。它在确保可读性的基础上，提供了超越 json 的灵活性和扩展性。
 
-==== PyYAML ====
+<h4>PyYAML</h4>
 
 官网：[http://pyyaml.org/]
 
@@ -1083,7 +1083,7 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 其优点是：跨多种语言、高性能、向前兼容、向后兼容。俺前几年写过一篇博文推荐 protobuf（在“[http://program-think.blogspot.com/2009/05/opensource-review-protocol-buffers.html 这里]”）。
 
-==== protobuf ====
+<h4>protobuf</h4>
 
 官网：[https://developers.google.com/protocol-buffers/]
 
@@ -1094,35 +1094,35 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 === 8.2.1 zip ===
 
-==== zipfile ====
+<h4>zipfile</h4>
 
 处理 zip 格式的标准库。
 
 === 8.2.2 bzip2（bz2） ===
 
-==== bz2 ====
+<h4>bz2</h4>
 
 处理 bzip2 格式的标准库。
 
 === 8.2.3 gzip（gz） ===
 
-==== gzip ====
+<h4>gzip</h4>
 
 处理 gzip 格式的标准库。
 
-==== zlib ====
+<h4>zlib</h4>
 
 处理 gzip 格式的标准库。
 
 === 8.2.4 tar ===
 
-==== tarfile ====
+<h4>tarfile</h4>
 
 处理 tar 格式的标准库。
 
 === 8.2.5 7zip（7z） ===
 
-==== PyLZMA ====
+<h4>PyLZMA</h4>
 
 官网：[http://www.joachim-bauch.de/projects/pylzma/]
 
@@ -1130,7 +1130,7 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 === 8.2.6 rar ===
 
-==== rarfile ====
+<h4>rarfile</h4>
 
 官网：[http://rarfile.berlios.de/]
 
@@ -1138,7 +1138,7 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 === 8.2.7 msi ===
 
-==== msilib ====
+<h4>msilib</h4>
 
 处理 msi 格式的标准库，从 Python 2.5 版本开始提供。
 
@@ -1147,15 +1147,15 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 === 8.3.1 XML ===
 
-==== xml.dom & xml.miniDom & xml.etree.ElementTree ====
+<h4>xml.dom & xml.miniDom & xml.etree.ElementTree</h4>
 
 用 DOM（Document Object Model）方式处理 XML 文件的标准库。
 
-==== xml.sax & xml.parsers.expat ====
+<h4>xml.sax & xml.parsers.expat</h4>
 
 用 SAX（Simple API for XML）方式处理 XML 文件的标准库。
 
-==== lxml ====
+<h4>lxml</h4>
 
 官网：[http://lxml.de/]
 
@@ -1165,14 +1165,14 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 === 8.3.2 HTML ===
 
-==== HTMLParser ====
+<h4>HTMLParser</h4>
 
 以回调方式解析 HTML/XHTML 文件内容的标准库。
 
 
 == 8.4 处理图片 ==
 
-==== Python Imaging Library（PIL） ====
+<h4>Python Imaging Library（PIL）</h4>
 
 官网：[http://www.pythonware.com/products/pil/]
 
@@ -1189,7 +1189,7 @@ im = im.rotate(90)
 im.show()
 </source>
 
-==== Wand ====
+<h4>Wand</h4>
 
 官网：[http://docs.wand-py.org/]
 
@@ -1213,7 +1213,7 @@ with Image(filename="mona-lisa.png") as img :
 
 == 8.5 处理 PDF ==
 
-==== pyfpdf ====
+<h4>pyfpdf</h4>
 
 官网：[https://github.com/reingart/pyfpdf]
 
@@ -1246,7 +1246,7 @@ pdf.write_html(html)
 pdf.output("test.pdf", "F")
 </source>
 
-==== pyPdf & PyPDF2 ====
+<h4>pyPdf & PyPDF2</h4>
 
 官网：[http://pybrary.net/pyPdf/] & [http://knowah.github.com/PyPDF2/]
 
@@ -1254,7 +1254,7 @@ pyPdf 目前已经不继续升级维护了。PyPDF2 是 pyPdf 的 fork 并继续
 
 除了可以提取文件属性，还可以切分/合并文档，加密/解密文档。
 
-==== PDFMiner ====
+<h4>PDFMiner</h4>
 
 官网：[http://www.unixuser.org/~euske/python/pdfminer/]
 
@@ -1265,7 +1265,7 @@ pyPdf 目前已经不继续升级维护了。PyPDF2 是 pyPdf 的 fork 并继续
 
 === 8.6.1 Word（doc、docx） ===
 
-==== PyWin32 ====
+<h4>PyWin32</h4>
 
 官网：[http://python.net/crew/mhammond/win32/]
 
@@ -1273,13 +1273,13 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 
 === 8.6.2 Excel（xls、xlsx） ===
 
-==== pyExcelerator ====
+<h4>pyExcelerator</h4>
 
 官网：[http://sourceforge.net/projects/pyexcelerator/]
 
 该库可以支持 Office Excel（97/2000/XP/2003）以及 OpenOffice Calc 的文档。无需依赖外部软件。
 
-==== PyWin32 ====
+<h4>PyWin32</h4>
 
 官网：[http://python.net/crew/mhammond/win32/]
 
@@ -1287,13 +1287,13 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 
 === 8.6.3 Power Point（ppt、pptx） ===
 
-==== python-pptx ====
+<h4>python-pptx</h4>
 
 官网：[https://github.com/scanny/python-pptx]
 
 该库可以用来生成 pptx（Open XML PowerPoint）格式的文档。
 
-==== PyWin32 ====
+<h4>PyWin32</h4>
 
 官网：[http://python.net/crew/mhammond/win32/]
 
@@ -1302,7 +1302,7 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 
 == 8.7 处理 CHM ==
 
-==== PyCHM ====
+<h4>PyCHM</h4>
 
 官网：[http://gnochm.sourceforge.net/pychm.html]
 
@@ -1311,7 +1311,7 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 
 == 8.8 处理 RTF ==
 
-==== PyRTF ====
+<h4>PyRTF</h4>
 
 官网：[http://pyrtf.sourceforge.net/]
 
@@ -1323,19 +1323,19 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 
 = 9 游戏开发 =
 
-==== PyGame ====
+<h4>PyGame</h4>
 
 官网：[http://www.pygame.org/]
 
 跨平台的 Python 第三方库，用来辅助游戏开发的，名气非常大。
 
-==== PyOpenGL ====
+<h4>PyOpenGL</h4>
 
 官网：[http://pyopengl.sourceforge.net/]
 
 封装 [https://en.wikipedia.org/wiki/OpenGL OpenGL] 的 Python 第三方库。
 
-==== Python-Ogre ====
+<h4>Python-Ogre</h4>
 
 官网：[http://www.python-ogre.org/]
 
@@ -1347,7 +1347,7 @@ PyWin32 前面提到过。它可以基于 [https://en.wikipedia.org/wiki/Compone
 
 = 10 数值计算 / 科学计算 =
 
-==== NumPy ====
+<h4>NumPy</h4>
 
 官网：[http://www.numpy.org/]
 
@@ -1369,7 +1369,7 @@ b = np.arange(10000000)
 c = a + b
 </source>
 
-==== SciPy ====
+<h4>SciPy</h4>
 
 官网：[http://www.scipy.org/]
 
@@ -1383,7 +1383,7 @@ SciPy 依赖 NumPy 提供的多维数组。相比 NumPy，SciPy 提供了更高�
 
 一些不方便归类的，暂时放到这里。
 
-==== PyPy ====
+<h4>PyPy</h4>
 
 官网：[http://www.pypy.org/]
 
