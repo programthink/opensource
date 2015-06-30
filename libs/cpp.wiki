@@ -329,6 +329,16 @@ string human_readable_card_number(const string& s)
 }
 </source>
 
+<h4>Oniguruma（鬼车）</h4>
+
+Home：[http://www.geocities.jp/kosako3/oniguruma/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Oniguruma 英文]
+
+来自日本的正则式库，基于 C 语言。据说性能很高。
+
+它被用在 Ruby、TextMate、Sublime Text、SubEthaEdit 等软件上。
+
 <h4>Qt.QRegExp</h4>
 
 Docs：[http://doc.qt.io/qt-4.8/qregexp.html]
