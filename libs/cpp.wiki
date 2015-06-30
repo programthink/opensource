@@ -2222,6 +2222,24 @@ Home：[http://cairographics.org/cairomm/]
 
 这是针对 Cairo 的 C++ 封装库。
 
+<h4>PBRT（Physically Based Rendering Toolkit）</h4>
+
+Home：[http://pbrt.org/]
+
+基于光线追踪的物理渲染系统，采用 C++ 开发。
+
+== 12.4 计算机视觉 ==
+
+<h4>OpenCV</h4>
+
+Home：[http://opencv.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/OpenCV 英文]、[https://zh.wikipedia.org/wiki/OpenCV 中文]
+
+它是一个跨平台的计算机视觉库，由 Intel 发起并参与开发。开发语言是 C 和 C++。
+
+提供其它编程语言（Python、Java、MATLAB/OCTAVE ...）的 API 绑定。
+
 ----
 
 = 13 多媒体 =
