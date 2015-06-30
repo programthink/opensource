@@ -6,11 +6,9 @@
 
 本页面汇总俺收集的各种 C 和 C++ 的开源代码库，不定期更新。
 
-如果你发现本页面的开源库有错漏之处，有 GitHub 帐号的同学，可以给俺发 issue；没帐号的同学，可以去[http://program-think.blogspot.com/ 俺博客]留言。
-
+如果你发现本页面的开源库有错漏之处，非常欢迎给俺提供反馈——有 GitHub 帐号的同学，可以[https://github.com/programthink/opensource/issues 给俺发 issue]；没帐号的同学，可以去[http://program-think.blogspot.com/ 俺博客]留言。
 
 ----
-
 
 = 1 综合性的库 =
 
@@ -98,9 +96,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Crypto%2B%2B 英文]
 
 虽然它以加密为主，但是也提供了其它一些辅助功能（比如：数据压缩、编码解码、计时器...）
 
-
 ----
-
 
 = 2 数据结构 & 算法 =
 
@@ -116,7 +112,7 @@ STL 标准库提供了如下：
 
 * 链表：list（双向）、forward_list（单向）
 
-* 队列：deque、deque（双端队列）
+* 队列：queue、deque（双端队列）
 
 * 栈：stack
 
@@ -126,7 +122,7 @@ STL 标准库提供了如下：
 
 === 2.1.2 Lockfree 的容器 ===
 
-（“lock-free”翻译成“锁无关”会引发歧义，所以俺直接洋文）
+（“lock-free”翻译成“锁无关”会引发歧义，所以俺直接用洋文）
 
 <h4>Boost.Lockfree</h4>
 
@@ -155,7 +151,6 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“�
 &#35;include <boost/circular_buffer.hpp>
 
 boost::circular_buffer<int> cb(3);  // Create with capacity for 3 integers
-
 cb.push_back(1);
 cb.push_back(2);
 cb.push_back(3);
@@ -214,11 +209,9 @@ Docs：[http://dlib.net/graph_tools.html]
 
 Dlib 前面已经介绍过。它提供了2个类（graph & directed_graph）封装“图”。
 
-
 == 2.2 对容器的操作 ==
 
 （STL 标准库里面已经实现了很多算法用来操作容器，考虑到本页面已经很长，这里只列举第三方库实现的算法）
-
 <h4>Boost.Foreach</h4>
 
 Docs：[http://boost.org/libs/foreach]
@@ -227,20 +220,18 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了通�
 
 有了它，你在遍历时无需声明迭代器变量，也无需关心遍历的容器是何种类型。
 
-代码示例
+代码示例——遍历字符串
 <source lang="cpp">
 &#35;include <string>
 &#35;include <iostream>
 &#35;include <boost/foreach.hpp>
 
 std::string test("Hello, world!");  // string 可以视为 char 的容器
-
 BOOST_FOREACH(char ch, test)
 {
     std::cout << ch;
 }
 </source>
-
 
 == 2.3 字符串处理 ==
 
@@ -344,7 +335,6 @@ Docs：[http://doc.qt.io/qt-4.8/qregexp.html]
 
 Qt 前面已经介绍过。这是 Qt 中的一个类，提供了“正则式”的功能。
 
-
 === 2.3.4 （其它） ===
 
 <h4>Boost.StringAlgorithms</h4>
@@ -361,7 +351,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了各�
 &#35;include <boost/algorithm/string.hpp>
 
 std::vector<std::string> v;
-// ...
+// 此处填充 v
 std::cout << boost::algorithm::join(v, " ") << '\n';
 </source>
 
@@ -385,7 +375,6 @@ std::cout << s << '\n';
 double d = boost::lexical_cast<double>(s);
 std::cout << d << '\n';
 </source>
-
 
 == 2.4 内存相关 ==
 
@@ -421,7 +410,6 @@ Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了内存池的功能。
 
-
 == 2.5 时间 & 日期 ==
 
 <h4>Boost.Date_Time</h4>
@@ -429,7 +417,6 @@ APR 前面已经介绍过。它提供了内存池的功能。
 Docs：[http://boost.org/libs/date_time]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了针对“日期 和 时间”的各种处理。
-
 
 == 2.6 编码 & 解码 ==
 
@@ -439,7 +426,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了针�
 
 Docs：[http://boost.org/libs/serialization]
 
-Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了【可定制的】“序列化”功能。。
+Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了【可定制的】“序列化”功能。
 
 === 2.6.2 Base64 ===
 
@@ -456,7 +443,6 @@ Boost 前面已经介绍过。使用前面提到的“Boost.Serialization”，�
 Docs：[http://www.cryptopp.com/docs/ref/annotated.html]
 
 Crypto++ 前面已经介绍过。它提供了6个类，分别用于 Base64、Base32、Base16 的编码/解码。
-
 
 == 2.7 （其它） ==
 
@@ -528,13 +514,11 @@ Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了 UUID 的生成、格式化成字符串、解析 UUID 字符串。
 
-
 ----
-
 
 = 3 编程范式 =
 
-（这一章节主要针对 C++——“支持多范式”是 C+ +的一大特色）
+（这一章节主要针对 C++——“支持多范式”是 C++ 的一大特色）
 
 == 3.1 面向对象编程（OOP） ==
 
@@ -558,7 +542,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，用来辅助�
 
 注：Boost 的这个子库已经进入 C++ 11 标准。
 
-代码示例
+代码示例——封装标准 C 的函数
 <source lang="cpp">
 &#35;include <cstdlib>
 &#35;include <cstring>
@@ -588,11 +572,10 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“�
 &#35;include <boost/lambda/lambda.hpp>
 
 std::vector<int> v;
-// ...
+// 此处填充 v
 std::for_each(v.begin(), v.end(),
     std::cout << boost::lambda::_1 << "\n");
 </source>
-
 
 == 3.4 元编程（Metaprogramming） ==
 
@@ -610,13 +593,11 @@ Docs：[http://dlib.net/metaprogramming.html]
 
 Dlib 前面已经介绍过。它提供了“模板元编程”的辅助类。
 
-
 ----
-
 
 = 4 调试 & 测试 =
 
-=== 4.1 调试日志 ===
+== 4.1 调试日志 ==
 
 <h4>Boost.Log</h4>
 
@@ -668,8 +649,7 @@ Home：[http://log4cpp.sourceforge.net/]
 
 如其名，这是一个模仿 log4j 的 C++ 库。支持多种操作系统（包括 Windows）。
 
-
-=== 4.2 单元测试 ===
+== 4.2 单元测试 ==
 
 <h4>Boost.Test</h4>
 
@@ -700,7 +680,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Check_%28unit_testing_framework%29 �
 /* The basic unit test looks as follows: */
 START_TEST (test_name)
 {
-  /* unit test code */
+    /* unit test code */
 }
 END_TEST
 /* The "START_TEST/END_TEST" pair are macros that setup basic structures to permit testing. 
@@ -708,8 +688,7 @@ END_TEST
    doing so produces all sorts of strange errors when the check is compiled. */
 </source>
 
-
-=== 4.3 检测内存泄漏 ===
+== 4.3 检测内存泄漏 ==
 
 <h4>Boost.Test.ExecutionMonitor</h4>
 
@@ -717,12 +696,9 @@ Docs：[http://boost.org/libs/test/doc/html/execution-monitor.html]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，它除了提供“单元测试”，还提供“内存泄漏的检测”。
 
-
 ----
 
-
 = 5 操作系统相关 =
-
 
 == 5.1 跨操作系统 ==
 
@@ -763,7 +739,6 @@ wxWidgets 前面已经介绍过。它提供了比较多这方面的功能（比�
 Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了“文件信息、文件名匹配”等功能。
-
 
 === 5.1.2 线程 ===
 
@@ -815,7 +790,6 @@ Home：[http://www.gnu.org/software/commoncpp/]
 
 由 GNU 提供的一套跨平台的线程并发框架。
 
-
 === 5.1.3 进程 ===
 
 <h4>ACE</h4>
@@ -829,7 +803,6 @@ ACE 前面已经介绍过。它提供了“进程管理”的功能（参见文�
 Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了“进程管理”的功能。
-
 
 === 5.1.4 本地进程间通信（IPC） ===
 
@@ -852,7 +825,6 @@ ACE 前面已经介绍过。它提供了许多种 IPC 机制（有些不是跨�
 Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了“进程同步、共享内存、信号处理”等功能。
-
 
 == 5.2 特定于 Windows 系统 ==
 
@@ -878,18 +850,15 @@ Docs：[http://pocoproject.org/docs/Poco.Util.html]
 
 POCO 前面已经介绍过。它提供了相应的封装类（WinService），可以用来操作 Service（注册、删除、启动、停止）。
 
-
 == 5.3 特定于 Linux & Unix 系统 ==
-
-
 
 ----
 
-= 6 桌面 GUI 开发 =
+= 6 GUI 开发 =
 
 == 6.1 GUI 框架 ==
 
-=== 6.1.1 跨平台的 GUI 框架  ===
+=== 6.1.1 跨平台的 GUI 框架 ===
 
 <h4>wxWidgets</h4>
 
@@ -931,7 +900,7 @@ bool MyApp::OnInit()
 }
 
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
-        : wxFrame(NULL, wxID_ANY, title, pos, size)
+    : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
     wxMenu* menuFile = new wxMenu();
     menuFile->Append(wxID_EXIT);
@@ -954,7 +923,7 @@ Qt 前面已经介绍过。下面给出一个 Hello world 的示例，让你看�
 <source lang="cpp">
 &#35;include <QtWidgets/QApplication>
 &#35;include <QtWidgets/QLabel>
- 
+
 int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
@@ -975,7 +944,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/GTK%2B 英文]、[https://zh.wikipedi
 代码示例——Hello world
 <source lang="cpp">
 &#35;include <gtk/gtk.h>
- 
+
 int main(int argc, char* argv[])
 {
     gtk_init(&argc, &argv);
@@ -1014,7 +983,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/FLTK 英文]、[https://zh.wikipedia.
 &#35;include <FL/Fl.H>
 &#35;include <FL/Fl_Window.H>
 &#35;include <FL/Fl_Box.H>
- 
+
 int main(int argc, char **argv)
 {
     Fl_Window* window = new Fl_Window(300, 180);
@@ -1030,7 +999,6 @@ int main(int argc, char **argv)
 }
 </source>
 
-
 === 6.1.2 特定于 Windows 的 GUI 框架 ===
 
 <h4>WTL（Windows Template Library）</h4>
@@ -1041,8 +1009,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Windows_Template_Library 英文]、[h
 
 这是微软雇员 Nenad Stefanovic 开发的开源 GUI 框架。开发 WTL 是为了提供一个轻量级的 MFC 替代品。
 
-
-== 6.2 图表/Chart ==
+== 6.2 图表（Chart） ==
 
 <h4>Qt</h4>
 
@@ -1106,9 +1073,7 @@ Home：[http://wxmathplot.sourceforge.net/]
 
 看名称就知道它是跟 wxWidgets 搭配的。效果图参见“[http://wxmathplot.sourceforge.net/screenshot.shtml 这里]”
 
-
 ----
-
 
 = 7 网络编程 =
 
@@ -1131,7 +1096,6 @@ Home：[http://www.winpcap.org/]
 Wikipedia：[https://en.wikipedia.org/wiki/Pcap 英文]
 
 它是 libpcap 在 Windows 系统下的移植。
-
 
 === 7.1.2 传输层 ===
 
@@ -1158,7 +1122,6 @@ APR 前面已经介绍过。它提供了对 socket 的封装和增强。
 Docs：[http://pocoproject.org/docs/Poco.Net.html]
 
 POCO 前面已经介绍过。它提供了针对 TCP 服务端的封装类。
-
 
 === 7.1.3 应用层 ===
 
@@ -1223,14 +1186,13 @@ Docs：[http://pocoproject.org/docs/Poco.Net.html]
 
 POCO 前面已经介绍过。它提供了几种常见应用层协议（HTTP、SMTP、POP3、FTP、NTP）的封装类。
 
-
 == 7.2 自定义协议 ==
 
 <h4>Protocol Buffers</h4>
 
 Home：[https://developers.google.com/protocol-buffers/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Protocol_Buffers Protocol 英文]
+Wikipedia：[https://en.wikipedia.org/wiki/Protocol_Buffers 英文]
 
 它是 Google 开发的一个跨语言的库，用于传输业务数据时的“编码/解码”。其优点是：跨多种语言、高性能、向前兼容、向后兼容。
 
@@ -1349,9 +1311,7 @@ Docs：[http://dlib.net/network.html]
 
 Dlib 前面已经介绍过。它针对网络通讯，提供了比较高的抽象层。
 
-
 ----
-
 
 = 8 数据库 =
 
@@ -1365,7 +1325,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/MySQL 英文]、[https://zh.wikipedia
 
 名气最大的开源数据库，诞生于1995年，采用 C 和 C++ 语言开发。如今隶属于 Oracle 公司。
 
-=== PostgreSQL ===
+<h4>PostgreSQL</h4>
 
 Home：[http://postgresql.org/]
 
@@ -1373,7 +1333,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/PostgreSQL 英文]、[https://zh.wiki
 
 名气仅次于 MySQL 的开源数据库，诞生于1996年。采用 C 语言开发。
 
-=== SQLite ===
+<h4>SQLite</h4>
 
 Home：[http://sqlite.org/]
 
@@ -1391,7 +1351,6 @@ Wikipedia：[https://en.wikipedia.org/wiki/MongoDB 英文]
 
 MongoDB 是近几年兴起的 NoSQL 数据库的一员。它本身是基于 C++ 和 C 开发的。
 
-
 == 8.2 数据库 API 的封装库 ==
 
 === 8.2.1 综合性的封装库 ===
@@ -1406,7 +1365,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Oracle_Template_Library 英文]
 
 它的特色是：全部代码都在一个头文件中。
 
-代码示例
+代码示例——操作 Oracle 数据库
 <source lang="cpp">
 &#35;include <stdio.h>
 &#35;include <iostream>
@@ -1454,7 +1413,7 @@ Home：[http://dev.mysql.com/doc/connector-cpp/en/]
 
 这是 MySQL 官方提供的 C++ 封装。
 
-代码示例
+代码示例——执行 SQL 语句
 <source lang="cpp">
 sql::mysql::MySQL_Driver* driver = sql::mysql::MySQL_Driver::get_mysql_driver_instance();
 sql::Connection* conn = driver->connect("tcp://127.0.0.1:3306", "user", "password");
@@ -1510,7 +1469,7 @@ void update(const std::string& name)
     }
 
     int employee_id = r[0][0].as<int>();
-    std::cout << "Updating employee #" << employee_id << std::endl;
+    std::cout << "Updating employee &#35;" << employee_id << std::endl;
 
     txn.exec(
         "UPDATE EMPLOYEE SET salary = salary + 1 "
@@ -1535,6 +1494,7 @@ Home：[http://vrogier.github.io/ocilib/]
 <source lang="cpp">
 &#35;include <ocilib.hpp>
 using namespace ocilib;
+
 int main()
 {
     try
@@ -1568,7 +1528,7 @@ int main()
 
 Docs：[http://sqlite.org/c3ref/intro.html]
 
-由于 sqlite 本身就是用 C 语言开发的，因此它直接提供了基于 C 的 API 接口。
+SQLite 前面已经介绍过。由于 SQLite 本身就是用 C 语言开发的，因此它直接提供了基于 C 的 API 接口。
 
 代码示例
 <source lang="cpp">
@@ -1627,6 +1587,8 @@ POCO 前面已经介绍过。它提供了 sqlite 的封装类
 
 Docs：[https://api.mongodb.org/c/current/]
 
+MongoDB 前面已经介绍过。这是其官方提供的 API。
+
 代码示例
 <source lang="cpp">
 &#35;include <stdio.h>
@@ -1667,7 +1629,6 @@ Docs：[http://pocoproject.org/docs/package-MongoDB.MongoDB.html]
 
 POCO 前面已经介绍过。它提供了 MongoDB 的封装类
 
-
 == 8.3 ODBC 相关 ==
 
 <h4>unixODBC</h4>
@@ -1690,7 +1651,6 @@ Docs：[http://pocoproject.org/docs/package-ODBC.ODBC.html]
 
 POCO 前面已经介绍过。它提供了操作 ODBC 的封装类。
 
-
 == 8.4 ORM（Object-Relational Mapping） ==
 
 <h4>ODB</h4>
@@ -1705,9 +1665,9 @@ Wikipedia：[https://en.wikipedia.org/wiki/ODB_%28C%2B%2B%29 英文]
 
 代码示例——声明一个可持久化的类
 <source lang="cpp">
-// 通过预处理语句“#pragma”来进行某些定制
+// 通过预处理语句“&#35;pragma”来进行某些定制
 
-#pragma db object table("people")
+&#35;pragma db object table("people")
 class person
 {
 public:
@@ -1716,14 +1676,14 @@ public:
 private:
     friend class odb::access;
     person();
- 
-    #pragma db id auto
+
+    &#35;pragma db id auto
     unsigned long id_;
- 
+
     string first_;
     string last_;
- 
-    #pragma type("INT UNSIGNED")
+
+    &#35;pragma type("INT UNSIGNED")
     unsigned short age_;
 };
 </source>
@@ -1740,19 +1700,17 @@ for(result::iterator i(r.begin()); i!=r.end(); ++i)
 {
     cout << "Hello, " << i->first() << endl;
 }
- 
+
 trans.commit();
 </source>
 
-
 ----
-
 
 = 9 Web 相关 =
 
 == 9.1 HTTP Server ==
 
-<h4>Apache Server</h4>
+<h4>Apache HTTP Server</h4>
 
 Home：[https://httpd.apache.org/]
 
@@ -1780,7 +1738,6 @@ Docs：[http://dlib.net/network.html#server_http]
 
 Dlib 前面已经介绍过。它提供了一个简单的 HTTP Server 的类（server_http）。
 
-
 == 9.2 HTTP Client ==
 
 <h4>cURL & libcurl</h4>
@@ -1793,17 +1750,17 @@ libcurl 前面已经介绍过。它提供了【完整的】HTTP 协议支持。�
 <source lang="cpp">
 &#35;include <stdio.h>
 &#35;include <curl/curl.h>
- 
+
 int main()
 {
     curl_global_init(CURL_GLOBAL_ALL);
- 
+
     CURL* curl = curl_easy_init();
     if(curl)
     {
         curl_easy_setopt(curl, CURLOPT_URL, "http://post.example.com/foo.cgi");
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, "name=daniel&project=curl");
- 
+
         CURLcode res = curl_easy_perform(curl);
         if(res != CURLE_OK)  // Check for errors
         {
@@ -1824,7 +1781,6 @@ Docs：[http://pocoproject.org/docs/package-Net.HTTPClient.html]
 
 POCO 前面已经介绍过。它提供了 HTTP Client 的封装类。
 
-
 == 9.3 浏览器引擎 ==
 
 <h4>WebKit</h4>
@@ -1843,7 +1799,6 @@ Wikipedia：[https://en.wikipedia.org/wiki/Gecko_(software) 英文]、[https://z
 
 它是 Firefox 的渲染引擎，基于 C++ 开发，由 Mozilla 社区维护。
 
-
 == 9.4 浏览器整合 ==
 
 <h4>CEF（Chromium Embedded Framework）</h4>
@@ -1857,11 +1812,17 @@ Wikipedia：[https://en.wikipedia.org/wiki/Chromium_Embedded_Framework 英文]
 以下是其它开源项目针对 CEF 的扩展，提供了其它编程语言的绑定。
 
 * dotNet - [https://github.com/chillitom/CefSharp]
+
 * dotNet (CEF1) - [https://bitbucket.org/fddima/cefglue]
+
 * dotNet/Mono (CEF3) - [https://bitbucket.org/xilium/xilium.cefglue]
+
 * dotNet (CEF3) - [https://bitbucket.org/chromiumfx/chromiumfx]
+
 * Java - [https://bitbucket.org/chromiumembedded/java-cef]
+
 * Go - [https://github.com/CzarekTomczak/cef2go]
+
 * Delphi (CEF3) - [https://github.com/hgourvest/dcef3]
 
 <h4>PhantomJS</h4>
@@ -1874,9 +1835,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/PhantomJS 英文]
 
 它本身没有提供 GUI 界面。但是提供了 JavaScript 的 API，让你可以操纵 WebKit 引擎。可以利用它进行 Web 界面的单元测试。
 
-
 ----
-
 
 = 10 信息安全 =
 
@@ -1934,11 +1893,9 @@ Docs：[http://pocoproject.org/docs/Poco.Crypto.html]
 
 POCO 前面已经介绍过。它提供了常见的加密算法和哈希算法。
 
-
 ----
 
-
-= 11 文件格式 =
+= 11 处理文件格式 =
 
 == 11.1 结构化数据格式 ==
 
@@ -2004,6 +1961,8 @@ Home：[https://github.com/miloyip/rapidjson]
 
 Home：[https://github.com/open-source-parsers/jsoncpp]
 
+如其名，这是个 C++ 的 JSON 封装库。
+
 === 11.1.3 YAML ===
 
 [https://en.wikipedia.org/wiki/YAML YAML] 是一种类似于 json 的结构化数据格式。它在确保可读性的基础上，提供了超越 json 的灵活性和扩展性。
@@ -2020,8 +1979,7 @@ Home：[http://pyyaml.org/wiki/LibYAML]
 
 C 语言实现的 YAML 解析器。
 
-
-== 11.2 压缩文件 / 打包文件 ==
+== 11.2 压缩文件 & 打包文件 ==
 
 === 11.2.1 综合性的库 ===
 
@@ -2041,7 +1999,7 @@ Home：[http://www.7-zip.org/sdk.html]
 
 支持的格式：7z、LZMA、LZMA2、XZ
 
-=== 11.2.2 处理 zip ===
+=== 11.2.2 zip ===
 
 [https://en.wikipedia.org/wiki/Zip_%28file_format%29 格式说明]
 
@@ -2051,7 +2009,9 @@ Home：[http://www.nih.at/libzip/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/Libzip 英文]
 
-=== 11.2.3 处理 bzip2（bz2） ===
+用 C 语言开发的库，基于 zlib 库。
+
+=== 11.2.3 bzip2（bz2） ===
 
 [https://en.wikipedia.org/wiki/Bzip2 格式说明]
 
@@ -2061,7 +2021,7 @@ Home：[http://bzip.org/]
 
 这是 bzip2 官方提供的库，C 语言实现。
 
-=== 11.2.4 处理 gzip（gz） ===
+=== 11.2.4 gzip（gz） ===
 
 <h4>zlib</h4>
 
@@ -2069,22 +2029,23 @@ Home：[http://zlib.net/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/Zlib 英文]、[https://zh.wikipedia.org/wiki/Zlib 中文]
 
-C 语言实现，诞生于1995年，被大量的开源项目使用。
+C 语言实现，诞生于1995年，被大量的开源项目使用（OpenSSL、OpenSSH、Apache、PostgreSQL、Git、libpng......）。
 
-=== 11.2.5 处理 tar ===
+=== 11.2.5 tar ===
 
 <h4>libtar</h4>
 
 Home：[http://www.feep.net/libtar/]
 
-=== 11.2.6 处理 rar ===
+基于 C 语言开发，可以对 tar 格式添加内容或读取内容。
+
+=== 11.2.6 rar ===
 
 <h4>unrarlib</h4>
 
 Home：[http://www.unrarlib.org/]
 
 该项目的开发已经停止。只支持对 RAR2 格式的解压缩。
-
 
 == 11.3 标记语言 ==
 
@@ -2130,8 +2091,7 @@ Home：[http://libxmlplusplus.sourceforge.net/]
 
 Home：[http://htmlcxx.sourceforge.net/]
 
-支持 HTML 和 CSS 的解析。
-
+如其名，是基于 C++ 开发的。支持 HTML 和 CSS 的解析。
 
 == 11.4 PDF ==
 
@@ -2180,7 +2140,6 @@ HPDF_SaveToFile(doc, "test.pdf");
 HPDF_Free(doc);
 </source>
 
-
 == 11.5 MS Office 文档 ==
 
 <h4>wvWare</h4>
@@ -2191,7 +2150,6 @@ Home：[http://wvware.sourceforge.net/]
 
 AbiWord 和 KWord 用到它。
 
-
 == 11.6 RTF ==
 
 <h4>LibRTF</h4>
@@ -2199,7 +2157,6 @@ AbiWord 和 KWord 用到它。
 Home：[http://sourceforge.net/projects/librtf/]
 
 C 语言实现的库，可以解析 RTF 文件格式。
-
 
 == 11.7 CHM ==
 
@@ -2217,9 +2174,7 @@ Home：[http://www.mare.ee/indrek/libchmxx/]
 
 它就是基于 CHMLIB 的 C++ 封装库。
 
-
 ----
-
 
 = 12 图像 =
 
@@ -2241,7 +2196,6 @@ Docs：[http://dlib.net/imaging.html]
 
 Dlib 前面已经介绍过。它提供了常见的图像处理功能（旋转、剪切、拉伸、过滤）。
 
-
 == 12.2 图像格式转换 ==
 
 <h4>ImageMagick</h4>
@@ -2249,7 +2203,6 @@ Dlib 前面已经介绍过。它提供了常见的图像处理功能（旋转、
 ImageMagick 前面已经介绍过。它支持非常多的图片格式（[http://imagemagick.org/script/formats.php 清单]），基本上你听说过的，它都支持。甚至包括 Postscript 和 PDF。
 
 在支持的格式中，它可以实现其中几十种格式的相互转换。
-
 
 == 12.3 图像渲染 ==
 
@@ -2263,14 +2216,13 @@ Wikipedia：[https://en.wikipedia.org/wiki/Cairo_%28graphics%29 英文]、[https
 
 基于 C 语言开发，提供多种语言绑定（C++、Java、C#、Python、Ruby、Perl、Scheme、Smalltalk）。
 
-<h4>Cairo</h4>
+<h4>cairomm</h4>
 
 Home：[http://cairographics.org/cairomm/]
 
 这是针对 Cairo 的 C++ 封装库。
 
 ----
-
 
 = 13 多媒体 =
 
@@ -2304,7 +2256,6 @@ Wikipedia：[https://en.wikipedia.org/wiki/Libav 英文]
 
 它是2011年从 FFmpeg 派生出来的。基于 C 语言开发，支持多种操作系统。
 
-
 == 13.2 视频库 ==
 
 <h4>libavcodec</h4>
@@ -2314,7 +2265,6 @@ Home：[http://ffmpeg.org/]
 它来自于 FFmpeg 社区，基于 C 语言实现，提供了多种视频格式和音频格式的编码/解码功能。
 
 由于 Libav 从 FFmpeg 分裂出来，Libav 下也带有一个同名的库。
-
 
 == 13.3 音频库 ==
 
@@ -2334,10 +2284,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/OpenAL 英文]、[https://zh.wikipedi
 
 C 语言开发的 3D 音效库，跨平台。最初由 Loki Software 开发。Loki 倒闭以后，这个项目由开源社区继续维护。
 
-
-
 ----
-
 
 = 14 游戏开发 =
 
@@ -2354,9 +2301,13 @@ Wikipedia：[https://en.wikipedia.org/wiki/Id_Tech 英文]
 原先基于 C 和 汇编开发，从 id Tech 4 开始改用 C++ 开发。
 
 * id Tech 1——俗称：Doom 引擎
+
 * id Tech 2（Quake）——俗称：Quake 引擎
+
 * id Tech 2（Quake II）——俗称：Quake II 引擎
+
 * id Tech 3——俗称：Quake III 引擎
+
 * id Tech 4——俗称：Doom 3 引擎
 
 <h4>Crystal Space</h4>
@@ -2383,7 +2334,6 @@ Wikipedia：[https://en.wikipedia.org/wiki/Panda3D 英文]
 
 以 C++ 编写，用 Python 脚本扩展。虽然它的名字有“3D”，但它不仅仅是 3D 引擎，还包括了其它功能（碰撞检测、音效、关卡编辑器...）。
 
-
 == 14.2 3D 渲染引擎 ==
 
 <h4>OGRE</h4>
@@ -2403,7 +2353,6 @@ Home：[http://mesa3d.org/]
 Wikipedia：[https://en.wikipedia.org/wiki/Mesa_%28computer_graphics%29 英文]、[https://zh.wikipedia.org/wiki/Mesa_3D 中文]
 
 使用 C 语言开发，它是针对 OpenGL 规范的【纯软件】实现（大部分 OpenGL 的实现都用到了显卡硬件）。
-
 
 == 14.3 物理引擎 ==
 
@@ -2437,9 +2386,9 @@ Home：[http://www.newtondynamics.com/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/Newton_Game_Dynamics 英文]
 
+基于 C++ 开发。
 
 ----
-
 
 = 15 数值运算 & 科学计算 =
 
@@ -2457,12 +2406,11 @@ Wikipedia：[https://en.wikipedia.org/wiki/GNU_Scientific_Library 英文]
 <source lang="cpp">
 &#35;include <stdio.h>
 &#35;include <gsl/gsl_sf_bessel.h>
- 
+
 double x = 5.0;
 double y = gsl_sf_bessel_J0(x);
 printf("J0(%g) = %.18e\n", x, y);
 </source>
-
 
 == 15.2 有理数 ==
 
@@ -2471,7 +2419,6 @@ printf("J0(%g) = %.18e\n", x, y);
 Docs：[http://boost.org/libs/rational]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“有理数”的功能。
-
 
 == 15.3 高精度数值运算 ==
 
@@ -2496,7 +2443,7 @@ mpz_init(result);
 
 mpz_mul(result, x, y);
 gmp_printf("%Zd\n", result);
- 
+
 /* free used memory */
 mpz_clear(x);
 mpz_clear(y);
@@ -2508,7 +2455,6 @@ mpz_clear(result);
 Docs：[http://boost.org/libs/multiprecision]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，实现了高精度数值运算。它还提供了针对 GMP 的数据类型的封装。
-
 
 == 15.4 矩阵 ==
 
@@ -2539,7 +2485,6 @@ Docs：[http://dlib.net/linear_algebra.html#matrix]
 
 Dlib 前面已经介绍过。它提供了一个矩阵类。
 
-
 == 15.5 线性代数 ==
 
 <h4>Boost.uBLAS</h4>
@@ -2554,7 +2499,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，实现了 BLA
 &#35;include <boost/numeric/ublas/vector.hpp>
 &#35;include <boost/numeric/ublas/matrix.hpp>
 &#35;include <boost/numeric/ublas/io.hpp>
- 
+
 using namespace boost::numeric::ublas;
 vector<double> v(2);
 v(0) = 1; v(1) = 2;
@@ -2607,11 +2552,9 @@ cout << "Least squares solution:" << endl << solve(m,v) << endl;
 
 Docs：[http://dlib.net/linear_algebra.html]
 
-Dlib 前面已经介绍过。
-
+Dlib 前面已经介绍过。它提供了线性代数相关的封装类。
 
 ----
-
 
 = 16 跨语言编程 =
 
@@ -2626,7 +2569,6 @@ Wikipedia：[https://en.wikipedia.org/wiki/SWIG 英文]
 这是一个很老牌的、有名气的工具，它可以把多种语言（Java、Python、C#、Ruby、PHP、Perl、Lua、Go ......）整合到 C/C++ 中。
 
 整合之后，你的 C/C++ 程序就可以享受到其它这些语言的特性啦，非常爽！
-
 
 == 16.2 整合单一语言的库 ==
 
@@ -2643,7 +2585,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，实现了 C++
 // 这是一个标准的 C 函数
 const char* greet()
 {
-   return "Hello, world";
+    return "Hello, world";
 }
 
 // 使用如下代码对上述函数进行包装
@@ -2659,11 +2601,7 @@ BOOST_PYTHON_MODULE(hello_ext)
 // print(hello_ext.greet())
 </source>
 
-
 ----
-
-
-
 
 = 17 （其它） =
 
@@ -2676,3 +2614,6 @@ BOOST_PYTHON_MODULE(hello_ext)
 Docs：[http://boost.org/libs/spirit]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“基于 EBNF 的解析器框架”。
+
+----
+
