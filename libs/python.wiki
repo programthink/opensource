@@ -1357,6 +1357,16 @@ Wikipedia：[https://en.wikipedia.org/wiki/SciPy 英文]、[https://zh.wikipedia
 
 它被广泛用于科研和工程领域。
 
+<h4>SymPy</h4>
+
+Home：[http://sympy.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/SymPy 英文]、[https://zh.wikipedia.org/wiki/SymPy 中文]
+
+它是用来做符号计算的，其目标是成为一个全功能的“计算机代数系统”。
+
+它支持的功能包括：符号计算、高精度计算、模式匹配、绘图、解方程、微积分、组合数学、离散数学、几何学、概率与统计 ......
+
 ----
 
 = 12 其它 =
