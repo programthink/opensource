@@ -1897,6 +1897,26 @@ Wikipedia：[https://en.wikipedia.org/wiki/GnuTLS 英文]
 
 采用 C 语言开发，名气也挺大。如其名，主要提供 TLS/SSL 的相关功能。
 
+<h4>NaCl</h4>
+
+Home：[http://nacl.cr.yp.to/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/NaCl_%28software%29 英文]
+
+这个名称是“Networking and Cryptography library”的缩写。
+
+它采用 C 语言开发，另有其它编程语言（Python、Ruby、PHP）的 API 绑定。
+
+它的作者同时也是 [https://en.wikipedia.org/wiki/Qmail qmail] 和 [https://en.wikipedia.org/wiki/Curve25519 Curve25519] 的作者。
+
+<h4>libsodium</h4>
+
+Home：[https://github.com/jedisct1/libsodium]
+
+它派生自 NaCl，提供了跟 NaCl 兼容的 API。支持的操作系统平台更多。
+
+shadowsocks 和 dnscrypt-proxy 用到它。
+
 <h4>POCO::Crypto</h4>
 
 Docs：[http://pocoproject.org/docs/Poco.Crypto.html]
