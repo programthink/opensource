@@ -1222,7 +1222,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Apache_Thrift 英文]
 
 （在这个方面，它有点类似于 Google 的 Protocol Buffers）
 
-== 7.3 网络开发框架 ==
+== 7.3 网络库、框架、中间件 ==
 
 <h4>Boost.Asio</h4>
 
@@ -1320,6 +1320,60 @@ Wikipedia：[https://en.wikipedia.org/wiki/Internet_Communications_Engine 英文
 Docs：[http://dlib.net/network.html]
 
 Dlib 前面已经介绍过。它针对网络通讯，提供了比较高的抽象层。
+
+<h4>libevent</h4>
+
+Home：[http://libevent.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Libevent 英文]、[https://zh.wikipedia.org/wiki/Libevent 中文]
+
+它提供了异步事件处理机制。在网络开发中，可以用它替代传统的“event loop”，有助于简化代码。
+
+它被一些知名的开源项目使用（比如：[https://zh.wikipedia.org/wiki/Tor Tor]、[https://zh.wikipedia.org/wiki/Memcached memcached]）。
+
+代码示例——HTTP Server（本示例基于 C++ 11 标准）
+<source lang="cpp">
+&#35;include <memory>
+&#35;include <cstdint>
+&#35;include <iostream>
+&#35;include <evhttp.h>
+
+int main()
+{
+    if(!event_init())
+    {
+        std::cerr << "Failed to init libevent." << std::endl;
+        return -1;
+    }
+    char const SrvAddress[] = "127.0.0.1";
+    std::uint16_t SrvPort = 5555;
+    std::unique_ptr<evhttp, decltype(&evhttp_free)> Server(evhttp_start(SrvAddress, SrvPort), &evhttp_free);
+    if(!Server)
+    {
+        std::cerr << "Failed to init http server." << std::endl;
+        return -1;
+    }
+
+    void (*OnReq)(evhttp_request* req, void*) = [] (evhttp_request* req, void*)
+    {
+        auto* OutBuf = evhttp_request_get_output_buffer(req);
+        if(!OutBuf)
+        {
+            return;
+        }
+        evbuffer_add_printf(OutBuf, "<html><body><h1>Hello, World!</h1></body></html>");
+        evhttp_send_reply(req, HTTP_OK, "", OutBuf);
+    };
+
+    evhttp_set_gencb(Server.get(), OnReq, nullptr);
+    if(event_dispatch() == -1)
+    {
+        std::cerr << "Failed to run messahe loop." << std::endl;
+        return -1;
+    }
+    return 0;
+}
+</source>
 
 ----
 
