@@ -2220,6 +2220,31 @@ ImageMagick 可说是最强大的开源图片处理工具集，采用 C 语言�
 
 它提供许多编程语言的 API，对于 C++ 是 [http://www.imagemagick.org/Magick++/ Magick++]，对于 C 是 [http://imagemagick.org/script/magick-wand.php MagickWand]
 
+<h4>Boost.GIL（Generic Image Library）</h4>
+
+Docs：[http://boost.org/libs/gil]
+
+Boost 前面已经介绍过。这是 Boost 的其中一个子库，实现了图像处理功能。
+
+代码示例——调整图像尺寸
+<source lang="cpp">
+&#35;include <boost/gil/image.hpp>
+&#35;include <boost/gil/typedefs.hpp>
+&#35;include <boost/gil/extension/io/jpeg_io.hpp>
+&#35;include <boost/gil/extension/numeric/sampler.hpp>
+&#35;include <boost/gil/extension/numeric/resample.hpp>
+
+using namespace boost::gil;
+
+rgb8_image_t img;
+jpeg_read_image("input.jpg", img);
+
+// Scale the image to 100x100 pixels using bilinear resampling
+rgb8_image_t square(100, 100);
+resize_view(const_view(img), view(square), bilinear_sampler());
+jpeg_write_view("output.jpg", const_view(square));
+</source>
+
 <h4>Dlib</h4>
 
 Docs：[http://dlib.net/imaging.html]
@@ -2662,6 +2687,4 @@ BOOST_PYTHON_MODULE(hello_ext)
 Docs：[http://boost.org/libs/spirit]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“基于 EBNF 的解析器框架”。
-
-----
 
