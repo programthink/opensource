@@ -841,7 +841,7 @@ Home：[http://www.pygtk.org/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/PyGTK 英文]
 
-这是 Python 对 GTK 的封装。
+它是 Python 对 GTK+2 的封装。
 
 代码示例——用 PyGTK 写 Hello world
 <source lang="python">
@@ -880,6 +880,33 @@ class HelloWorld :
 if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     hello = HelloWorld()
     hello.main()
+</source>
+
+<h4>PyGObject（PyGI）</h4>
+
+Home：[https://live.gnome.org/PyGObject]
+
+它是 Python 对 GTK+3 的封装。PyGTK 的官网也推荐它。
+
+代码示例——用 PyGObject 写 Hello world
+<source lang="python">
+from gi.repository import Gtk
+
+class MyWindow(Gtk.Window):
+    def &#95;&#95;init&#95;&#95;(self):
+        Gtk.Window.&#95;&#95;init&#95;&#95;(self, title="Hello World")
+
+        self.button = Gtk.Button(label="Click Here")
+        self.button.connect("clicked", self.on_button_clicked)
+        self.add(self.button)
+
+    def on_button_clicked(self, widget):
+        print("Hello, world!")
+
+win = MyWindow()
+win.connect("delete-event", Gtk.main_quit)
+win.show_all()
+Gtk.main()
 </source>
 
 === 7.1.4 基于 Qt ===
@@ -1372,6 +1399,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/SymPy 英文]、[https://zh.wikipedia
 = 12 其它 =
 
 一些不方便归类的，暂时放到这里。
+
 <h4>PyPy</h4>
 
 Home：[http://www.pypy.org/]
