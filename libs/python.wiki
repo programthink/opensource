@@ -1370,9 +1370,17 @@ Home：[http://www.pygame.org/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/Pygame 英文]、[https://zh.wikipedia.org/wiki/Pygame 中文]
 
-这是名气很大的跨平台游戏引擎，构建于 SDL（Simple DirectMedia Layer）之上。
+这是名气很大的跨平台游戏引擎，构建于 [https://zh.wikipedia.org/wiki/SDL SDL]（Simple DirectMedia Layer）之上。
 
 它起先是用来替代终止开发的 pySDL，包含了图像和音频的库。
+
+<h4>Cocos2d</h4>
+
+Home：[http://cocos2d.org/]
+
+它是一个开源的 2D 游戏框架，最初使用 Python 编写的。后来该框架已经被移植到了多种语言和平台上。
+
+很多手机游戏是基于 Cocos2d 的衍生框架开发的。
 
 == 11.2 3D 渲染引擎 ==
 
