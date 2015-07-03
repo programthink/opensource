@@ -1380,7 +1380,19 @@ Home：[http://cocos2d.org/]
 
 它是一个开源的 2D 游戏框架，最初使用 Python 编写的。后来该框架已经被移植到了多种语言和平台上。
 
+其功能包括了：GUI 组件、音效、物理引擎、脚本语言绑定、场景编辑器 ...
+
 很多手机游戏是基于 Cocos2d 的衍生框架开发的。
+
+<h4>Blender Game Engine</h4>
+
+Home：[http://www.blender.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Game_Blender 英文]、[https://zh.wikipedia.org/wiki/Game_Blender 中文]
+
+它是 [https://en.wikipedia.org/wiki/Blender_%28software%29 Blender] 的组成部分，虽然是以 C++ 编写，但内置了 Python 脚本的扩展。
+
+其功能包括：3D 渲染、碰撞检测、角色编辑器、音效、网络通讯、AI ...
 
 == 11.2 3D 渲染引擎 ==
 
