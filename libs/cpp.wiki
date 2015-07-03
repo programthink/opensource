@@ -106,19 +106,35 @@ Wikipedia：[https://en.wikipedia.org/wiki/Crypto%2B%2B 英文]
 
 <h4>std</h4>
 
-STL 标准库提供了如下：
+C++ 98 标准内置的 STL 提供了如下容器：
 
-* 数组：vector（动态）、array（固定）
+* 数组：vector（动态数组）、valarray（针对数值类型特化的 vector）、bitset（储存比特的【固定】数组）
 
-* 链表：list（双向）、forward_list（单向）
+* 链表：list（双向）
 
 * 队列：queue、deque（双端队列）
 
 * 栈：stack
 
-* 映射：map（键值无重复）、multimap（键值可重复）、hash_map、hash_multimap
+* 映射：map（键值无重复）、multimap（键值可重复）
 
-* 集合：set（元素无重复）、multiset（元素可重复）、hash_set、hash_multiset
+* 集合：set（元素无重复）、multiset（元素可重复）
+
+[https://en.wikipedia.org/wiki/C%2B%2B11 C++ 11 标准]新增了如下容器：
+
+* 数组：array（相比 vector，它的 size 是编译时【固定】的）
+
+* 链表：forward_list（相比 list，它是【单向】的）
+
+* 映射：unordered_map、unordered_multimap（相比 map 和 multimap，这俩采用 hash 实现）
+
+* 集合：unordered_set、unordered_multiset（相比 set 和 multiset，这俩采用 hash 实现）
+
+下面几个容器，C++ 标准【没有】包含，但包含在某些知名的 STL 第三方库中（比如 SGI 的 STL）：
+
+* 映射：hash_map、hash_multimap（与 unordered_map、unordered_multimap 相同）
+
+* 集合：hash_set、hash_multiset（与 unordered_set、unordered_multiset 相同）
 
 === 2.1.2 Lockfree 的容器 ===
 
