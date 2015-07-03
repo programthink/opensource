@@ -1362,25 +1362,31 @@ Pycairo 是 Cairo 官方提供 Python 封装。
 
 = 11 游戏开发 =
 
+== 11.1 综合性的游戏引擎 ==
+
 <h4>PyGame</h4>
 
 Home：[http://www.pygame.org/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/Pygame 英文]、[https://zh.wikipedia.org/wiki/Pygame 中文]
 
-跨平台的 Python 第三方库，用来辅助游戏开发的，名气非常大。
+这是名气很大的跨平台游戏引擎，构建于 SDL（Simple DirectMedia Layer）之上。
+
+它起先是用来替代终止开发的 pySDL，包含了图像和音频的库。
+
+== 11.2 3D 渲染引擎 ==
 
 <h4>PyOpenGL</h4>
 
 Home：[http://pyopengl.sourceforge.net/]
 
-封装 [https://en.wikipedia.org/wiki/OpenGL OpenGL] 的 Python 第三方库。
+封装 [https://en.wikipedia.org/wiki/OpenGL OpenGL] 的 Python 库。
 
 <h4>Python-Ogre</h4>
 
 Home：[http://www.python-ogre.org/]
 
-封装 [https://en.wikipedia.org/wiki/OGRE OGRE]（3D 渲染引擎）的 Python 第三方库。
+封装 [https://en.wikipedia.org/wiki/OGRE OGRE] 的 Python 库。
 
 ----
 
