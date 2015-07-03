@@ -1350,6 +1350,16 @@ PIL 前面已经介绍过。它支持常见图像文件格式（BMP、JPG、GIF�
 
 Wand 前面已经介绍过。由于它是针对 [https://en.wikipedia.org/wiki/ImageMagick ImageMagick] 的封装。只要 ImageMagick 能转换的格式，它也可以转换。
 
+== 10.3 图像渲染 ==
+
+<h4>Pycairo</h4>
+
+Home：[http://cairographics.org/pycairo/]
+
+[https://en.wikipedia.org/wiki/Cairo_%28graphics%29 Cairo] 是一个图像渲染引擎，提供了矢量图像的渲染功能。支持多种后端输出（包括：Win32 GDI、OpenGL、Xlib、XCB、PDF、PNG、SVG......）。
+
+Pycairo 是 Cairo 官方提供 Python 封装。
+
 = 11 游戏开发 =
 
 <h4>PyGame</h4>
