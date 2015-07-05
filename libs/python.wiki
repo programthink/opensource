@@ -519,7 +519,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Apache_Thrift 英文]
 
 （在这个方面，它有点类似于 Google 的 Protocol Buffers）
 
-== 5.3 网络开发框架 ==
+== 5.3 网络库、框架、中间件 ==
 
 <h4>Twisted</h4>
 
@@ -546,6 +546,14 @@ class EchoFactory(protocol.Factory) :
 reactor.listenTCP(12345, EchoFactory())
 reactor.run()
 </source>
+
+<h4>gevent</h4>
+
+Home：[http://www.gevent.org/]
+
+这是一个基于[https://zh.wikipedia.org/wiki/%E5%8D%8F%E7%A8%8B 协程]的网络库，原先其底层依赖于 libevent，后来改为 libev。
+
+很多开源项目用到了 gevent，具体参见 [https://github.com/gevent/gevent/wiki/Projects gevent 官方的 wiki]。
 
 ----
 
