@@ -444,6 +444,12 @@ Docs：[http://boost.org/libs/date_time]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了针对“日期 和 时间”的各种处理。
 
+<h4>POCO</h4>
+
+Docs：[http://pocoproject.org/docs/Poco.html]
+
+POCO 前面已经介绍过。它提供了若干个日期和时间的封装类（时区转换、格式化字符串、解析时间字符串）。
+
 == 2.6 编码 & 解码 ==
 
 === 2.6.1 序列化 ===
@@ -469,6 +475,12 @@ Boost 前面已经介绍过。使用前面提到的“Boost.Serialization”，�
 Docs：[http://www.cryptopp.com/docs/ref/annotated.html]
 
 Crypto++ 前面已经介绍过。它提供了6个类，分别用于 Base64、Base32、Base16 的编码/解码。
+
+<h4>POCO</h4>
+
+Docs：[http://pocoproject.org/docs/Poco.html]
+
+POCO 前面已经介绍过。它提供了 Base64 和 Base32 的编码/解码。
 
 == 2.7 （其它） ==
 
@@ -539,6 +551,12 @@ memcpy(&u, uuid_data, 16);
 Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了 UUID 的生成、格式化成字符串、解析 UUID 字符串。
+
+<h4>POCO</h4>
+
+Docs：[http://pocoproject.org/docs/Poco.UUIDGenerator.html]
+
+POCO 前面已经介绍过。它提供了 UUID 的生成。
 
 ----
 
@@ -754,11 +772,17 @@ int main(int argc, char* argv[])
 }
 </source>
 
+<h4>POCO</h4>
+
+Docs：[http://pocoproject.org/docs/Poco.html]
+
+POCO 前面已经介绍过。它提供了文件系统相关的封装类（遍历目录和文件、临时文件、文件变化通知...）。
+
 <h4>wxWidgets</h4>
 
 Docs：[http://docs.wxwidgets.org/trunk/group__group__class__file.html]
 
-wxWidgets 前面已经介绍过。它提供了比较多这方面的功能（比如：监视文件系统变化、遍历目录、临时文件）。
+wxWidgets 前面已经介绍过。它提供了文件系统相关的封装类（遍历目录和文件、临时文件、文件变化通知...）。
 
 <h4>APR</h4>
 
@@ -803,6 +827,12 @@ ACE 前面已经介绍过。它提供了“多线程”的功能（参见文档�
 Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了“线程池、线程同步/互斥”等功能，以及一些线程安全的数据结构。
+
+<h4>POCO</h4>
+
+Docs：[http://pocoproject.org/docs/Poco.html]
+
+POCO 前面已经介绍过。它提供了线程、线程池以及线程同步/互斥的封装类。
 
 <h4>wxWidgets</h4>
 
@@ -1339,12 +1369,6 @@ Wikipedia：[https://en.wikipedia.org/wiki/Internet_Communications_Engine 英文
 
 它的设计借鉴了 CORBA，好在没有 CORBA 那么复杂。
 
-<h4>Dlib</h4>
-
-Docs：[http://dlib.net/network.html]
-
-Dlib 前面已经介绍过。它针对网络通讯，提供了比较高的抽象层。
-
 <h4>libevent</h4>
 
 Home：[http://libevent.org/]
@@ -1442,6 +1466,12 @@ Home：[http://libev.schmorp.de/]
 看名称就能猜到它跟 libevent 很像。实际上，你可以把 libev 视为 libevent 的竞争性替代品。
 
 [http://www.gevent.org/ gevent] 官方博客的[http://blog.gevent.org/2011/04/28/libev-and-libevent/ 一篇文章]对比了这俩库的优缺点。
+
+<h4>Dlib</h4>
+
+Docs：[http://dlib.net/network.html]
+
+Dlib 前面已经介绍过。它针对网络通讯，提供了比较高的抽象层。
 
 ----
 
