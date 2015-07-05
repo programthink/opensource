@@ -1347,6 +1347,42 @@ Wikipedia：[https://en.wikipedia.org/wiki/Libevent 英文]、[https://zh.wikipe
 
 它被一些知名的开源项目使用（比如：[https://zh.wikipedia.org/wiki/Tor Tor]、[https://zh.wikipedia.org/wiki/Memcached memcached]）。
 
+代码示例——HTTP Server（本示例基于 ANSI C）
+<source lang="cpp">
+&#35;include <sys/types.h>
+&#35;include <stdio.h>
+&#35;include <stdlib.h>
+&#35;include <unistd.h>
+
+&#35;include <event.h>
+&#35;include <evhttp.h>
+
+void generic_request_handler(struct evhttp_request* req, void* arg)
+{
+    struct evbuffer* return_buffer = evbuffer_new();
+
+    evbuffer_add_printf(return_buffer, "Thanks for the request!");
+    evhttp_send_reply(req, HTTP_OK, "Client", return_buffer);
+    evbuffer_free(return_buffer);
+}
+
+int main(int argc, char** argv)
+{
+    short          http_port = 8080;
+    char*          http_addr = "127.0.0.1";
+    struct evhttp* http_server = NULL;
+
+    event_init();
+    http_server = evhttp_start(http_addr, http_port);
+    evhttp_set_gencb(http_server, generic_request_handler, NULL);
+
+    fprintf(stderr, "Server started on port %d\n", http_port);
+    event_dispatch();
+
+    return 0;
+}
+</source>
+
 代码示例——HTTP Server（本示例基于 C++ 11 标准）
 <source lang="cpp">
 &#35;include <memory>
@@ -1362,7 +1398,7 @@ int main()
         return -1;
     }
     char const SrvAddress[] = "127.0.0.1";
-    std::uint16_t SrvPort = 5555;
+    std::uint16_t SrvPort = 8080;
     std::unique_ptr<evhttp, decltype(&evhttp_free)> Server(evhttp_start(SrvAddress, SrvPort), &evhttp_free);
     if(!Server)
     {
@@ -1390,6 +1426,14 @@ int main()
     return 0;
 }
 </source>
+
+<h4>libev</h4>
+
+Home：[http://libev.schmorp.de/]
+
+看名称就能猜到它跟 libevent 很像。实际上，你可以把 libev 视为 libevent 的竞争性替代品。
+
+[http://www.gevent.org/ gevent] 官方博客的[http://blog.gevent.org/2011/04/28/libev-and-libevent/ 一篇文章]对比了这俩库的优缺点。
 
 ----
 
