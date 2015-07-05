@@ -1210,7 +1210,15 @@ Home：[http://www.curlpp.org/]
 
 Docs：[http://pocoproject.org/docs/Poco.Net.html]
 
-POCO 前面已经介绍过。它提供了几种常见应用层协议（HTTP、SMTP、POP3、FTP、NTP）的封装类。
+POCO 前面已经介绍过。它提供了几种常见应用层协议（HTTP、SMTP、POP3、FTP、NTP ...）的封装类。
+
+<h4>c-ares</h4>
+
+Home：[http://c-ares.haxx.se/]
+
+这是一个 C 语言开发的 DNS 封装库，支持异步 DNS 请求，跨多种操作系统。
+
+对比官网域名可知，它跟 cURL 是一家子。除了 cURL/libcurl 用到它，还有一些知名开源项目（比如：Wireshark、node.js ...）用到它。
 
 == 7.2 自定义协议 ==
 
