@@ -104,17 +104,21 @@ Python 可以很容易地跟其它编程语言整合。整合之后，就可以�
 
 ctypes 在 Python 2.5 版本加入到标准库中。
 
-通过它，你可以很方便地调用 C/C++ 动态库导出的函数，可以在 Python 中使用各种 C/C++ 的数据类型（比如指针）。
+通过它，你可以很方便地调用 C/C++ 动态库导出的函数，可以在 Python 中使用各种 C/C++ 的数据类型（包括“指针”和“引用”）。
 
 代码示例——调用 Linux/Unix 系统的标准 C 函数，获取当前时间
 <source lang="python">
 from ctypes import *
+
 libc = CDLL("libc.so.6")
 time = libc.time(None)
+</source>
 
-&#35; 调用 Windows 系统 API，弹出消息提示框
+代码示例——调用 Windows 系统的 API，弹出消息提示框
+<source lang="python">
 from ctypes import c_int, WINFUNCTYPE, windll
 from ctypes.wintypes import HWND, LPCSTR, UINT
+
 prototype = WINFUNCTYPE(c_int, HWND, LPCSTR, LPCSTR, UINT)
 paramflags = (1, "hwnd", 0), (1, "text", "Hi"), (1, "caption", None), (1, "flags", 0)
 MessageBox = prototype(("MessageBoxA", windll.user32), paramflags)
@@ -127,7 +131,7 @@ Home：[http://swig.org/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/SWIG 英文]
 
-这是一个很老牌的、有名气的工具，它可以把多种语言（Java、Python、C#、Ruby、PHP、Perl、Lua、Go、等）整合到 C/C++ 中。
+这是一个很老牌的、有名气的工具，它可以把多种语言（Java、Python、C#、Ruby、PHP、Perl、Lua、Go ...）整合到 C/C++ 中。
 
 <h4>Cython</h4>
 
@@ -223,6 +227,13 @@ for file in os.listdir(".") :
 
 其中 multiprocessing 是 2.6 版本加入到标准库的。
 
+代码示例——启动命令行进程，并获取该进程的标准输出
+<source lang="python">
+import subprocess
+output = subprocess.check_output(["dir"])  &#35; 获取当前目录的内容
+output = subprocess.check_output(["netstat", "-an"])  &#35; 获取当前网络链接
+</source>
+
 <h4>signal</h4>
 
 用于进程信号处理的标准库（主要用于 Linux & UNIX 系统）。
@@ -240,7 +251,7 @@ map = mmap.mmap(-1, 13)
 map.write("Hello, world")
 
 pid = os.fork()
-if pid == 0:  &#35; 子进程
+if pid == 0 :  &#35; 子进程
     map.seek(0)
     print(map.readline())
     map.close()
@@ -461,6 +472,17 @@ Python 标准库很早就提供了对 socket 编程的支持。
 
 封装 FTP 协议（文件传输）的标准库
 
+代码示例——列出 FTP 服务器上某目录的内容
+<source lang="python">
+from ftplib import FTP
+
+ftp = FTP("ftp.debian.org")  &#35; 连接服务器（如果不指定端口号，则用默认端口号 21）
+ftp.login()                  &#35; 登录（如果不指定用户名和密码，则用匿名登录）
+ftp.cwd("debian")            &#35; 切换到 "debian" 目录
+ftp.retrlines("LIST")        &#35; 列出当前目录的内容
+ftp.quit()
+</source>
+
 <h4>smtplib</h4>
 
 封装 SMTP 协议（邮件发送）的标准库
@@ -477,9 +499,26 @@ Python 标准库很早就提供了对 socket 编程的支持。
 
 Home：[http://pycurl.sourceforge.net/]
 
-[https://en.wikipedia.org/wiki/Curl cURL] 是一个功能很强的网络库/网络工具，支持 N 多应用层协议。pycurl 提供了 Python 的封装。
+[https://en.wikipedia.org/wiki/Curl cURL] 是一个功能很强的网络库/网络工具，支持 N 多应用层协议。俺在前几年写过一篇博文推荐它（在“[http://program-think.blogspot.com/2009/03/opensource-review-curl-library.html 这里]”）。
 
-关于 cURL，俺前几年写过一篇博文推荐它（在“[http://program-think.blogspot.com/2009/03/opensource-review-curl-library.html 这里]”）。
+看名称就能猜到——PycURL 是 cURL 的 Python 封装。
+
+代码示例——发起 HTTP GET 请求
+<source lang="python">
+import pycurl
+try :
+    from io import BytesIO
+except ImportError :
+    from StringIO import StringIO as BytesIO
+
+buffer = BytesIO()
+curl = pycurl.Curl()
+curl.setopt(curl.URL, "http://pycurl.sourceforge.net/")
+curl.setopt(curl.WRITEDATA, buffer)
+curl.perform()
+curl.close()
+body = buffer.getvalue()
+</source>
 
 <h4>jabber.py</h4>
 
@@ -529,7 +568,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Twisted_%28software%29 英文]
 
 这是一个基于 Python 网络通讯开发框架，诞生于2002年，名气很大。
 
-它的某些设计类似于 C++ 的 [https://en.wikipedia.org/wiki/Adaptive_Communication_Environment ACE] 框架。除了能用来进行传输层（TCP UDP）的开发，还提供了若干应用层协议（HTTP、XMPP、SSH、IRC、等）的支持。
+它的某些设计类似于 C++ 的 [https://en.wikipedia.org/wiki/Adaptive_Communication_Environment ACE] 框架。除了能用来进行传输层（TCP UDP）的开发，还提供了若干应用层协议（HTTP、XMPP、SSH、IRC ...）的支持。
 
 代码示例——实现一个简单的 Echo 服务，监听在 12345 端口
 <source lang="python">
@@ -554,6 +593,17 @@ Home：[http://www.gevent.org/]
 这是一个基于[https://zh.wikipedia.org/wiki/%E5%8D%8F%E7%A8%8B 协程]的网络库，原先其底层依赖于 libevent，后来改为 libev。
 
 很多开源项目用到了 gevent，具体参见 [https://github.com/gevent/gevent/wiki/Projects gevent 官方的 wiki]。
+
+代码示例——并发执行网络请求
+<source lang="python">
+from gevent import socket
+import gevent
+
+hosts = ["google.com", "github.com", "program-think.blogspot.com"]
+jobs = [gevent.spawn(socket.gethostbyname, host) for host in hosts]
+gevent.joinall(jobs, timeout=2)
+print([job.value for job in jobs])
+</source>
 
 ----
 
