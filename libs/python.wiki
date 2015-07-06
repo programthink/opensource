@@ -364,6 +364,33 @@ Wikipedia：[https://en.wikipedia.org/wiki/TurboGears 英文]、[https://zh.wiki
 
 又一个重型的 Web 开发框架，名气仅次于 Django。
 
+<h4>web.py</h4>
+
+Home：[http://webpy.org/]
+
+与前两个（Django、TurboGears）不同，这是一个轻量级的框架。甚至被称为“It's the anti-framework framework.”
+
+其作者是大名鼎鼎的黑客 [https://en.wikipedia.org/wiki/Aaron_Swartz Aaron Swartz]。（俺在[http://program-think.blogspot.nl/2013/01/weekly-share-37.html 某篇博文]中悼念过他）。
+
+当年 Aaron Swartz 用 web.py 来搭建同样大名鼎鼎的网站 [https://en.wikipedia.org/wiki/Reddit reddit]（该网站是 Web 2.0 的标杆）。
+
+代码示例——Hello world
+<source lang="python">
+import web
+
+urls = (
+    "/", "index"
+)
+
+class index:
+    def GET(self):
+        return "Hello, world!"
+
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+    app = web.application(urls, globals())
+    app.run()
+</source>
+
 == 4.4 Web前端 & JS整合 ==
 
 <h4>Pyjamas & pyjs</h4>
