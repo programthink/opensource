@@ -272,6 +272,12 @@ file.open("hello.txt");
 file << L"שלום!";
 </source>
 
+<h4>POCO.Text</h4>
+
+Docs：[http://pocoproject.org/docs/package-Foundation.Text.html]
+
+POCO 前面已经介绍过。它提供了 UTF8/UTF16/UTF32 的转换。
+
 === 2.3.2 字符串格式化 ===
 
 <h4>Boost.Format</h4>
@@ -354,6 +360,12 @@ Wikipedia：[https://en.wikipedia.org/wiki/Oniguruma 英文]
 来自日本的正则式库，基于 C 语言。据说性能很高。
 
 它被用在 Ruby、TextMate、Sublime Text、SubEthaEdit 等软件上。
+
+<h4>POCO.RegExp</h4>
+
+Docs：[http://pocoproject.org/docs/package-Foundation.RegExp.html]
+
+POCO 前面已经介绍过。它提供了正则表达式的封装类。
 
 <h4>Qt.QRegExp</h4>
 
@@ -444,9 +456,9 @@ Docs：[http://boost.org/libs/date_time]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了针对“日期 和 时间”的各种处理。
 
-<h4>POCO</h4>
+<h4>POCO.DateTime</h4>
 
-Docs：[http://pocoproject.org/docs/Poco.html]
+Docs：[http://pocoproject.org/docs/package-Foundation.DateTime.html]
 
 POCO 前面已经介绍过。它提供了若干个日期和时间的封装类（时区转换、格式化字符串、解析时间字符串）。
 
@@ -476,9 +488,9 @@ Docs：[http://www.cryptopp.com/docs/ref/annotated.html]
 
 Crypto++ 前面已经介绍过。它提供了6个类，分别用于 Base64、Base32、Base16 的编码/解码。
 
-<h4>POCO</h4>
+<h4>POCO.Streams</h4>
 
-Docs：[http://pocoproject.org/docs/Poco.html]
+Docs：[http://pocoproject.org/docs/package-Foundation.Streams.html]
 
 POCO 前面已经介绍过。它提供了 Base64 和 Base32 的编码/解码。
 
@@ -552,11 +564,11 @@ Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了 UUID 的生成、格式化成字符串、解析 UUID 字符串。
 
-<h4>POCO</h4>
+<h4>POCO.UUID</h4>
 
-Docs：[http://pocoproject.org/docs/Poco.UUIDGenerator.html]
+Docs：[http://pocoproject.org/docs/package-Foundation.UUID.html]
 
-POCO 前面已经介绍过。它提供了 UUID 的生成。
+POCO 前面已经介绍过。它提供了 UUID 的生成、格式转换。
 
 ----
 
@@ -658,6 +670,14 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了记�
 BOOST_LOG_TRIVIAL(debug) << "A debug severity message";
 BOOST_LOG_TRIVIAL(info) << "An informational severity message";
 </source>
+
+<h4>POCO.Logging</h4>
+
+Docs：[http://pocoproject.org/docs/package-Foundation.Logging.html]
+
+POCO 前面已经介绍过。它提供了好几个用于调试日志的封装类（包括特定于 Windows 平台和特定于 POSIX 平台的类）。
+
+它还支持日志文件的循环存储。
 
 <h4>Dlib</h4>
 
@@ -772,11 +792,11 @@ int main(int argc, char* argv[])
 }
 </source>
 
-<h4>POCO</h4>
+<h4>POCO.Filesystem</h4>
 
-Docs：[http://pocoproject.org/docs/Poco.html]
+Docs：[http://pocoproject.org/docs/package-Foundation.Filesystem.html]
 
-POCO 前面已经介绍过。它提供了文件系统相关的封装类（遍历目录和文件、临时文件、文件变化通知...）。
+POCO 前面已经介绍过。它提供了文件系统相关的封装类（遍历目录和文件、通配符匹配、临时文件、文件变化通知...）。
 
 <h4>wxWidgets</h4>
 
@@ -828,9 +848,9 @@ Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了“线程池、线程同步/互斥”等功能，以及一些线程安全的数据结构。
 
-<h4>POCO</h4>
+<h4>POCO.Threading</h4>
 
-Docs：[http://pocoproject.org/docs/Poco.html]
+Docs：[http://pocoproject.org/docs/package-Foundation.Threading.html]
 
 POCO 前面已经介绍过。它提供了线程、线程池以及线程同步/互斥的封装类。
 
@@ -860,6 +880,12 @@ Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了“进程管理”的功能。
 
+<h4>POCO.Processes</h4>
+
+Docs：[http://pocoproject.org/docs/Poco.Process.html]
+
+POCO 前面已经介绍过。它提供了“进程”的封装类。
+
 === 5.1.4 本地进程间通信（IPC） ===
 
 （本章节列举的是【本地】IPC，跨主机的网络通讯，参见本页面后续的章节）
@@ -881,6 +907,12 @@ ACE 前面已经介绍过。它提供了许多种 IPC 机制（有些不是跨�
 Docs：[https://apr.apache.org/docs/apr/trunk/modules.html]
 
 APR 前面已经介绍过。它提供了“进程同步、共享内存、信号处理”等功能。
+
+<h4>POCO.Processes</h4>
+
+Docs：[http://pocoproject.org/docs/package-Foundation.Processes.html]
+
+POCO 前面已经介绍过。它提供了 IPC 相关的封装类（“共享内存”和“管道”）。
 
 == 5.2 特定于 Windows 系统 ==
 
@@ -2192,6 +2224,12 @@ Home：[http://www.nih.at/libzip/]
 Wikipedia：[https://en.wikipedia.org/wiki/Libzip 英文]
 
 用 C 语言开发的库，基于 zlib 库。
+
+<h4>Poco::Zip</h4>
+
+Docs：[http://pocoproject.org/docs/Poco.Zip.html]
+
+POCO 前面已经介绍过。它提供了若干封装类，用于 zip 格式的压缩和解压。
 
 === 11.2.3 bzip2（bz2） ===
 
