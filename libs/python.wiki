@@ -364,6 +364,28 @@ Wikipedia：[https://en.wikipedia.org/wiki/TurboGears 英文]、[https://zh.wiki
 
 又一个重型的 Web 开发框架，名气仅次于 Django。
 
+它跟 Django 一样，都是“Full-Stack Frameworks”。
+
+<h4>CherryPy</h4>
+
+Home：[http://www.cherrypy.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/CherryPy 英文]
+
+轻量级的 Web 框架。某些 Web 框架（比如前面提到的 TurboGears）使用它作为底层。
+
+代码示例——Hello world
+<source lang="python">
+import cherrypy
+
+class HelloWorld(object):
+    def index(self):
+        return "Hello World!"
+    index.exposed = True
+
+cherrypy.quickstart(HelloWorld())
+</source>
+
 <h4>web.py</h4>
 
 Home：[http://webpy.org/]
