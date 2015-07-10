@@ -1533,7 +1533,7 @@ Home：[http://sqlite.org/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/SQLite 英文]、[https://zh.wikipedia.org/wiki/SQLite 中文]
 
-SQLite 是一个很优秀的文件型数据库，非常轻量级，支持各种作系统平台。采用 C 语言开发。
+它是一个很优秀的嵌入式（进程内）数据库，非常轻量级，支持各种作系统平台。采用 C 语言开发。
 
 俺前几年写过一篇博文推荐它（在“[http://program-think.blogspot.com/2009/04/how-to-use-sqlite.html 这里]”）。
 
@@ -1543,7 +1543,17 @@ Home：[https://www.mongodb.org/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/MongoDB 英文]
 
-MongoDB 是近几年兴起的 NoSQL 数据库的一员。它本身是基于 C++ 和 C 开发的。
+这是近几年兴起的 NoSQL 数据库的一员。它本身是基于 C++ 和 C 开发的。
+
+<h4>Berkeley DB（BDB）</h4>
+
+Home：[http://www.oracle.com/us/products/database/berkeley-db/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Berkeley_DB 英文]、[https://zh.wikipedia.org/wiki/Berkeley_DB 中文]
+
+诞生于1994年，是一个很老牌的嵌入式（进程内）数据库，基于 C 语言开发。开发 BDB 的公司于2006年被 Oracle 收购。
+
+很多开源项目用到它。甚至 MySQL 也包含了一个基于 BDB 的存储后端。
 
 == 8.2 数据库 API 的封装库 ==
 
