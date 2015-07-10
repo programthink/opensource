@@ -1555,6 +1555,18 @@ Wikipedia：[https://en.wikipedia.org/wiki/Berkeley_DB 英文]、[https://zh.wik
 
 很多开源项目用到它。甚至 MySQL 也包含了一个基于 BDB 的存储后端。
 
+<h4>Firebird</h4>
+
+Home：[http://www.firebirdsql.org/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Firebird_%28database_server%29 英文]、[https://zh.wikipedia.org/wiki/Firebird_(%E6%95%B0%E6%8D%AE%E5%BA%93) 中文]
+
+它是2000年的时候，从 [https://en.wikipedia.org/wiki/Borland Borland] 公司的 InterBase 数据库派生出来的。
+
+基于 C++ 开发，支持多种操作系统平台。
+
+关于它有个插曲：Firefox 浏览器曾经用过“Firebird”这个名称，因为跟 Firebird 数据库同名，后来才改用 Firefox 这个名称。
+
 == 8.2 数据库 API 的封装库 ==
 
 === 8.2.1 综合性的封装库 ===
