@@ -46,6 +46,12 @@ print(chardet.detect(bytes))
 
 cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现的，提供 Unicode 兼容性。
 
+<h4>difflib</h4>
+
+可以对两个字符串进行“按行”比较，其功能类似于命令行的 diff。
+
+另外还支持“最佳匹配”功能——对给定的字符串 s 和字符串列表 l，在 l 里面找到最接近 s 的字符串。
+
 == 1.2 编码 & 解码 ==
 
 === 1.2.1 base64 ===
