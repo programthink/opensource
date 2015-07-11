@@ -225,13 +225,49 @@ for file in os.listdir(".") :
 
     
 
-== 3.2 本地进程间通信（IPC） ==
+== 3.2 线程 ==
 
-<h4>subprocess & multiprocessing</h4>
+<h4>threading</h4>
+
+这个模块提供了比较高层的线程封装 API。它本身包含了线程同步/互斥的机制。
+
+代码示例——基于“函数”的线程
+<source lang="python">
+import threading
+import time
+
+def my_thread() :
+    print("Thread started!")
+    time.sleep(3)
+    print("Thread finished!")
+
+threading.Thread(target=my_thread).start()
+</source>
+
+代码示例——基于“类”的线程
+<source lang="python">
+import threading
+import time
+from &#95;&#95;future&#95;&#95; import print_function
+
+class MyThread(threading.Thread) :
+    def run(self) :
+        print("{} started!".format(self.getName()))
+        time.sleep(3)
+        print("{} finished!".format(self.getName()))
+
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+    for n in range(10) :
+        mythread = MyThread(name = "Thread-{}".format(n + 1))
+        mythread.start()
+        time.sleep(1)
+</source>
+
+== 3.3 进程 ==
+
+<h4>subprocess</h4>
 
 用于进程管理的标准库，可以启动子进程，通过标准输入输出跟子进程交互。
-
-其中 multiprocessing 是 2.6 版本加入到标准库的。
 
 代码示例——启动命令行进程，并获取该进程的标准输出
 <source lang="python">
@@ -240,9 +276,28 @@ output = subprocess.check_output(["dir"])  &#35; 获取当前目录的内容
 output = subprocess.check_output(["netstat", "-an"])  &#35; 获取当前网络链接
 </source>
 
-<h4>signal</h4>
+<h4>multiprocessing</h4>
 
-用于进程信号处理的标准库（主要用于 Linux & UNIX 系统）。
+它是 2.6 版本加入到标准库的，其 API 接口的风格类似于 threading 模块。
+
+它本身包含了进程同步/互斥的机制。
+
+代码示例——利用其 Lock 机制，确保多个子进程的标准输出不会混杂（每次只有一个进程调用 print）。
+<source lang="python">
+from multiprocessing import Process, Lock
+
+def f(lock, n) :
+    lock.acquire()
+    print("hello world %d" % n)
+    lock.release()
+
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+    lock = Lock()
+    for num in range(10):
+        Process(target=f, args=(lock, num)).start()
+</source>
+
+== 3.4 本地进程间通信（IPC） ==
 
 <h4>mmap</h4>
 
@@ -263,7 +318,17 @@ if pid == 0 :  &#35; 子进程
     map.close()
 </source>
 
-== 3.3 Windows 系统相关 ==
+<h4>signal</h4>
+
+用于进程信号处理的标准库（主要用于 Linux & UNIX 系统）。
+
+== 3.5 Linux & Unix 系统相关 ==
+
+<h4>syslog</h4>
+
+通过这个标准库，可以很方便地跟 POSIX 的 syslog 服务进行交互。
+
+== 3.6 Windows 系统相关 ==
 
 <h4>PyWin32</h4>
 
@@ -271,13 +336,7 @@ Home：[http://python.net/crew/mhammond/win32/]
 
 这个第三方库封装了 Windows API 及 COM API。通过它可以方便地用 Python 进行 Windows 编程（调用 COM 组件、编写 Windows 服务、等）。
 
-== 3.4 Linux & Unix 系统相关 ==
-
-<h4>syslog</h4>
-
-通过这个标准库，可以很方便地跟 POSIX 的 syslog 服务进行交互。
-
-== 3.5 程序打包 ==
+== 3.7 程序打包 ==
 
 <h4>PyInstaller</h4>
 
