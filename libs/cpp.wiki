@@ -1646,6 +1646,45 @@ delete conn;
 conn = NULL;
 </source>
 
+<h4>MySQL++</h4>
+
+Home：[http://www.tangentsoft.net/mysql%2B%2B/]
+
+这是个老牌的库，诞生于1998年，提供了 MySQL API 的 C++ 封装。
+
+代码示例——执行 SQL 语句
+<source lang="cpp">
+&#35;include <iostream>
+&#35;include <mysql++.h>
+
+void query(db_name, server_name, user, password)
+{
+    using namespace std;
+
+    mysqlpp::Connection conn(false);
+    if(!conn.connect(db_name, server_name, user, password))
+    {
+        cerr << "DB connection failed: " << conn.error() << endl;
+        return;
+    }
+
+    mysqlpp::Query query = conn.query("select item from table1");
+    mysqlpp::StoreQueryResult sqr = query.store()
+    if(!sqr)
+    {
+        cerr << "Failed to get item list: " << query.error() << endl;
+        return;
+    }
+
+    mysqlpp::StoreQueryResult::const_iterator iter;
+    for(iter=sqr.begin(); iter!=sqr.end(); ++iter)
+    {
+        mysqlpp::Row row = *iter;
+        cout << '\t' << row[0] << endl;
+    }
+}
+</source>
+
 <h4>POCO::Data::MySQL</h4>
 
 Docs：[http://pocoproject.org/docs/package-MySQL.MySQL.html]
