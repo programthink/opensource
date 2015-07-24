@@ -862,7 +862,23 @@ conn.commit()
 conn.close()
 </source>
 
-=== 6.2.7 Berkeley DB ===
+=== 6.2.7 Redis ===
+
+<h4>redis-py</h4>
+
+Home：[https://github.com/andymccurdy/redis-py]
+
+操作 Redis 的第三方 Python 客户端。
+
+代码示例——简单的 set/get
+<source lang="python">
+import redis
+r = redis.StrictRedis(host="localhost", port=6379, db=0)
+r.set("foo", "bar")
+print(r.get("foo"))
+</source>
+
+=== 6.2.8 Berkeley DB ===
 
 <h4>PyBSDDB</h4>
 
