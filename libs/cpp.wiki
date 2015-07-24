@@ -1602,13 +1602,25 @@ Wikipedia：[https://en.wikipedia.org/wiki/MongoDB 英文]
 
 这是近几年兴起的 NoSQL 数据库的一员。它本身是基于 C++ 和 C 开发的。
 
+<h4>Redis</h4>
+
+Home：[http://redis.io/]
+
+Wikipedia：[https://zh.wikipedia.org/wiki/Redis 中文]、[https://en.wikipedia.org/wiki/Redis 英文]
+
+诞生于2009年，是目前（2014~2015）最流行的键值存储数据库，基于 C 语言开发。
+
+以性能高而著称，很多大型网站用到它（Twitter、GitHub、Flickr、Instagram、百度、新浪、腾讯、搜狐）
+
 <h4>Berkeley DB（BDB）</h4>
 
 Home：[http://www.oracle.com/us/products/database/berkeley-db/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/Berkeley_DB 英文]、[https://zh.wikipedia.org/wiki/Berkeley_DB 中文]
 
-诞生于1994年，是一个很老牌的嵌入式（进程内）数据库，基于 C 语言开发。开发 BDB 的公司于2006年被 Oracle 收购。
+诞生于1994年，是一个很老牌的嵌入式（进程内）数据库，提供“键值存储”的功能，基于 C 语言开发。
+
+开发 BDB 的公司于2006年被 Oracle 收购。
 
 很多开源项目用到它。甚至 MySQL 也包含了一个基于 BDB 的存储后端。
 
@@ -1893,7 +1905,79 @@ Docs：[http://pocoproject.org/docs/package-SQLite.SQLite.html]
 
 POCO 前面已经介绍过。它提供了 sqlite 的封装类
 
-=== 8.2.7 MongoDB 封装库 ===
+=== 8.2.7 Redis ===
+
+<h4>Hiredis</h4>
+
+Home：[https://github.com/redis/hiredis]
+
+这是 Redis 官方提供的 C 客户端，很轻量级，支持“异步 API”。
+
+代码示例——结合 libev 进行异步调用
+<source lang="cpp">
+&#35;include <stdio.h>
+&#35;include <stdlib.h>
+&#35;include <string.h>
+&#35;include <signal.h>
+
+&#35;include <hiredis.h>
+&#35;include <async.h>
+&#35;include <adapters/libev.h>
+
+void getCallback(redisAsyncContext* context, void* r, void* privdata)
+{
+    redisReply* reply = r;
+    if(reply == NULL)
+    {
+        return;
+    }
+    printf("argv[%s]: %s\n", (char*)privdata, reply->str);
+    redisAsyncDisconnect(context);  /* Disconnect after receiv reply */
+}
+
+void connectCallback(const redisAsyncContext* context, int status)
+{
+    if(status != REDIS_OK)
+    {
+        printf("Error: %s\n", context->errstr);
+        return;
+    }
+    printf("Connected...\n");
+}
+
+void disconnectCallback(const redisAsyncContext* context, int status)
+{
+    if(status != REDIS_OK)
+    {
+        printf("Error: %s\n", context->errstr);
+        return;
+    }
+    printf("Disconnected...\n");
+}
+
+int main(int argc, char* argv[])
+{
+    signal(SIGPIPE, SIG_IGN);
+
+    redisAsyncContext* context = redisAsyncConnect("127.0.0.1", 6379);
+    if(context->err)
+    {
+        printf("Error: %s\n", context->errstr);
+        return 1;  /* Let *context leak for now... */
+    }
+
+    redisLibevAttach(EV_DEFAULT_ context);
+    redisAsyncSetConnectCallback(context, connectCallback);
+    redisAsyncSetDisconnectCallback(context, disconnectCallback);
+    redisAsyncCommand(context, NULL, NULL,
+                        "SET key %b", argv[argc-1], strlen(argv[argc-1]));
+    redisAsyncCommand(context, getCallback, (char*)"end-1", "GET key");
+    ev_loop(EV_DEFAULT_ 0);
+    return 0;
+}
+</source>
+
+=== 8.2.8 MongoDB 封装库 ===
 
 <h4>官方的 C API</h4>
 
