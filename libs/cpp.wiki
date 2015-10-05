@@ -762,13 +762,23 @@ END_TEST
    doing so produces all sorts of strange errors when the check is compiled. */
 </source>
 
-== 4.3 检测内存泄漏 ==
+== 4.3 健壮性测试 ==
 
 <h4>Boost.Test.ExecutionMonitor</h4>
 
 Docs：[http://boost.org/libs/test/doc/html/execution-monitor.html]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，它除了提供“单元测试”，还提供“内存泄漏的检测”。
+
+== 4.4 性能测试 ==
+
+<h4>benchmark</h4>
+
+Home：[https://github.com/google/benchmark]
+
+这是 Google 提供的性能测试辅助工具，用来测试指定函数的执行时间。
+
+它可以把测试结果导出为 CSV 或 JSON 格式。
 
 ----
 
