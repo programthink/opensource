@@ -351,6 +351,24 @@ string human_readable_card_number(const string& s)
 }
 </source>
 
+<h4>re2</h4>
+
+Home：[https://github.com/google/re2]
+
+这是 Google 提供的正则式库，基于 C++。其 API 使用起来很简洁。
+
+有多种脚本语言（Python、Ruby、Perl、Node.js、Erlang、OCaml）提供了对它的封装。
+
+代码示例——基于正则式进行匹配
+<source lang="cpp">
+&#35;include <re2/re2.h>
+int i;
+string s;
+assert(RE2::FullMatch("test:1234", "(\\w+):(\\d+)", &s, &i));
+assert(s == "test");
+assert(i == 1234);
+</source>
+
 <h4>Oniguruma（鬼车）</h4>
 
 Home：[http://www.geocities.jp/kosako3/oniguruma/]
