@@ -721,6 +721,16 @@ Docs：[http://boost.org/libs/test]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了与测试相关的各种辅助工具（包括单元测试）。
 
+<h4>Google Test</h4>
+
+Home：[https://github.com/google/googletest]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Google_Test 英文]
+
+这是 Google 提供的单元测试框架。从 Google Code 迁移到 GitHub 之后，又整合了 GoogleMock 项目。
+
+一些知名的开源项目（Chromium、LLVM、OpenCV）用到了它。
+
 <h4>CppUnit</h4>
 
 Home：[http://freedesktop.org/wiki/Software/cppunit/]
