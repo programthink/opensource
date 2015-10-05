@@ -2405,7 +2405,9 @@ Home：[http://www.libarchive.org/]
 
 C 语言实现，支持的格式：
 
-可创建/解开：zip、tar、7z、cpio、ar、xar；可解开：gzip、bzip2、xz、lzma、rpm、lz4、lzop
+可读写的格式：zip、gzip、bzip2、xz、lzma、tar、ISO、cpio、ar、pax、mtree；
+
+只读的格式：7z、rar、cab、rpm、lzh、lzop、raw、xar
 
 <h4>LZMA SDK</h4>
 
@@ -2414,6 +2416,14 @@ Home：[http://www.7-zip.org/sdk.html]
 这是由 7-zip 官方提供的。7-zip 就是用它进行压缩/解压缩。
 
 支持的格式：7z、LZMA、LZMA2、XZ
+
+<h4>zopfli</h4>
+
+Home：[https://github.com/google/zopfli]
+
+这是由 Google 开发的 C 库，提供对 zip 和 gzip 格式的压缩（不提供解压）。
+
+压缩的速度比较慢，但是可以得到更高的压缩率。
 
 === 11.2.2 zip ===
 
