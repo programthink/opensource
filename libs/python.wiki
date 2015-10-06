@@ -1251,6 +1251,14 @@ Home：[http://pyopenssl.sourceforge.net/]
 
 [https://en.wikipedia.org/wiki/OpenSSL OpenSSL] 在加密领域可是大名鼎鼎。这个库使用 Python 对 OpenSSL 进行很薄的封装。
 
+<h4>Keyczar</h4>
+
+Home：[https://github.com/google/keyczar]
+
+这是 Google 提供的加密库，同时提供 C++、Java、Python 三种语言的实现。
+
+它提供了比较高层的 API， 使用者无需关心太多的细节。
+
 ----
 
 = 9 处理文件格式 =
