@@ -2759,7 +2759,7 @@ Home：[http://cairographics.org/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/Cairo_%28graphics%29 英文]、[https://zh.wikipedia.org/wiki/Cairo_(%E7%B9%AA%E5%9C%96) 中文]
 
-它提供了矢量图像的渲染功能。支持多种后端输出（包括：Win32 GDI、OpenGL、Xlib、XCB、PDF、PNG、SVG......）。
+它提供了矢量图像的渲染功能。支持多种后端输出（Win32 GDI、OpenGL、Xlib、XCB、PDF、PNG、SVG ......）。
 
 基于 C 语言开发，提供多种语言绑定（C++、Java、C#、Python、Ruby、Perl、Scheme、Smalltalk）。
 
@@ -2768,6 +2768,16 @@ Wikipedia：[https://en.wikipedia.org/wiki/Cairo_%28graphics%29 英文]、[https
 Home：[http://cairographics.org/cairomm/]
 
 这是针对 Cairo 的 C++ 封装库。
+
+<h4>Skia</h4>
+
+Home：[https://github.com/google/skia]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Skia_Graphics_Engine 英文]、[https://zh.wikipedia.org/wiki/Skia_Graphics_Library 中文]
+
+它是 Google 基于 C++ 开发的图像渲染库。支持多种后端输出（rasterization、OpenGL、PDF、SVG、SWF ......）。
+
+原先由 Skia 公司开发，后来该公司被 Google 收购。被用于 Android、Chrome、Chrome OS、Firefox 等知名开源项目。
 
 <h4>PBRT（Physically Based Rendering Toolkit）</h4>
 
