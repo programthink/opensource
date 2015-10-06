@@ -2341,6 +2341,46 @@ Home：[https://github.com/jedisct1/libsodium]
 
 shadowsocks 和 dnscrypt-proxy 用到它。
 
+<h4>Keyczar</h4>
+
+Home：[https://github.com/google/keyczar]
+
+这是 Google 提供的加密库，同时提供 C++、Java、Python 三种语言的实现。
+
+它提供了比较高层的 API， 使用者无需关心太多的细节。
+
+代码示例——加密/解密文本
+<source lang="cpp">
+&#35;include <cassert>
+&#35;include <iostream>
+&#35;include <string>
+&#35;include <keyczar/keyczar.h>
+
+void test(const std::string& key_location)
+{
+    keyczar::Keyczar* crypter = keyczar::Crypter::Read(key_location);
+    if(!crypter)
+    {
+        return;
+    }
+
+    std::string plain = "Secret message";
+    std::cout << "Plain text: " << plain << std::endl;
+
+    std::string cipher;
+    if(crypter->Encrypt(plain, &cipher))
+    {
+        std::cout << "Cipher text (Base64w): " << cipher << std::endl;
+        std::string decrypted;
+        if(crypter->Decrypt(cipher, &decrypted))
+        {
+            assert(plain == decrypted);
+        }
+    }
+    delete crypter;
+}
+</source>
+
 <h4>POCO::Crypto</h4>
 
 Docs：[http://pocoproject.org/docs/Poco.Crypto.html]
