@@ -596,6 +596,80 @@ POCO 前面已经介绍过。它提供了 UUID 的生成、格式转换。
 
 == 3.1 面向对象编程（OOP） ==
 
+<h4>fruit</h4>
+
+Home：[https://github.com/google/fruit]
+
+它是 Google 开发的 C++ 库，提供了“依赖注入”（[https://en.wikipedia.org/wiki/Dependency_injection dependency injection]）的框架。
+
+代码示例——一个简单的例子
+<source lang="cpp">
+&#35;include <iostream>
+&#35;include <fruit/fruit.h>
+
+using fruit::Component;
+using fruit::Injector;
+
+class Writer
+{
+public:
+    virtual void write(std::string str) = 0;
+};
+
+class StdoutWriter : public Writer
+{
+public:
+    // Like "StdoutWriter() = default;" but also marks this constructor as the
+    // one to use for injection.
+    INJECT(StdoutWriter()) = default;
+
+    virtual void write(std::string str) override
+    {
+        std::cout << str;
+    }
+};
+
+class Greeter
+{
+public:
+    virtual void greet() = 0;
+};
+
+class GreeterImpl : public Greeter
+{
+private:
+    Writer* writer;
+
+public:
+    // Like "GreeterImpl(Writer* writer) {...}"
+    // but also marks this constructor as the one to use for injection.
+    INJECT(GreeterImpl(Writer* writer))
+        : writer(writer)
+    {
+    }
+
+    virtual void greet() override
+    {
+        writer->write("Hello world!\n");
+    }
+};
+
+Component<Greeter> getGreeterComponent()
+{
+    return fruit::createComponent()
+        .bind<Writer, StdoutWriter>()
+        .bind<Greeter, GreeterImpl>();
+}
+
+int main()
+{
+    Injector<Greeter> injector(getGreeterComponent());
+    Greeter* greeter = injector.get<Greeter*>();
+    greeter->greet();
+    return 0;
+}
+</source>
+
 == 3.2 泛型编程（GP） ==
 
 <h4>Boost.TypeTraits</h4>
