@@ -1259,6 +1259,14 @@ Home：[https://github.com/google/keyczar]
 
 它提供了比较高层的 API， 使用者无需关心太多的细节。
 
+== 8.2 访问控制 ==
+
+<h4>oauth2client</h4>
+
+Home：[https://github.com/google/oauth2client]
+
+这是 Google 提供的 OAuth 客户端，支持 OAuth 2.0 规范。
+
 ----
 
 = 9 处理文件格式 =
