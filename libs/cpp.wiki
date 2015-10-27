@@ -1760,6 +1760,14 @@ Wikipedia：[https://en.wikipedia.org/wiki/Firebird_%28database_server%29 英文
 
 关于它有个插曲：Firefox 浏览器曾经用过“Firebird”这个名称，因为跟 Firebird 数据库同名，后来才改用 Firefox 这个名称。
 
+<h4>ScyllaDB</h4>
+
+Home：[http://www.scylladb.com/]
+
+这是2015年新兴的 NoSQL 数据库，相当于是用 C++ 重写了（Java 开发的）Cassandra。
+
+号称性能提高10倍，并且延迟极低。
+
 == 8.2 数据库 API 的封装库 ==
 
 === 8.2.1 综合性的封装库 ===
