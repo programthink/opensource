@@ -163,7 +163,7 @@ Home：[http://www.jython.org/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/Jython 英文]、[https://zh.wikipedia.org/wiki/Jython 中文]
 
-通过 Jython 可以让 Python 代码运行在 JVM 上，并且可以调用其它的 JVM 语言的代码（比如 Java、Scale）
+通过 Jython 可以让 Python 代码运行在 JVM 上，并且可以调用其它的 JVM 语言的代码（比如 Java、Scala）
 
 == 2.3 整合 dotNet 平台 ==
 
