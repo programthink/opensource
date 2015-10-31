@@ -2037,7 +2037,7 @@ Docs：[http://pocoproject.org/docs/package-SQLite.SQLite.html]
 
 POCO 前面已经介绍过。它提供了 sqlite 的封装类
 
-=== 8.2.7 Redis ===
+=== 8.2.7 Redis 封装库 ===
 
 <h4>Hiredis</h4>
 
