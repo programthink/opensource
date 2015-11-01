@@ -874,7 +874,7 @@ Home：[https://github.com/google/benchmark]
 
 ----
 
-= 5 操作系统相关 =
+= 5 操作系统 =
 
 == 5.1 跨操作系统 ==
 
@@ -1054,7 +1054,7 @@ POCO 前面已经介绍过。它提供了相应的封装类（WinService），�
 
 ----
 
-= 6 GUI 开发 =
+= 6 GUI =
 
 == 6.1 GUI 框架 ==
 
@@ -1275,7 +1275,7 @@ Home：[http://wxmathplot.sourceforge.net/]
 
 ----
 
-= 7 网络编程 =
+= 7 网络 =
 
 == 7.1 链路层 & 网络层 ==
 
@@ -2240,7 +2240,7 @@ trans.commit();
 
 ----
 
-= 9 Web 相关 =
+= 9 Web =
 
 == 9.1 HTTP Server ==
 
@@ -2949,7 +2949,7 @@ C 语言开发的 3D 音效库，跨平台。最初由 Loki Software 开发。Lo
 
 ----
 
-= 14 游戏开发 =
+= 14 游戏 =
 
 == 14.1 综合性的游戏引擎 ==
 
