@@ -1277,9 +1277,7 @@ Home：[http://wxmathplot.sourceforge.net/]
 
 = 7 网络编程 =
 
-== 7.1 标准协议 ==
-
-=== 7.1.1 链路层 & 网络层 ===
+== 7.1 链路层 & 网络层 ==
 
 <h4>libpcap</h4>
 
@@ -1354,7 +1352,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Pcap 英文]
 
 它是 libpcap 在 Windows 系统下的移植。
 
-=== 7.1.2 传输层 ===
+== 7.2 传输层 ==
 
 <h4>socket</h4>
 
@@ -1380,7 +1378,7 @@ Docs：[http://pocoproject.org/docs/Poco.Net.html]
 
 POCO 前面已经介绍过。它提供了针对 TCP 服务端的封装类。
 
-=== 7.1.3 应用层 ===
+== 7.3 标准的应用层 ==
 
 <h4>cURL & libcurl</h4>
 
@@ -1451,7 +1449,7 @@ Home：[http://c-ares.haxx.se/]
 
 对比官网域名可知，它跟 cURL 是一家子。除了 cURL/libcurl 用到它，还有一些知名开源项目（比如：Wireshark、node.js ...）用到它。
 
-== 7.2 自定义协议 ==
+== 7.4 自定义的应用层 ==
 
 <h4>Protocol Buffers</h4>
 
@@ -1477,7 +1475,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Apache_Thrift 英文]
 
 （在这个方面，它有点类似于 Google 的 Protocol Buffers）
 
-== 7.3 网络库、框架、中间件 ==
+== 7.5 网络库、框架、中间件 ==
 
 <h4>Boost.Asio</h4>
 
