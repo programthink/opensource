@@ -1380,6 +1380,8 @@ POCO 前面已经介绍过。它提供了针对 TCP 服务端的封装类。
 
 == 7.3 标准的应用层 ==
 
+=== 7.3.1 综合性的库 ===
+
 <h4>cURL & libcurl</h4>
 
 Home：[http://curl.haxx.se/libcurl/]
@@ -1440,6 +1442,12 @@ Home：[http://www.curlpp.org/]
 Docs：[http://pocoproject.org/docs/Poco.Net.html]
 
 POCO 前面已经介绍过。它提供了几种常见应用层协议（HTTP、SMTP、POP3、FTP、NTP ...）的封装类。
+
+=== 7.3.2 HTTP ===
+
+（关于“HTTP 协议”，请参见另一个大类：“Web 相关”）
+
+=== 7.3.3 DNS ===
 
 <h4>c-ares</h4>
 
