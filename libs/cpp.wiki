@@ -1457,6 +1457,24 @@ Home：[http://c-ares.haxx.se/]
 
 对比官网域名可知，它跟 cURL 是一家子。除了 cURL/libcurl 用到它，还有一些知名开源项目（比如：Wireshark、node.js ...）用到它。
 
+=== 7.3.4 XMPP ===
+
+（XMPP 的洋文全称是“Extensible Messaging and Presence Protocol”。这是一个标准化的 IM 交互协议）
+
+<h4>Swiften</h4>
+
+Home：[http://swift.im/swiften.html]
+
+这是一个 C++ 语言开发的 XMPP 封装库。它同时也是 Swift 聊天客户端所用的后端。
+
+它大量使用了 Boost 的子库（Signal、Bind、Optional、Smart Pointers ...）。
+
+<h4>QXmpp</h4>
+
+Home：[https://github.com/qxmpp-project/qxmpp]
+
+这是一个 C++ 语言开发的 XMPP 封装库。从它的名称可以看出——依赖了 Qt 框架（需要 Qt 4.5 或更高版本）。
+
 == 7.4 自定义的应用层 ==
 
 <h4>Protocol Buffers</h4>
