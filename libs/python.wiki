@@ -185,7 +185,7 @@ Home：[http://pyobjc.sourceforge.net/]
 
 ----
 
-= 3 操作系统相关 =
+= 3 操作系统 =
 
 == 3.1 文件和目录操作 ==
 
@@ -376,7 +376,7 @@ Home：[https://pypi.python.org/pypi/setuptools]
 
 ----
 
-= 4 Web 开发 =
+= 4 Web =
 
 == 4.1 HTTP Client ==
 
@@ -973,7 +973,7 @@ Person.createTable()
 
 ----
 
-= 7 GUI 开发 =
+= 7 GUI =
 
 == 7.1 GUI 框架 ==
 
@@ -1580,7 +1580,7 @@ Home：[http://cairographics.org/pycairo/]
 
 Pycairo 是 Cairo 官方提供 Python 封装。
 
-= 11 游戏开发 =
+= 11 游戏 =
 
 == 11.1 综合性的游戏引擎 ==
 
