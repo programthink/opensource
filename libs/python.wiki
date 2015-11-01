@@ -598,32 +598,7 @@ Python 标准库很早就提供了对 socket 编程的支持。
 
 == 5.3 标准的应用层 ==
 
-<h4>ftplib</h4>
-
-封装 FTP 协议（文件传输）的标准库
-
-代码示例——列出 FTP 服务器上某目录的内容
-<source lang="python">
-from ftplib import FTP
-
-ftp = FTP("ftp.debian.org")  &#35; 连接服务器（如果不指定端口号，则用默认端口号 21）
-ftp.login()                  &#35; 登录（如果不指定用户名和密码，则用匿名登录）
-ftp.cwd("debian")            &#35; 切换到 "debian" 目录
-ftp.retrlines("LIST")        &#35; 列出当前目录的内容
-ftp.quit()
-</source>
-
-<h4>smtplib</h4>
-
-封装 SMTP 协议（邮件发送）的标准库
-
-<h4>imaplib</h4>
-
-封装 IMAP 协议（邮件接收）的标准库
-
-<h4>poplib</h4>
-
-封装 POP3 协议（邮件接收）的标准库
+=== 5.3.1 综合性的库 ===
 
 <h4>PycURL</h4>
 
@@ -649,6 +624,43 @@ curl.perform()
 curl.close()
 body = buffer.getvalue()
 </source>
+
+=== 5.3.2 HTTP ===
+
+（关于“HTTP 协议”，请参见另一个大类：“Web”）
+
+=== 5.3.3 FTP ===
+
+<h4>ftplib</h4>
+
+封装 FTP 协议（文件传输）的标准库
+
+代码示例——列出 FTP 服务器上某目录的内容
+<source lang="python">
+from ftplib import FTP
+
+ftp = FTP("ftp.debian.org")  &#35; 连接服务器（如果不指定端口号，则用默认端口号 21）
+ftp.login()                  &#35; 登录（如果不指定用户名和密码，则用匿名登录）
+ftp.cwd("debian")            &#35; 切换到 "debian" 目录
+ftp.retrlines("LIST")        &#35; 列出当前目录的内容
+ftp.quit()
+</source>
+
+=== 5.3.4 Email ===
+
+<h4>smtplib</h4>
+
+封装 SMTP 协议（邮件发送）的标准库
+
+<h4>imaplib</h4>
+
+封装 IMAP 协议（邮件接收）的标准库
+
+<h4>poplib</h4>
+
+封装 POP3 协议（邮件接收）的标准库
+
+=== 5.3.5 IM ===
 
 <h4>jabber.py</h4>
 
