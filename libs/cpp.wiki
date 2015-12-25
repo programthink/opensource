@@ -1459,7 +1459,7 @@ Home：[http://c-ares.haxx.se/]
 
 === 7.3.4 XMPP ===
 
-（XMPP 的洋文全称是“Extensible Messaging and Presence Protocol”。这是一个标准化的 IM 交互协议）
+（[https://zh.wikipedia.org/wiki/XMPP XMPP] 的洋文全称是“Extensible Messaging and Presence Protocol”。这是一个标准化的 IM 交互协议）
 
 <h4>Swiften</h4>
 
@@ -1691,6 +1691,16 @@ Home：[http://libev.schmorp.de/]
 看名称就能猜到它跟 libevent 很像。实际上，你可以把 libev 视为 libevent 的竞争性替代品。
 
 [http://www.gevent.org/ gevent] 官方博客的[http://blog.gevent.org/2011/04/28/libev-and-libevent/ 一篇文章]对比了这俩库的优缺点。
+
+<h4>libuv</h4>
+
+Home：[https://github.com/libuv/libuv]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Libuv 英文]
+
+它提供了跨平台的异步 I/O 机制。主要是为了提供给 [https://en.wikipedia.org/wiki/Node.js Node.js] 使用。
+
+除了支持网络通讯，还支持：线程池、Windows 命名管道、Unix domain sockets、文件系统事件通知 ......
 
 <h4>Dlib</h4>
 
