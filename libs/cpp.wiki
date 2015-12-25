@@ -2403,6 +2403,16 @@ Wikipedia：[https://en.wikipedia.org/wiki/PhantomJS 英文]
 
 它本身没有提供 GUI 界面。但是提供了 JavaScript 的 API，让你可以操纵 WebKit 引擎。可以利用它进行 Web 界面的单元测试。
 
+== 9.5 （其它） ==
+
+<h4>WebSocket++</h4>
+
+Home：[http://www.zaphoyd.com/websocketpp/]
+
+顾名思义，它提供了 [https://en.wikipedia.org/wiki/WebSocket WebSocket] 的 C++ 封装，基于 Boost Asio 构建。
+
+支持多种操作系统平台，支持 TLS、proxy、IPv6。
+
 ----
 
 = 10 信息安全 =
