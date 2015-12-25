@@ -2266,6 +2266,12 @@ for(result::iterator i(r.begin()); i!=r.end(); ++i)
 trans.commit();
 </source>
 
+<h4>hiberlite</h4>
+
+Home：[https://github.com/paulftw/hiberlite]
+
+专门提供给 Sqlite 的 ORM 封装库。基于 C++ 开发，其 API 采用类似 Boost.Serialization 的风格。
+
 ----
 
 = 9 Web =
