@@ -1593,6 +1593,14 @@ with Image(filename="mona-lisa.png") as img :
             display(new_img)
 </source>
 
+<h4>PyGraphviz</h4>
+
+Home：[https://github.com/pygraphviz/pygraphviz]
+
+[https://en.wikipedia.org/wiki/Graphviz Graphviz] 是一个功能很强大的关系图【自动】生成工具，具体介绍可以参见俺的博文（在“[https://program-think.blogspot.com/2016/02/opensource-review-graphviz.html 这里]”）
+
+这个库如其名所示，提供了 Python 对 Graphviz 的封装。
+
 == 10.2 图像格式转换 ==
 
 <h4>Python Imaging Library（PIL）</h4>
