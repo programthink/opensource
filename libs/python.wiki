@@ -1599,7 +1599,29 @@ Home：[https://github.com/pygraphviz/pygraphviz]
 
 [https://en.wikipedia.org/wiki/Graphviz Graphviz] 是一个功能很强大的关系图【自动】生成工具，具体介绍可以参见俺的博文（在“[https://program-think.blogspot.com/2016/02/opensource-review-graphviz.html 这里]”）
 
-这个库如其名所示，提供了 Python 对 Graphviz 的封装。
+这个库如其名所示，提供了 Python 对 Graphviz 的封装（基于 SWIG）。
+
+<h4>Graphviz</h4>
+
+Home：[https://github.com/xflr6/graphviz]
+
+这个库与上一个类似，也提供了 Graphviz 的 Python 的封装。
+
+这两个库都在 GitHub 上。（可能是因为出现较晚）这个库的 Star 和 Fork 数都不如上一个，不过俺感觉文档比较全。
+
+代码示例——创建一个 DOT 图并加入若干节点和连线
+<source lang="python">
+from graphviz import Digraph
+
+dot = Digraph(comment='The Round Table')
+&#35; 添加节点
+dot.node('A', 'King Arthur')
+dot.node('B', 'Sir Bedevere the Wise')
+dot.node('L', 'Sir Lancelot the Brave')
+&#35; 添加连线
+dot.edges(['AB', 'AL'])
+dot.edge('B', 'L', constraint='false')
+</source>
 
 == 10.2 图像格式转换 ==
 
