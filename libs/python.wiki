@@ -8,7 +8,7 @@
 
 本页面列出的各种 Python 库/模块，如果注明了官网的网址，说明这个库是第三方的；否则就是 Python 语言内置的标准库。
 
-如果你发现本页面的开源库有错漏之处，非常欢迎给俺提供反馈——有 GitHub 帐号的同学，可以[https://github.com/programthink/opensource/issues 给俺发 issue]；没帐号的同学，可以去[http://program-think.blogspot.com/ 俺博客]留言。
+如果你发现本页面的开源库有错漏之处，非常欢迎给俺提供反馈——有 GitHub 帐号的同学，可以[https://github.com/programthink/opensource/issues 给俺发 issue]；没帐号的同学，可以去[https://program-think.blogspot.com/ 俺博客]留言。
 
 ----
 
@@ -625,7 +625,7 @@ Python 标准库很早就提供了对 socket 编程的支持。
 
 Home：[http://pycurl.sourceforge.net/]
 
-[https://en.wikipedia.org/wiki/Curl cURL] 是一个功能很强的网络库/网络工具，支持 N 多应用层协议。俺在前几年写过一篇博文推荐它（在“[http://program-think.blogspot.com/2009/03/opensource-review-curl-library.html 这里]”）。
+[https://en.wikipedia.org/wiki/Curl cURL] 是一个功能很强的网络库/网络工具，支持 N 多应用层协议。俺在前几年写过一篇博文推荐它（在“[https://program-think.blogspot.com/2009/03/opensource-review-curl-library.html 这里]”）。
 
 看名称就能猜到——PycURL 是 cURL 的 Python 封装。
 
@@ -705,7 +705,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Protocol_Buffers 英文]
 
 这是 Google 开发的一个跨语言的库，用于网络传输业务数据时的“编码/解码”。
 
-其优点是：跨多种语言、高性能、向前兼容、向后兼容。俺前几年写过一篇博文推荐 protobuf（在“[http://program-think.blogspot.com/2009/05/opensource-review-protocol-buffers.html 这里]”）。
+其优点是：跨多种语言、高性能、向前兼容、向后兼容。俺前几年写过一篇博文推荐 protobuf（在“[https://program-think.blogspot.com/2009/05/opensource-review-protocol-buffers.html 这里]”）。
 
 作为 Protocol Buffers 的发明者，Google 默认实现了三种编程语言（C++、Java、Python）对它的支持。
 
@@ -898,7 +898,7 @@ Home：[https://pypi.python.org/pypi/ibm_db]
 
 sqlite3 从 Python 2.5 版本开始加入到标准库中。通过它，你可以很方便地操作 SQLite 数据库。
 
-[https://en.wikipedia.org/wiki/SQLite SQLite] 是一个很优秀的轻量级数据库，俺前几年写过一篇博文推荐它（在“[http://program-think.blogspot.com/2009/04/how-to-use-sqlite.html 这里]”）。
+[https://en.wikipedia.org/wiki/SQLite SQLite] 是一个很优秀的轻量级数据库，俺前几年写过一篇博文推荐它（在“[https://program-think.blogspot.com/2009/04/how-to-use-sqlite.html 这里]”）。
 
 代码示例——创建一个内存数据库，建表并插入记录
 <source lang="python">
@@ -1280,7 +1280,7 @@ Home：[http://code.enthought.com/chaco/]
 
 它支持的哈希算法有：MD5 SHA1 SHA224 SHA256 SHA384 SHA512
 
-关于散列算法，俺写过一篇扫盲（在“[http://program-think.blogspot.com/2013/02/file-integrity-check.html 这里]”）。
+关于散列算法，俺写过一篇扫盲（在“[https://program-think.blogspot.com/2013/02/file-integrity-check.html 这里]”）。
 
 代码示例——计算字符串的 SHA1 散列值
 <source lang="python">
