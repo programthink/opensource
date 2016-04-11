@@ -2723,6 +2723,18 @@ Home：[https://google.github.io/snappy/]
 
 支持多种语言的绑定（C#、Common Lisp、Erlang、Go、Haskell、Lua、Java、Node.js、Perl、PHP、Python、R、Ruby、Smalltalk）
 
+=== 11.2.8 Brotli ===
+
+<h4>Brotli</h4>
+
+Home：[https://github.com/google/brotli]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Brotli 英文]
+
+由 Google 开发的压缩格式，压缩率很高（据说高于 LZMA 和 bz2）。
+
+该算法很新，是2015年9月才发布的。
+
 == 11.3 标记语言 ==
 
 === 11.3.1 XML ===
