@@ -2711,6 +2711,18 @@ Home：[http://www.unrarlib.org/]
 
 该项目的开发已经停止。只支持对 RAR2 格式的解压缩。
 
+=== 11.2.7 snappy ===
+
+<h4>snappy</h4>
+
+Home：[https://google.github.io/snappy/]
+
+由 Google 开发的压缩格式，特点是非常快（不论是压缩还是解压）；但是压缩率不如 gzip。
+
+起先被用于 Google 内部的 BigTable，如今被用于多种 NoSQL 数据库（比如：Cassandra、Hadoop、LevelDB、MongoDB、RocksDB...）
+
+支持多种语言的绑定（C#、Common Lisp、Erlang、Go、Haskell、Lua、Java、Node.js、Perl、PHP、Python、R、Ruby、Smalltalk）
+
 == 11.3 标记语言 ==
 
 === 11.3.1 XML ===
