@@ -2639,6 +2639,16 @@ Home：[http://www.7-zip.org/sdk.html]
 
 支持的格式：7z、LZMA、LZMA2、XZ
 
+<h4>PhysicsFS</h4>
+
+Home：[http://icculus.org/physfs/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/PhysicsFS 英文]
+
+针对不同的压缩/归档格式，提供了类似 VFS 的抽象封装层。主要用于游戏开发中。
+
+支持的格式：zip、7z、GRP、PAK、HOG、MVL、WAD...
+
 <h4>zopfli</h4>
 
 Home：[https://github.com/google/zopfli]
