@@ -749,6 +749,38 @@ Home：[https://bitbucket.org/jaraco/irc]
 
 IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库。
 
+=== 5.3.6 远程控制 ===
+
+<h4>telnetlib</h4>
+
+【标准库】
+
+封装 telnet 协议
+
+代码示例——使用 telnet 登录到某个主机并执行简单命令
+<source lang="python">
+import telnetlib
+import getpass
+
+host = raw_input("Enter remote host: ")
+user = raw_input("Enter your remote account: ")
+password = getpass.getpass()
+
+tn = telnetlib.Telnet(host)
+
+tn.read_until("login: ")
+tn.write(user + "\n")
+
+if password :
+  tn.read_until("Password: ")
+  tn.write(password + "\n")
+
+tn.write("ls\n")
+tn.write("exit\n")
+
+print tn.read_all()
+</source>
+
 == 5.4 自定义的应用层 ==
 
 <h4>Protocol Buffers</h4>
