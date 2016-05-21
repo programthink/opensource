@@ -696,7 +696,7 @@ body = buffer.getvalue()
 
 （关于“HTTP 协议”，请参见另一个大类：“Web”）
 
-=== 5.3.3 FTP ===
+=== 5.3.3 文件传输 ===
 
 <h4>ftplib</h4>
 
@@ -715,7 +715,7 @@ ftp.retrlines("LIST")        &#35; 列出当前目录的内容
 ftp.quit()
 </source>
 
-=== 5.3.4 Email ===
+=== 5.3.4 电子邮件 ===
 
 <h4>smtplib</h4>
 
@@ -735,7 +735,7 @@ ftp.quit()
 
 封装 POP3（Post Office Protocol v3）协议
 
-=== 5.3.5 IM ===
+=== 5.3.5 即时通讯 ===
 
 <h4>jabber.py</h4>
 
