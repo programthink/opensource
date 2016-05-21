@@ -20,7 +20,9 @@
 
 <h4>re</h4>
 
-正则表达式的标准库，提供基于正则的匹配和替换。
+【标准库】
+
+提供基于正则的匹配和替换。
 
 === 1.1.2 字符集 ===
 
@@ -42,11 +44,15 @@ print(chardet.detect(bytes))
 
 <h4>StringIO & cStringIO</h4>
 
+【标准库】
+
 以读写文件的方式来操作字符串（有点类似于内存文件）。
 
 cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现的，提供 Unicode 兼容性。
 
 <h4>difflib</h4>
+
+【标准库】
 
 可以对两个字符串进行“按行”比较，其功能类似于命令行的 diff。
 
@@ -60,7 +66,9 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 
 <h4>base64</h4>
 
-标准库，提供 Base16、Base32、Base64 格式的编码和解码。
+【标准库】
+
+提供 Base16、Base32、Base64 格式的编码和解码。
 
 === 1.2.2 UUencode ===
 
@@ -68,7 +76,9 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 
 <h4>uu</h4>
 
-标准库，提供 UUencode 格式的编码和解码。
+【标准库】
+
+提供 UUencode 格式的编码和解码。
 
 === 1.2.3 BinHex ===
 
@@ -76,15 +86,21 @@ cStringIO 是 C 语言实现的，性能更高；而 StringIO 是 Python 实现�
 
 <h4>binhex</h4>
 
-标准库，提供 BinHex 格式的编码和解码。
+【标准库】
+
+提供 BinHex 格式的编码和解码。
 
 == 1.3 数学类 ==
 
 <h4>math</h4>
 
+【标准库】
+
 顾名思义，这个标准库封装了常用的数学函数（开方、指数、对数、三角函数......）。
 
 <h4>random</h4>
+
+【标准库】
 
 顾名思义，这个标准库是用来进行随机数生成滴。
 
@@ -97,7 +113,9 @@ random.randint(0, 100)
 
 <h4>fractions</h4>
 
-这个标准库封装了跟有理数（分数）相关的运算
+【标准库】
+
+封装了跟有理数（分数）相关的运算
 
 == 1.4 容器 ==
 
@@ -191,11 +209,15 @@ Home：[http://pyobjc.sourceforge.net/]
 
 <h4>os</h4>
 
-这是一个非常基本的标准库，提供了常见的操作系统相关功能，很多功能是针对文件系统。
+【标准库】
+
+这是非常基本的标准库，提供了常见的操作系统相关功能，很多功能是针对文件系统。
 
 <h4>shutil</h4>
 
-相对于 os 标准库，shutil 标准库提供了一些比较高级的文件和目录操作（目录递归复制、目录递归删除、目录压缩打包...）
+【标准库】
+
+相对于 os 而言，shutil 提供了一些比较高级的文件和目录操作（目录递归复制、目录递归删除、目录压缩打包...）
 
 代码示例——递归删除某个目录
 <source lang="python">
@@ -205,7 +227,9 @@ shutil.rmtree(xxxx)
 
 <h4>glob</h4>
 
-这个标准库用于查找文件，【支持通配符】（* 和 ?）
+【标准库】
+
+用于查找文件，【支持通配符】（* 和 ?）
 
 代码示例——获取当前目录所有 txt 文件
 <source lang="python">
@@ -216,7 +240,9 @@ for file in glob.glob("./*.txt") :
 
 <h4>fnmatch</h4>
 
-这个标准库用于匹配文件名（支持通配符，类似上面的 glob）
+【标准库】
+
+用于匹配文件名（支持通配符，类似上面的 glob）
 
 代码示例——列出当前目录所有 txt 文件
 <source lang="python">
@@ -229,7 +255,9 @@ for file in os.listdir(".") :
 
 <h4>tempfile</h4>
 
-使用这个标准库，可以安全地生成临时文件或临时目录。
+【标准库】
+
+使用它可以安全地生成临时文件或临时目录。
 
     
 
@@ -237,7 +265,9 @@ for file in os.listdir(".") :
 
 <h4>threading</h4>
 
-这个模块提供了比较高层的线程封装 API。它本身包含了线程同步/互斥的机制。
+【标准库】
+
+提供了比较高层的线程封装 API。它本身包含了线程同步/互斥的机制。
 
 代码示例——基于“函数”的线程
 <source lang="python">
@@ -275,7 +305,9 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 <h4>subprocess</h4>
 
-用于进程管理的标准库，可以启动子进程，通过标准输入输出跟子进程交互。
+【标准库】
+
+用于进程管理，可以启动子进程，通过标准输入输出跟子进程交互。
 
 代码示例——启动命令行进程，并获取该进程的标准输出
 <source lang="python">
@@ -285,6 +317,8 @@ output = subprocess.check_output(["netstat", "-an"])  &#35; 获取当前网络�
 </source>
 
 <h4>multiprocessing</h4>
+
+【标准库】
 
 它是 2.6 版本加入到标准库的，其 API 接口的风格类似于 threading 模块。
 
@@ -309,6 +343,8 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 <h4>mmap</h4>
 
+【标准库】
+
 提供了内存映射文件的支持。
 
 代码示例——利用 mmap 在父子进程间交换数据
@@ -328,13 +364,17 @@ if pid == 0 :  &#35; 子进程
 
 <h4>signal</h4>
 
+【标准库】
+
 用于进程信号处理的标准库（主要用于 Linux & UNIX 系统）。
 
 == 3.5 Linux & Unix 系统相关 ==
 
 <h4>syslog</h4>
 
-通过这个标准库，可以很方便地跟 POSIX 的 syslog 服务进行交互。
+【标准库】
+
+通过它可以很方便地跟 POSIX 的 syslog 服务进行交互。
 
 == 3.6 Windows 系统相关 ==
 
@@ -382,6 +422,8 @@ Home：[https://pypi.python.org/pypi/setuptools]
 
 <h4>httplib & httplib2 & http.request & urllib.parse</h4>
 
+【标准库】
+
 这几个库可以进行各种 HTTP 客户端请求（GET、POST、等）。
 
 Python2 的模块名是 httplib 和 httplib2；到 Python3，模块名改为 http.request 和 urllib.parse
@@ -418,6 +460,8 @@ u'{"type":"User"...'
 == 4.2 HTTP Server ==
 
 <h4>SimpleHTTPServer & http.server</h4>
+
+【标准库】
 
 提供轻量级 HTTP Server 的标准库。
 
@@ -526,6 +570,8 @@ Home：[https://github.com/chrivers/pyjaco]
 == 4.5 浏览器整合 ==
 
 <h4>webbrowser</h4>
+
+【标准库】
 
 操纵当前系统的默认浏览器，访问指定 URL 的页面。
 
@@ -654,7 +700,9 @@ body = buffer.getvalue()
 
 <h4>ftplib</h4>
 
-封装 FTP 协议（文件传输）的标准库
+【标准库】
+
+封装 FTP（File Transfer Protocol）协议
 
 代码示例——列出 FTP 服务器上某目录的内容
 <source lang="python">
@@ -671,15 +719,21 @@ ftp.quit()
 
 <h4>smtplib</h4>
 
-封装 SMTP 协议（邮件发送）的标准库
+【标准库】
+
+封装 SMTP（Simple Mail Transfer Protocol）协议
 
 <h4>imaplib</h4>
 
-封装 IMAP 协议（邮件接收）的标准库
+【标准库】
+
+封装 IMAP（Internet Message Access Protocol）协议
 
 <h4>poplib</h4>
 
-封装 POP3 协议（邮件接收）的标准库
+【标准库】
+
+封装 POP3（Post Office Protocol v3）协议
 
 === 5.3.5 IM ===
 
@@ -896,6 +950,8 @@ Home：[https://pypi.python.org/pypi/ibm_db]
 
 <h4>sqlite3</h4>
 
+【标准库】
+
 sqlite3 从 Python 2.5 版本开始加入到标准库中。通过它，你可以很方便地操作 SQLite 数据库。
 
 [https://en.wikipedia.org/wiki/SQLite SQLite] 是一个很优秀的轻量级数据库，俺前几年写过一篇博文推荐它（在“[https://program-think.blogspot.com/2009/04/how-to-use-sqlite.html 这里]”）。
@@ -1015,6 +1071,8 @@ Person.createTable()
 [https://en.wikipedia.org/wiki/Tk_(framework) Tk] 是一个跨平台的界面组件库。
 
 <h4>Tkinter & tkinter</h4>
+
+【标准库】
 
 这是 Python 内置的标准库，封装了 Tcl/Tk 界面库。
 
@@ -1276,6 +1334,8 @@ Home：[http://code.enthought.com/chaco/]
 
 <h4>hashlib</h4>
 
+【标准库】
+
 在 Python 2.5 版本加入到标准库中。通过它，你可以很方便地计算各种散列值。
 
 它支持的哈希算法有：MD5 SHA1 SHA224 SHA256 SHA384 SHA512
@@ -1327,14 +1387,18 @@ Home：[https://github.com/google/oauth2client]
 [https://en.wikipedia.org/wiki/Comma-separated_values CSV] 是一种历史悠久的结构化数据存储格式。其效果类似于一张数据库二维表。
 <h4>csv</h4>
 
-标准库，提供 CSV 格式文件的读写。
+【标准库】
+
+提供 CSV 格式文件的读写，可以手动指定行列分隔符。
 
 === 9.1.2 JSON ===
 
 JSON 格式源自 JavaScript，如今在 Web 开发中广为应用。
 <h4>json</h4>
 
-标准库，提供 JSON 格式的编码和解码。
+【标准库】
+
+提供 JSON 格式的编码和解码。
 
 代码示例——编码/解码 JSON 字符串
 <source lang="python">
@@ -1366,29 +1430,39 @@ pyyaml 提供了 Python 对 YAML 的封装。
 
 <h4>zipfile</h4>
 
-处理 zip 格式的标准库。
+【标准库】
+
+提供对 zip 格式的读写。
 
 === 9.2.2 bzip2（bz2） ===
 
 <h4>bz2</h4>
 
-处理 bzip2 格式的标准库。
+【标准库】
+
+提供对 bzip2 格式的读写。
 
 === 9.2.3 gzip（gz） ===
 
 <h4>gzip</h4>
 
-处理 gzip 格式的标准库。
+【标准库】
+
+提供对 gzip 格式的读写。
 
 <h4>zlib</h4>
 
-处理 gzip 格式的标准库。
+【标准库】
+
+提供对 zlib 格式的读写。
 
 === 9.2.4 tar ===
 
 <h4>tarfile</h4>
 
-处理 tar 格式的标准库。
+【标准库】
+
+提供对 tar 格式的读写。
 
 === 9.2.5 7zip（7z） ===
 
@@ -1410,7 +1484,9 @@ Home：[http://rarfile.berlios.de/]
 
 <h4>msilib</h4>
 
-处理 msi 格式的标准库，从 Python 2.5 版本开始提供。
+【标准库】
+
+提供对 msi 格式的读写，从 Python 2.5 版本开始加入标准库。
 
 == 9.3 标记语言 ==
 
@@ -1418,11 +1494,15 @@ Home：[http://rarfile.berlios.de/]
 
 <h4>xml.dom & xml.miniDom & xml.etree.ElementTree</h4>
 
-用 DOM（Document Object Model）方式处理 XML 文件的标准库。
+【标准库】
+
+用 DOM（Document Object Model）方式处理 XML 文件。
 
 <h4>xml.sax & xml.parsers.expat</h4>
 
-用 SAX（Simple API for XML）方式处理 XML 文件的标准库。
+【标准库】
+
+用 SAX（Simple API for XML）方式处理 XML 文件。
 
 <h4>lxml</h4>
 
@@ -1436,7 +1516,9 @@ Home：[http://lxml.de/]
 
 <h4>HTMLParser</h4>
 
-以回调方式解析 HTML/XHTML 文件内容的标准库。
+【标准库】
+
+以回调方式解析 HTML/XHTML 文件内容。
 
 == 9.4 PDF ==
 
