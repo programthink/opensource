@@ -787,6 +787,14 @@ Home：[https://github.com/citronneur/rdpy]
 
 纯 Python 实现的 RDP（[https://en.wikipedia.org/wiki/Remote_Desktop_Protocol 微软远程桌面协议]）和 VNC（[https://en.wikipedia.org/wiki/Virtual_Network_Computing Virtual Network Computing]）客户端，依赖于 Twisted 库
 
+=== 5.3.7 （其它） ===
+
+<h4>urlparse</h4>
+
+【标准库】
+
+用于解析 URL，提取各个部分的内容。从 Python 2.5 版本开始加入到标准库中，从 Python 2.7 开始支持包含 IPv6 的 URL
+
 == 5.4 自定义的应用层 ==
 
 <h4>Protocol Buffers</h4>
@@ -1861,7 +1869,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/SymPy 英文]、[https://zh.wikipedia
 
 ----
 
-= 13 其它 =
+= 13 （其它） =
 
 一些不方便归类的，暂时放到这里。
 
