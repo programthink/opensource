@@ -781,6 +781,12 @@ tn.write("exit\n")
 print tn.read_all()
 </source>
 
+<h4>rdpy</h4>
+
+Home：[https://github.com/citronneur/rdpy]
+
+纯 Python 实现的 RDP（[https://en.wikipedia.org/wiki/Remote_Desktop_Protocol 微软远程桌面协议]）和 VNC（[https://en.wikipedia.org/wiki/Virtual_Network_Computing Virtual Network Computing]）客户端，依赖于 Twisted 库
+
 == 5.4 自定义的应用层 ==
 
 <h4>Protocol Buffers</h4>
