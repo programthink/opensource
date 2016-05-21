@@ -715,6 +715,22 @@ ftp.retrlines("LIST")        &#35; 列出当前目录的内容
 ftp.quit()
 </source>
 
+<h4>pysftp</h4>
+
+Home：[https://bitbucket.org/dundeemt/pysftp]
+
+封装 [https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol SFTP] 协议，依赖于 ssh.py
+
+代码示例——简单的上传/下载
+<source lang="python">
+import pysftp
+
+with pysftp.Connection("hostxxx", username="userxxx", password="xxxxxx") as sftp :
+    with sftp.cd("public")              &#35; 服务端当前目录切换到 public
+        sftp.put("/my/local/filename")  &#35; 上传某个本地文件到服务端的 public 目录
+    sftp.get_r("myfiles", "/local")     &#35; 递归复制某个服务端的目录到本地
+</source>
+
 === 5.3.4 电子邮件 ===
 
 <h4>smtplib</h4>
@@ -772,8 +788,8 @@ tn.read_until("login: ")
 tn.write(user + "\n")
 
 if password :
-  tn.read_until("Password: ")
-  tn.write(password + "\n")
+    tn.read_until("Password: ")
+    tn.write(password + "\n")
 
 tn.write("ls\n")
 tn.write("exit\n")
