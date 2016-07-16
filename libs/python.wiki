@@ -892,6 +892,27 @@ Home：[https://github.com/zeromq/pyzmq]
 
 PyZMQ 2.2 之后的版本同时支持 ZMQ 的 3.x 和 4.x 版本。
 
+<h4>nanomsg-python</h4>
+
+Home：[https://github.com/tonysimpson/nanomsg-python]
+
+这是 nanomsg 的 Python 封装库。同时支持 Python2 和 Python3。
+
+代码示例——Hello world
+<source lang="python">
+from &#95;&#95;future&#95;&#95; import print_function
+from nanomsg import Socket, PAIR, PUB
+
+s1 = Socket(PAIR)
+s2 = Socket(PAIR)
+s1.bind("inproc://test")
+s2.connect("inproc://test")
+s1.send(b"hello world")
+print(s2.recv())
+s1.close()
+s2.close()
+</source>
+
 ----
 
 = 6 数据库 =
