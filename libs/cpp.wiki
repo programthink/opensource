@@ -1552,7 +1552,7 @@ Home：[http://www.zeromq.org/]
 
 Wikipedia：[https://en.wikipedia.org/wiki/ZeroMQ 英文]、[https://zh.wikipedia.org/wiki/%C3%98MQ 中文]
 
-ZeroMQ 是一个轻量级、跨平台的开源库，提供了高性能、异步的消息队列。它提供了多种语言的绑定（包括 C 和 C++）。
+ZeroMQ 是一个轻量级、跨平台的开源库，提供了高性能、异步的消息队列。采用 C++ 开发，提供了多种语言的绑定。
 
 与传统的消息中间件不同，使用 ZeroMQ 不需要额外的“消息代理（message broker）”。
 
@@ -1581,6 +1581,50 @@ int main(int argc, char* argv[])
         // Send reply back to client
         s_send(responder, "Hello, world");
     }
+}
+</source>
+
+<h4>nanomsg</h4>
+
+Home：[http://nanomsg.org/]
+
+很类似 ZeroMQ 的库，比 ZMQ 更加轻量级。采用 C 开发，提供了多种语言的绑定。
+
+API 完全参照 BSD socket 的风格和语义。
+
+代码示例——Request/Reply
+<source lang="cpp">
+&#35;include <assert.h>
+&#35;include <libc.h>
+&#35;include <stdio.h>
+&#35;include <nanomsg/nn.h>
+&#35;include <nanomsg/pipeline.h>
+
+int reply(const char* url)
+{
+    int sock = nn_socket(AF_SP, NN_PULL);
+    assert(sock >= 0);
+    assert(nn_bind(sock, url) >= 0);
+    while(1)
+    {
+        char* msg = NULL;
+        int bytes = nn_recv(sock, &msg, NN_MSG, 0);
+        assert(bytes >= 0);
+        printf("RECEIVED:\n%s\n", msg);
+        nn_freemsg(msg);
+    }
+}
+
+int request(const char* url, const char* msg)
+{
+    int sz_msg = strlen(msg) + 1; // '\0'
+    int sock = nn_socket(AF_SP, NN_PUSH);
+    assert(sock >= 0);
+    assert(nn_connect(sock, url) >= 0);
+    printf("SENDING:\n%s\n", msg);
+    int bytes = nn_send(sock, msg, sz_msg, 0);
+    assert(bytes == sz_msg);
+    return nn_shutdown(sock, 0);
 }
 </source>
 
