@@ -884,6 +884,14 @@ gevent.joinall(jobs, timeout=2)
 print([job.value for job in jobs])
 </source>
 
+<h4>PyZMQ</h4>
+
+Home：[https://github.com/zeromq/pyzmq]
+
+这是 ZMQ（ZeroMQ）的 Python 封装库。同时支持 Python2 和 Python3。
+
+PyZMQ 2.2 之后的版本同时支持 ZMQ 的 3.x 和 4.x 版本。
+
 ----
 
 = 6 数据库 =
