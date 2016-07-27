@@ -1301,11 +1301,85 @@ Home：[http://wxmathplot.sourceforge.net/]
 
 == 7.1 命令行参数 ==
 
+<h4>getopt</h4>
+
+Home：[https://www.gnu.org/software/libc/manual/html_node/Getopt.html]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Getopt 英文]
+
+这是标准C用来处理命令行参数的老牌函数，诞生于上世纪80年代初期。
+
+它有很多种不同的实现，如今用得最多的是 GNU C Library 的实现。GNU 还实现了一个增强版 getopt_long。
+
+代码示例
+<source lang="cpp">
+&#35;include <stdio.h>     /* for printf */
+&#35;include <stdlib.h>    /* for exit */
+&#35;include <unistd.h>    /* for getopt */
+int main(int argc, char** argv)
+{
+    int digit_optind = 0;
+    int aopt = 0, bopt = 0;
+    char* copt = NULL;
+    char* dopt = NULL;
+    int c;
+    while( (c = getopt(argc, argv, "abc:d:012")) != -1)
+    {
+        int this_option_optind = optind ? optind : 1;
+        switch(c)
+        {
+            case '0':
+            case '1':
+            case '2':
+                if(digit_optind != 0 && digit_optind != this_option_optind)
+                {
+                    printf("digits occur in two different argv-elements.\n");
+                }
+                digit_optind = this_option_optind;
+                printf("option %c\n", c);
+                break;
+            case 'a':
+                printf("option a\n");
+                aopt = 1;
+                break;
+            case 'b':
+                printf("option b\n");
+                bopt = 1;
+                break;
+            case 'c':
+                printf("option c with value '%s'\n", optarg);
+                copt = optarg;
+                break;
+            case 'd':
+                printf("option d with value '%s'\n", optarg);
+                dopt = optarg;
+                break;
+            case '?':
+                break;
+            default:
+                printf("?? getopt returned character code 0%o ??\n", c);
+        }
+    }
+    if(optind < argc)
+    {
+        printf("non-option ARGV-elements: ");
+        while(optind < argc)
+        {
+            printf("%s ", argv[optind++]);
+        }
+        printf("\n");
+    }
+    exit (0);
+}
+</source>
+
 <h4>Boost.Program_options</h4>
 
 Docs：[http://boost.org/libs/program_options]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“处理命令行参数”的功能。
+
+它的功能很丰富，但是比较重型。
 
 == 7.2 文本终端 ==
 
