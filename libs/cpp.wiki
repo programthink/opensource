@@ -1307,6 +1307,18 @@ Docs：[http://boost.org/libs/program_options]
 
 Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“处理命令行参数”的功能。
 
+== 7.2 文本终端 ==
+
+<h4>ncurses</h4>
+
+Home：[https://www.gnu.org/software/ncurses/]
+
+Wikipedia：[https://en.wikipedia.org/wiki/Ncurses 英文]、[https://zh.wikipedia.org/wiki/Ncurses 中文]
+
+ncurses 是“new curses”的缩略词，它是 [https://en.wikipedia.org/wiki/Curses_(programming_library) curses] 库的自由软件克隆，诞生于1993年。
+
+大名鼎鼎的 [https://en.wikipedia.org/wiki/Eric_S._Raymond Eric S. Raymond] 曾参与早期版本的开发。
+
 = 8 网络 =
 
 == 8.1 链路层 & 网络层 ==
