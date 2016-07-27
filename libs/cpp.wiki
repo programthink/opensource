@@ -304,6 +304,28 @@ cout << format("%s  %d") % "price" % 1234;
 // price  1234
 </source>
 
+<h4>fmt</h4>
+
+Home：[https://github.com/fmtlib/fmt]
+
+这是一个轻量级、类型安全、高性能的字符串格式化库。它也可以用来替代 C++ 标准库中的 IOStreams。
+
+代码示例
+<source lang="cpp">
+&#35;include <string>
+&#35;include <fmt/format.h>
+
+// 使用 Python 的格式化语法
+fmt::print("Hello, {}!", "world");
+// 使用 printf 的格式化语法
+fmt::printf("Hello, %s!", "world");
+// 使用序号参数，
+std::string s = fmt::format("{0} {1} {0}", "Hello", "world");
+// 使用命名参数
+fmt::print("Hello, {name}! The answer is {number}. Goodbye, {name}.",
+           fmt::arg("name", "World"), fmt::arg("number", 42));
+</source>
+
 === 2.3.3 正则表达式 ===
 
 <h4>PCRE（Perl Compatible Regular Expressions）</h4>
