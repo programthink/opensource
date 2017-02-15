@@ -193,7 +193,17 @@ Wikipedia：[https://en.wikipedia.org/wiki/IronPython 英文]、[https://zh.wiki
 
 通过 IronPython 可以让 Python 代码运行在 dotNET 平台上，并且可以调用其它的 dotNET 语言的代码（C#、F#、VB.Net ...）
 
-== 2.4 整合 Objective-C 语言 ==
+== 2.4 整合 Go ==
+
+<h4>gopy</h4>
+
+Home：[https://github.com/go-python/gopy]
+
+gopy 可以把 Go 源代码编译为 Python 的一个 module。
+
+它提供了两种方式（命令行、Python 库）来实现：Go 源码编译为 Python 模块。
+
+== 2.5 整合 Objective-C ==
 
 <h4>PyObjC</h4>
 
