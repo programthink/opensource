@@ -2897,6 +2897,18 @@ Wikipedia：[https://en.wikipedia.org/wiki/Brotli 英文]
 
 该算法很新，是2015年9月才发布的。
 
+=== 12.2.9 LZFSE ===
+
+<h4>LZFSE</h4>
+
+Home：[https://github.com/lzfse/lzfse]
+
+Wikipedia：[https://zh.wikipedia.org/wiki/LZFSE 中文]
+
+由苹果开发的压缩格式。苹果称它的压缩率与“ZLib level 5”相似，但速度快2至3倍。
+
+该算法是前不久（2016年7月）才开源出来的。
+
 == 12.3 标记语言 ==
 
 === 12.3.1 XML ===
