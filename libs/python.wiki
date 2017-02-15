@@ -1068,7 +1068,15 @@ conn.commit()
 conn.close()
 </source>
 
-=== 6.2.7 Redis ===
+=== 6.2.7 MongoDB ===
+
+<h4>PyMongo</h4>
+
+Docs：[https://docs.mongodb.com/ecosystem/drivers/python/]
+
+这是 MongoDB 官方提供的 Python 驱动。
+
+=== 6.2.8 Redis ===
 
 <h4>redis-py</h4>
 
@@ -1084,7 +1092,7 @@ r.set("foo", "bar")
 print(r.get("foo"))
 </source>
 
-=== 6.2.8 LevelDB ===
+=== 6.2.9 LevelDB ===
 
 <h4>Plyvel</h4>
 
@@ -1101,7 +1109,7 @@ print(db.get(b"key"))
 db.close()
 </source>
 
-=== 6.2.9 Berkeley DB ===
+=== 6.2.10 Berkeley DB ===
 
 <h4>PyBSDDB</h4>
 
