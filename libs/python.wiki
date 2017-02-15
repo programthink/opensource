@@ -1076,7 +1076,25 @@ Docs：[https://docs.mongodb.com/ecosystem/drivers/python/]
 
 这是 MongoDB 官方提供的 Python 驱动。
 
-=== 6.2.8 Redis ===
+=== 6.2.8 Apache HBase ===
+
+<h4>HappyBase</h4>
+
+Home：[https://github.com/wbolster/happybase]
+
+操作 HBase 的 Python 库，基于 [https://en.wikipedia.org/wiki/Apache_Thrift Thrift] 连接到 HBase。
+
+代码示例——简单的存取操作
+<source lang="python">
+import happybase
+connection = happybase.Connection("hostname")
+table = connection.table("table-name")
+table.put(b"row-key", {b"test1": b"data1", b"test2": b"data2"})
+row = table.row(b"row-key")
+print(row[b"test1"])
+</source>
+
+=== 6.2.9 Redis ===
 
 <h4>redis-py</h4>
 
@@ -1092,7 +1110,7 @@ r.set("foo", "bar")
 print(r.get("foo"))
 </source>
 
-=== 6.2.9 LevelDB ===
+=== 6.2.10 LevelDB ===
 
 <h4>Plyvel</h4>
 
@@ -1109,7 +1127,7 @@ print(db.get(b"key"))
 db.close()
 </source>
 
-=== 6.2.10 Berkeley DB ===
+=== 6.2.11 Berkeley DB ===
 
 <h4>PyBSDDB</h4>
 
