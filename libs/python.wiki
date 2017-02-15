@@ -1076,7 +1076,7 @@ Home：[https://github.com/andymccurdy/redis-py]
 
 操作 Redis 的第三方 Python 客户端。
 
-代码示例——简单的 set/get
+代码示例——简单的存取操作
 <source lang="python">
 import redis
 r = redis.StrictRedis(host="localhost", port=6379, db=0)
@@ -1084,7 +1084,24 @@ r.set("foo", "bar")
 print(r.get("foo"))
 </source>
 
-=== 6.2.8 Berkeley DB ===
+=== 6.2.8 LevelDB ===
+
+<h4>Plyvel</h4>
+
+Home：[https://github.com/wbolster/plyvel]
+
+操作 LevelDB 的 Python 库，速度快，同时兼容 Python2 和 Python3。
+
+代码示例——简单的存取操作
+<source lang="python">
+import plyvel
+db = plyvel.DB("/tmp/testdb/", create_if_missing=True)
+db.put(b"key", b"value")
+print(db.get(b"key"))
+db.close()
+</source>
+
+=== 6.2.9 Berkeley DB ===
 
 <h4>PyBSDDB</h4>
 
