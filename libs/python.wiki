@@ -1204,6 +1204,38 @@ class Person(SQLObject) :
 Person.createTable()
 </source>
 
+<h4>Peewee</h4>
+
+Home：[http://www.peewee-orm.com/]
+
+一个轻量级的 ORM，支持 SQLite、MySQL 和 PostgreSQL，通过插件机制支持更多数据库。
+
+同时支持 Python2 和 Python3。
+
+代码示例——通过对象的方式创建表
+<source lang="python">
+from peewee import *
+
+db = SqliteDatabase("test.db")
+
+class Person(Model) :
+    name = CharField()
+    birthday = DateField()
+    is_relative = BooleanField()
+    class Meta :
+        database = db  &#35; This model uses the "test.db".
+
+class Pet(Model) :
+    owner = ForeignKeyField(Person, related_name="pets")
+    name = CharField()
+    animal_type = CharField()
+    class Meta :
+        database = db  &#35; This model uses the "test.db".
+
+db.connect()
+db.create_tables([Person, Pet])
+</source>
+
 ----
 
 = 7 GUI =
