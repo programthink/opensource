@@ -923,6 +923,29 @@ s1.close()
 s2.close()
 </source>
 
+== 5.6 云计算 ==
+
+<h4>Apache Libcloud</h4>
+
+Home：[https://libcloud.apache.org/]
+
+如今云提供商越来越多。这个库提供了统一的 API 让你访问各大知名云提供商提供的各种服务。
+
+代码示例——创建 DNS 记录
+<source lang="python">
+from libcloud.dns.types import Provider, RecordType
+from libcloud.dns.providers import get_driver
+
+cls = get_driver(Provider.ZERIGO)
+driver = cls("email", "api key")
+
+zones = driver.list_zones()
+zone = [zone for zone in zones if zone.domain == "mydomain.com"][0]
+
+record = zone.create_record(name="www", type=RecordType.A, data="127.0.0.1")
+print(record)
+</source>
+
 ----
 
 = 6 数据库 =
