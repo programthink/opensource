@@ -1771,10 +1771,6 @@ Home：[http://www.unixuser.org/~euske/python/pdfminer/]
 
 === 9.5.1 Word（doc、docx） ===
 
-<h4>PyWin32</h4>
-
-PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Word（本地需要安装 Office）。
-
 <h4>python-docx</h4>
 
 Home：[https://github.com/python-openxml/python-docx]
@@ -1782,6 +1778,12 @@ Home：[https://github.com/python-openxml/python-docx]
 纯 python 实现的 docx 操作库，能够处理 docx 中的“文本、图片、样式”。
 
 同时支持 Python2 和 Python3。
+
+<h4>PyWin32</h4>
+
+PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Word。
+
+（本地需要安装 Office）
 
 === 9.5.2 Excel（xls、xlsx） ===
 
@@ -1793,7 +1795,9 @@ Home：[http://sourceforge.net/projects/pyexcelerator/]
 
 <h4>PyWin32</h4>
 
-PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Excel（本地需要安装 Office）。
+PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Excel。
+
+（本地需要安装 Office）
 
 === 9.5.3 Power Point（ppt、pptx） ===
 
@@ -1805,7 +1809,9 @@ Home：[https://github.com/scanny/python-pptx]
 
 <h4>PyWin32</h4>
 
-PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Excel（本地需要安装 Office）。
+PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Power Point。
+
+（本地需要安装 Office）
 
 == 9.6 RTF ==
 
