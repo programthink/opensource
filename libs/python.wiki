@@ -1775,6 +1775,14 @@ Home：[http://www.unixuser.org/~euske/python/pdfminer/]
 
 PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/Component_Object_Model COM] 操作 Office 文档，包括 Word（本地需要安装 Office）。
 
+<h4>python-docx</h4>
+
+Home：[https://github.com/python-openxml/python-docx]
+
+纯 python 实现的 docx 操作库，能够处理 docx 中的“文本、图片、样式”。
+
+同时支持 Python2 和 Python3。
+
 === 9.5.2 Excel（xls、xlsx） ===
 
 <h4>pyExcelerator</h4>
