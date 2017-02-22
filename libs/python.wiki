@@ -1819,6 +1819,14 @@ with Image(filename="mona-lisa.png") as img :
             display(new_img)
 </source>
 
+<h4>Pillow</h4>
+
+Home：[http://python-pillow.org/]
+
+你可以把它视作“轻量级的 PIL”。
+
+它的目标是比 PIL 更容易使用，并尽可能与 PIL 的 API 兼容。
+
 <h4>PyGraphviz</h4>
 
 Home：[https://github.com/pygraphviz/pygraphviz]
