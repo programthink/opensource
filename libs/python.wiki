@@ -161,7 +161,7 @@ MessageBox(text="Hello, world", flags=2)
 
 Home：[http://swig.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/SWIG 英文]
+Links：[https://en.wikipedia.org/wiki/SWIG Wikipedia]
 
 这是一个很老牌的、有名气的工具，它可以把多种语言（Java、Python、C#、Ruby、PHP、Perl、Lua、Go ...）整合到 C/C++ 中。
 
@@ -179,7 +179,7 @@ Home：[http://cython.org/]
 
 Home：[http://www.jython.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Jython 英文]、[https://zh.wikipedia.org/wiki/Jython 中文]
+Links：[https://en.wikipedia.org/wiki/Jython Wikipedia] [https://zh.wikipedia.org/wiki/Jython 维基百科]
 
 通过 Jython 可以让 Python 代码运行在 JVM 上，并且可以调用其它的 JVM 语言的代码（比如 Java、Scala）
 
@@ -189,7 +189,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Jython 英文]、[https://zh.wikipedi
 
 Home：[http://ironpython.net/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/IronPython 英文]、[https://zh.wikipedia.org/wiki/IronPython 中文]
+Links：[https://en.wikipedia.org/wiki/IronPython Wikipedia] [https://zh.wikipedia.org/wiki/IronPython 维基百科]
 
 通过 IronPython 可以让 Python 代码运行在 dotNET 平台上，并且可以调用其它的 dotNET 语言的代码（C#、F#、VB.Net ...）
 
@@ -408,7 +408,7 @@ PyInstaller 可以把你的 Python 代码制作成独立运行的程序（不依
 
 Home：[http://www.py2exe.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Py2exe 英文]
+Links：[https://en.wikipedia.org/wiki/Py2exe Wikipedia]
 
 py2exe 的功能类似 PyInstaller，但只支持 Windows 平台。
 
@@ -496,7 +496,7 @@ httpd.serve_forever()
 
 Home：[https://www.djangoproject.com/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Django_(web_framework) 英文]、[https://zh.wikipedia.org/wiki/Django 中文]
+Links：[https://en.wikipedia.org/wiki/Django_(web_framework) Wikipedia] [https://zh.wikipedia.org/wiki/Django 维基百科]
 
 在 Python 社区，Django 是目前最有影响力的 Web 开发框架。该框架很重型，内置了 Web 服务端开发常用的组件（比如：ORM、用户管理）。
 
@@ -508,7 +508,7 @@ Django 应用范围很广，比如 Google 的 Web 开发平台 GAE 就支持它�
 
 Home：[http://www.turbogears.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/TurboGears 英文]、[https://zh.wikipedia.org/wiki/TurboGears 中文]
+Links：[https://en.wikipedia.org/wiki/TurboGears Wikipedia] [https://zh.wikipedia.org/wiki/TurboGears 维基百科]
 
 又一个重型的 Web 开发框架，名气仅次于 Django。
 
@@ -518,7 +518,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/TurboGears 英文]、[https://zh.wiki
 
 Home：[http://www.cherrypy.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/CherryPy 英文]
+Links：[https://en.wikipedia.org/wiki/CherryPy Wikipedia]
 
 轻量级的 Web 框架。某些 Web 框架（比如前面提到的 TurboGears）使用它作为底层。
 
@@ -642,7 +642,7 @@ Home：[https://github.com/google/pywebsocket]
 
 Home：[http://www.secdev.org/projects/scapy/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Scapy 英文]
+Links：[https://en.wikipedia.org/wiki/Scapy Wikipedia]
 
 这是一个底层的网络库，可以在不同协议层次构造网络数据包（包括链路层、网络层、传输层），还支持 Sniffer 抓包。
 
@@ -827,7 +827,7 @@ Home：[https://github.com/citronneur/rdpy]
 
 Home：[https://developers.google.com/protocol-buffers/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Protocol_Buffers 英文]
+Links：[https://en.wikipedia.org/wiki/Protocol_Buffers Wikipedia]
 
 这是 Google 开发的一个跨语言的库，用于网络传输业务数据时的“编码/解码”。
 
@@ -839,7 +839,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Protocol_Buffers 英文]
 
 Home：[https://thrift.apache.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Apache_Thrift 英文]
+Links：[https://en.wikipedia.org/wiki/Apache_Thrift Wikipedia]
 
 来自于 Apache 社区，提供了一种跨语言的通讯机制。
 
@@ -853,7 +853,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Apache_Thrift 英文]
 
 Home：[http://twistedmatrix.com/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Twisted_%28software%29 英文]
+Links：[https://en.wikipedia.org/wiki/Twisted_%28software%29 Wikipedia]
 
 这是一个基于 Python 网络通讯开发框架，诞生于2002年，名气很大。
 
@@ -1164,7 +1164,7 @@ Home：[http://www.jcea.es/programacion/pybsddb.htm]
 
 Home：[http://www.sqlalchemy.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/SQLAlchemy 英文]、[https://zh.wikipedia.org/wiki/SQLAlchemy 中文]
+Links：[https://en.wikipedia.org/wiki/SQLAlchemy Wikipedia] [https://zh.wikipedia.org/wiki/SQLAlchemy 维基百科]
 
 SQLAlchemy 支持的数据库有：MySQL、PostgreSQL、Sqlite、Oracle、MS SQL Server、Firebird、Sybase SQL Server、Informix、等。
 
@@ -1211,7 +1211,7 @@ Base.metadata.create_all(create_engine("dbms://user:pwd@host/dbname"))
 
 Home：[http://sqlobject.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/SQLObject 英文]
+Links：[https://en.wikipedia.org/wiki/SQLObject Wikipedia]
 
 SQLObject 支持的数据库有：MySQL、PostgreSQL、Sqlite、MS SQL Server、Firebird、Sybase SQL Server、SAP DB、等。
 
@@ -1295,7 +1295,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 Home：[http://www.wxpython.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/WxPython 英文]、[https://zh.wikipedia.org/wiki/WxPython 中文]
+Links：[https://en.wikipedia.org/wiki/WxPython Wikipedia] [https://zh.wikipedia.org/wiki/WxPython 维基百科]
 
 在所有的 wxWidgets 的 Python 封装库中，这个是名气最大的。
 
@@ -1333,7 +1333,7 @@ Home：[http://pythoncard.sourceforge.net/]
 
 Home：[http://www.pygtk.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/PyGTK 英文]
+Links：[https://en.wikipedia.org/wiki/PyGTK Wikipedia]
 
 它是 Python 对 GTK+2 的封装。
 
@@ -1411,7 +1411,7 @@ Gtk.main()
 
 Home：[http://www.riverbankcomputing.com/software/pyqt/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/PyQt 英文]、[https://zh.wikipedia.org/wiki/PyQt 中文]
+Links：[https://en.wikipedia.org/wiki/PyQt Wikipedia] [https://zh.wikipedia.org/wiki/PyQt 维基百科]
 
 这是 Python 对 Qt 的封装。
 
@@ -1495,7 +1495,7 @@ Home：[http://ocemp.sourceforge.net/gui.html]
 
 Home：[http://matplotlib.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Matplotlib 英文]
+Links：[https://en.wikipedia.org/wiki/Matplotlib Wikipedia]
 
 这是一个有名的图形库，主要用来绘制数学相关的图形。
 
@@ -1839,7 +1839,7 @@ Home：[http://gnochm.sourceforge.net/pychm.html]
 
 Home：[http://www.pythonware.com/products/pil/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Python_Imaging_Library 英文]
+Links：[https://en.wikipedia.org/wiki/Python_Imaging_Library Wikipedia]
 
 这是一个很有名气的 Python 图像处理库，支持常见图像文件格式（BMP、JPG、GIF、PNG ...）。
 
@@ -1954,7 +1954,7 @@ Pycairo 是 Cairo 官方提供 Python 封装。
 
 Home：[http://www.pygame.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Pygame 英文]、[https://zh.wikipedia.org/wiki/Pygame 中文]
+Links：[https://en.wikipedia.org/wiki/Pygame Wikipedia] [https://zh.wikipedia.org/wiki/Pygame 维基百科]
 
 这是名气很大的跨平台游戏引擎，构建于 [https://zh.wikipedia.org/wiki/SDL SDL]（Simple DirectMedia Layer）之上。
 
@@ -1974,7 +1974,7 @@ Home：[http://cocos2d.org/]
 
 Home：[http://www.blender.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Game_Blender 英文]、[https://zh.wikipedia.org/wiki/Game_Blender 中文]
+Links：[https://en.wikipedia.org/wiki/Game_Blender Wikipedia] [https://zh.wikipedia.org/wiki/Game_Blender 维基百科]
 
 它是 [https://en.wikipedia.org/wiki/Blender_%28software%29 Blender] 的组成部分，虽然是以 C++ 编写，但内置了 Python 脚本的扩展。
 
@@ -2002,7 +2002,7 @@ Home：[http://www.python-ogre.org/]
 
 Home：[http://www.numpy.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/NumPy 英文]、[https://zh.wikipedia.org/wiki/NumPy 中文]
+Links：[https://en.wikipedia.org/wiki/NumPy Wikipedia] [https://zh.wikipedia.org/wiki/NumPy 维基百科]
 
 它提供了功能强大、性能很高的数值数组，可以用来进行各种数值计算（包括矩阵运算）。
 
@@ -2026,7 +2026,7 @@ c = a + b
 
 Home：[http://www.scipy.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/SciPy 英文]、[https://zh.wikipedia.org/wiki/SciPy 中文]
+Links：[https://en.wikipedia.org/wiki/SciPy Wikipedia] [https://zh.wikipedia.org/wiki/SciPy 维基百科]
 
 它依赖 NumPy 提供的多维数组。相比 NumPy，它提供了更高层的数学运算模块（统计、线性代数、积分、常微分方程求解、傅立叶变换、信号处理 ...）。
 
@@ -2036,7 +2036,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/SciPy 英文]、[https://zh.wikipedia
 
 Home：[http://sympy.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/SymPy 英文]、[https://zh.wikipedia.org/wiki/SymPy 中文]
+Links：[https://en.wikipedia.org/wiki/SymPy Wikipedia] [https://zh.wikipedia.org/wiki/SymPy 维基百科]
 
 它是用来做符号计算的，其目标是成为一个全功能的“计算机代数系统”。
 
@@ -2052,7 +2052,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/SymPy 英文]、[https://zh.wikipedia
 
 Home：[http://www.pypy.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/PyPy 英文]、[https://zh.wikipedia.org/wiki/PyPy 中文]
+Links：[https://en.wikipedia.org/wiki/PyPy Wikipedia] [https://zh.wikipedia.org/wiki/PyPy 维基百科]
 
 它是一个用 Python 写的 Python 解释器（有点绕口令）。
 
