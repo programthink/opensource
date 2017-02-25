@@ -16,7 +16,7 @@
 
 Home：[http://boost.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Boost_%28C%2B%2B_libraries%29 英文]、[https://zh.wikipedia.org/wiki/Boost_C%2B%2B_Libraries 中文]
+Links：[https://en.wikipedia.org/wiki/Boost_%28C%2B%2B_libraries%29 Wikipedia] [https://zh.wikipedia.org/wiki/Boost_C%2B%2B_Libraries 维基百科]
 
 Boost 大概是最重要的第三方 C++ 库。其作者有很多是 C++ 标准委员会的成员。Boost 的很多子库后来都成为 C++ 的标准库。
 
@@ -26,7 +26,7 @@ Boost 大概是最重要的第三方 C++ 库。其作者有很多是 C++ 标准�
 
 Home：[https://wxwidgets.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/WxWidgets 英文]、[https://zh.wikipedia.org/wiki/WxWidgets 中文]
+Links：[https://en.wikipedia.org/wiki/WxWidgets Wikipedia] [https://zh.wikipedia.org/wiki/WxWidgets 维基百科]
 
 这是一个非常老牌的 C++ 开源 GUI 框架，诞生于1992年。原先叫做 wxWindows，后来因为微软的法律纠纷，改为现名。
 
@@ -40,7 +40,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/WxWidgets 英文]、[https://zh.wikip
 
 Home：[http://www.qt-project.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Qt_(toolkit) 英文]、[https://zh.wikipedia.org/wiki/Qt 中文]
+Links：[https://en.wikipedia.org/wiki/Qt_(toolkit) Wikipedia] [https://zh.wikipedia.org/wiki/Qt 维基百科]
 
 这是一个非常老牌的 C++ 开源 GUI 框架，于1995年发布 1.0 版本。原先由 Trolltech 公司维护，后来该公司被 Nokia 收购。
 
@@ -52,7 +52,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Qt_(toolkit) 英文]、[https://zh.wi
 
 Home：[https://apr.apache.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Apache_Portable_Runtime 英文]、[https://zh.wikipedia.org/wiki/Apache%E5%8F%AF%E7%A7%BB%E6%A4%8D%E8%BF%90%E8%A1%8C%E6%97%B6 中文]
+Links：[https://en.wikipedia.org/wiki/Apache_Portable_Runtime Wikipedia] [https://zh.wikipedia.org/wiki/Apache%E5%8F%AF%E7%A7%BB%E6%A4%8D%E8%BF%90%E8%A1%8C%E6%97%B6 维基百科]
 
 这是由 Apache 社区维护的 C 开源库，主要提供操作系统相关的功能（文件系统、进程、线程、用户、IPC）。此外还提供了一些网络相关的功能。
 
@@ -62,7 +62,7 @@ APR 原先是 Apache Web 服务器的一个组成部分，后来独立出来，�
 
 Home：[http://www.cse.wustl.edu/~schmidt/ACE.html]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Adaptive_Communication_Environment 英文]、[https://zh.wikipedia.org/wiki/ACE%E8%87%AA%E9%80%82%E9%85%8D%E9%80%9A%E4%BF%A1%E7%8E%AF%E5%A2%83 中文]
+Links：[https://en.wikipedia.org/wiki/Adaptive_Communication_Environment Wikipedia] [https://zh.wikipedia.org/wiki/ACE%E8%87%AA%E9%80%82%E9%85%8D%E9%80%9A%E4%BF%A1%E7%8E%AF%E5%A2%83 维基百科]
 
 这是一个跨平台的 C++ 库，提供了一套网络通讯的框架；另外还支持线程、进程和 IPC。
 
@@ -70,7 +70,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Adaptive_Communication_Environment �
 
 Home：[http://pocoproject.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/POCO_C%2B%2B_Libraries 英文]
+Links：[https://en.wikipedia.org/wiki/POCO_C%2B%2B_Libraries Wikipedia]
 
 它的名称源自“POrtable COmponents”，是一个基于 C++ 的开源库。
 
@@ -80,7 +80,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/POCO_C%2B%2B_Libraries 英文]
 
 Home：[http://dlib.net/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Dlib 英文]
+Links：[https://en.wikipedia.org/wiki/Dlib Wikipedia]
 
 诞生于2002年的 C++ 开源库，提供了非常多的功能（网络、多线程、GUI、数值计算、图像处理、数据挖掘......）。
 
@@ -90,7 +90,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Dlib 英文]
 
 Home：[http://www.cryptopp.com/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Crypto%2B%2B 英文]
+Links：[https://en.wikipedia.org/wiki/Crypto%2B%2B Wikipedia]
 
 它也叫“CryptoPP”或“libcrypto++”，是非常著名的开源加密库，诞生于1995年。基于 C++ 开发，大量用到模板语法。
 
@@ -332,7 +332,7 @@ fmt::print("Hello, {name}! The answer is {number}. Goodbye, {name}.",
 
 Home：[http://www.pcre.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions 英文]
+Links：[https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions Wikipedia]
 
 这是一个很老牌的正则表达式的库，诞生于1997年。很多知名的开源项目（Apache、PHP、KDE）用到了它。
 
@@ -395,7 +395,7 @@ assert(i == 1234);
 
 Home：[http://www.geocities.jp/kosako3/oniguruma/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Oniguruma 英文]
+Links：[https://en.wikipedia.org/wiki/Oniguruma Wikipedia]
 
 来自日本的正则式库，基于 C 语言。据说性能很高。
 
@@ -839,7 +839,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了与�
 
 Home：[https://github.com/google/googletest]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Google_Test 英文]
+Links：[https://en.wikipedia.org/wiki/Google_Test Wikipedia]
 
 这是 Google 提供的单元测试框架。从 Google Code 迁移到 GitHub 之后，又整合了 GoogleMock 项目。
 
@@ -849,7 +849,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Google_Test 英文]
 
 Home：[http://freedesktop.org/wiki/Software/cppunit/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/CppUnit 英文]
+Links：[https://en.wikipedia.org/wiki/CppUnit Wikipedia]
 
 如其名，这是一个 C++ 的单元测试框架。该项目起先是作为 JUnit 的 C++ 移植而创建的。
 
@@ -857,7 +857,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/CppUnit 英文]
 
 Home：[http://check.sourceforge.net/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Check_%28unit_testing_framework%29 英文]
+Links：[https://en.wikipedia.org/wiki/Check_%28unit_testing_framework%29 Wikipedia]
 
 这是针对 C 的单元测试框架。
 
@@ -1159,7 +1159,7 @@ int main(int argc, char* argv[])
 
 Home：[http://www.gtk.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/GTK%2B 英文]、[https://zh.wikipedia.org/wiki/GTK%2B 中文]
+Links：[https://en.wikipedia.org/wiki/GTK%2B Wikipedia] [https://zh.wikipedia.org/wiki/GTK%2B 维基百科]
 
 老牌的 GUI 框架，诞生于1998年。原先叫做“GIMP Toolkit”，是基于 C 开发的跨平台界面组件库。
 
@@ -1196,7 +1196,7 @@ int main(int argc, char* argv[])
 
 Home：[http://www.fltk.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/FLTK 英文]、[https://zh.wikipedia.org/wiki/FLTK 中文]
+Links：[https://en.wikipedia.org/wiki/FLTK Wikipedia] [https://zh.wikipedia.org/wiki/FLTK 维基百科]
 
 它的全称是“Fast, Light Toolkit”。如其名，它非常轻量级。用它写一个“Hello World 应用”，静态链接后大约才 100KB
 
@@ -1227,7 +1227,7 @@ int main(int argc, char **argv)
 
 Home：[http://sourceforge.net/projects/wtl/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Windows_Template_Library 英文]、[https://zh.wikipedia.org/wiki/Windows_Template_Library 中文]
+Links：[https://en.wikipedia.org/wiki/Windows_Template_Library Wikipedia] [https://zh.wikipedia.org/wiki/Windows_Template_Library 维基百科]
 
 这是微软雇员 Nenad Stefanovic 开发的开源 GUI 框架。开发 WTL 是为了提供一个轻量级的 MFC 替代品。
 
@@ -1305,7 +1305,7 @@ Home：[http://wxmathplot.sourceforge.net/]
 
 Home：[https://www.gnu.org/software/libc/manual/html_node/Getopt.html]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Getopt 英文]
+Links：[https://en.wikipedia.org/wiki/Getopt Wikipedia]
 
 这是标准C用来处理命令行参数的老牌函数，诞生于上世纪80年代初期。
 
@@ -1387,7 +1387,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“�
 
 Home：[https://www.gnu.org/software/ncurses/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Ncurses 英文]、[https://zh.wikipedia.org/wiki/Ncurses 中文]
+Links：[https://en.wikipedia.org/wiki/Ncurses Wikipedia] [https://zh.wikipedia.org/wiki/Ncurses 维基百科]
 
 ncurses 是“new curses”的缩略词，它是 [https://en.wikipedia.org/wiki/Curses_(programming_library) curses] 库的自由软件克隆，诞生于1993年。
 
@@ -1401,7 +1401,7 @@ ncurses 是“new curses”的缩略词，它是 [https://en.wikipedia.org/wiki/
 
 Home：[http://www.tcpdump.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Pcap 英文]
+Links：[https://en.wikipedia.org/wiki/Pcap Wikipedia]
 
 很著名的 Sniffer 抓包库，基于 C 语言开发。
 
@@ -1466,7 +1466,7 @@ int main(int argc, char* argv[])
 
 Home：[http://www.winpcap.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Pcap 英文]
+Links：[https://en.wikipedia.org/wiki/Pcap Wikipedia]
 
 它是 libpcap 在 Windows 系统下的移植。
 
@@ -1504,7 +1504,7 @@ POCO 前面已经介绍过。它提供了针对 TCP 服务端的封装类。
 
 Home：[http://curl.haxx.se/libcurl/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/CURL 英文]、[https://zh.wikipedia.org/wiki/CURL 中文]
+Links：[https://en.wikipedia.org/wiki/CURL Wikipedia] [https://zh.wikipedia.org/wiki/CURL 维基百科]
 
 cURL 是一个功能很强的网络库/网络工具，支持 N 多应用层协议。下面是支持协议的列表（从它官网抄袭的）
 
@@ -1599,7 +1599,7 @@ Home：[https://github.com/qxmpp-project/qxmpp]
 
 Home：[https://developers.google.com/protocol-buffers/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Protocol_Buffers 英文]
+Links：[https://en.wikipedia.org/wiki/Protocol_Buffers Wikipedia]
 
 它是 Google 开发的一个跨语言的库，用于传输业务数据时的“编码/解码”。其优点是：跨多种语言、高性能、向前兼容、向后兼容。
 
@@ -1611,7 +1611,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Protocol_Buffers 英文]
 
 Home：[https://thrift.apache.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Apache_Thrift 英文]
+Links：[https://en.wikipedia.org/wiki/Apache_Thrift Wikipedia]
 
 来自于 Apache 社区，提供了一种跨语言的通讯机制。
 
@@ -1668,7 +1668,7 @@ ACE 前面已经介绍过。它提供了很多种用于网络通讯的设计模�
 
 Home：[http://www.zeromq.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/ZeroMQ 英文]、[https://zh.wikipedia.org/wiki/%C3%98MQ 中文]
+Links：[https://en.wikipedia.org/wiki/ZeroMQ Wikipedia] [https://zh.wikipedia.org/wiki/%C3%98MQ 维基百科]
 
 ZeroMQ 是一个轻量级、跨平台的开源库，提供了高性能、异步的消息队列。采用 C++ 开发，提供了多种语言的绑定。
 
@@ -1750,7 +1750,7 @@ int request(const char* url, const char* msg)
 
 Home：[https://zeroc.com/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Internet_Communications_Engine 英文]、[https://zh.wikipedia.org/wiki/ICE_(%E4%B8%AD%E9%97%B4%E4%BB%B6) 中文]
+Links：[https://en.wikipedia.org/wiki/Internet_Communications_Engine Wikipedia] [https://zh.wikipedia.org/wiki/ICE_(%E4%B8%AD%E9%97%B4%E4%BB%B6) 维基百科]
 
 这是一个面向对象的通讯中间件，诞生于2002年。支持不同编程语言的通讯。
 
@@ -1760,7 +1760,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Internet_Communications_Engine 英文
 
 Home：[http://libevent.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Libevent 英文]、[https://zh.wikipedia.org/wiki/Libevent 中文]
+Links：[https://en.wikipedia.org/wiki/Libevent Wikipedia] [https://zh.wikipedia.org/wiki/Libevent 维基百科]
 
 它提供了异步事件处理机制。在网络开发中，可以用它替代传统的“event loop”，有助于简化代码。
 
@@ -1858,7 +1858,7 @@ Home：[http://libev.schmorp.de/]
 
 Home：[https://github.com/libuv/libuv]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Libuv 英文]
+Links：[https://en.wikipedia.org/wiki/Libuv Wikipedia]
 
 它提供了跨平台的异步 I/O 机制。主要是为了提供给 [https://en.wikipedia.org/wiki/Node.js Node.js] 使用。
 
@@ -1880,7 +1880,7 @@ Dlib 前面已经介绍过。它针对网络通讯，提供了比较高的抽象
 
 Home：[https://www.mysql.com/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/MySQL 英文]、[https://zh.wikipedia.org/wiki/MySQL 中文]
+Links：[https://en.wikipedia.org/wiki/MySQL Wikipedia] [https://zh.wikipedia.org/wiki/MySQL 维基百科]
 
 名气最大的开源数据库，诞生于1995年，采用 C 和 C++ 语言开发。如今隶属于 Oracle 公司。
 
@@ -1888,7 +1888,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/MySQL 英文]、[https://zh.wikipedia
 
 Home：[http://postgresql.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/PostgreSQL 英文]、[https://zh.wikipedia.org/wiki/PostgreSQL 中文]
+Links：[https://en.wikipedia.org/wiki/PostgreSQL Wikipedia] [https://zh.wikipedia.org/wiki/PostgreSQL 维基百科]
 
 名气仅次于 MySQL 的开源数据库，诞生于1996年。采用 C 语言开发。
 
@@ -1896,7 +1896,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/PostgreSQL 英文]、[https://zh.wiki
 
 Home：[http://sqlite.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/SQLite 英文]、[https://zh.wikipedia.org/wiki/SQLite 中文]
+Links：[https://en.wikipedia.org/wiki/SQLite Wikipedia] [https://zh.wikipedia.org/wiki/SQLite 维基百科]
 
 它是一个很优秀的嵌入式（进程内）数据库，非常轻量级，支持各种作系统平台。采用 C 语言开发。
 
@@ -1906,7 +1906,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/SQLite 英文]、[https://zh.wikipedi
 
 Home：[https://www.mongodb.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/MongoDB 英文]
+Links：[https://en.wikipedia.org/wiki/MongoDB Wikipedia]
 
 这是近几年兴起的 NoSQL 数据库的一员。它本身是基于 C++ 和 C 开发的。
 
@@ -1914,7 +1914,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/MongoDB 英文]
 
 Home：[http://redis.io/]
 
-Wikipedia：[https://zh.wikipedia.org/wiki/Redis 中文]、[https://en.wikipedia.org/wiki/Redis 英文]
+Links：[https://zh.wikipedia.org/wiki/Redis 维基百科] [https://en.wikipedia.org/wiki/Redis Wikipedia]
 
 诞生于2009年，是目前（2014~2015）最流行的键值存储数据库，基于 C 语言开发。
 
@@ -1924,7 +1924,7 @@ Wikipedia：[https://zh.wikipedia.org/wiki/Redis 中文]、[https://en.wikipedia
 
 Home：[http://www.oracle.com/us/products/database/berkeley-db/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Berkeley_DB 英文]、[https://zh.wikipedia.org/wiki/Berkeley_DB 中文]
+Links：[https://en.wikipedia.org/wiki/Berkeley_DB Wikipedia] [https://zh.wikipedia.org/wiki/Berkeley_DB 维基百科]
 
 诞生于1994年，是一个很老牌的嵌入式（进程内）数据库，提供“键值存储”的功能，基于 C 语言开发。
 
@@ -1936,7 +1936,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Berkeley_DB 英文]、[https://zh.wik
 
 Home：[https://github.com/google/leveldb]
 
-Wikipedia：[https://en.wikipedia.org/wiki/LevelDB 英文]、[https://zh.wikipedia.org/wiki/LevelDB 中文]
+Links：[https://en.wikipedia.org/wiki/LevelDB Wikipedia] [https://zh.wikipedia.org/wiki/LevelDB 维基百科]
 
 它是 Google 基于 C++ 开发的 NoSQL 数据库，提供“键值存储”的功能。
 
@@ -1948,7 +1948,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/LevelDB 英文]、[https://zh.wikiped
 
 Home：[http://www.firebirdsql.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Firebird_%28database_server%29 英文]、[https://zh.wikipedia.org/wiki/Firebird_(%E6%95%B0%E6%8D%AE%E5%BA%93) 中文]
+Links：[https://en.wikipedia.org/wiki/Firebird_%28database_server%29 Wikipedia] [https://zh.wikipedia.org/wiki/Firebird_(%E6%95%B0%E6%8D%AE%E5%BA%93) 维基百科]
 
 它是2000年的时候，从 [https://en.wikipedia.org/wiki/Borland Borland] 公司的 InterBase 数据库派生出来的。
 
@@ -1972,7 +1972,7 @@ Home：[http://www.scylladb.com/]
 
 Home：[http://otl.sourceforge.net/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Oracle_Template_Library 英文]
+Links：[https://en.wikipedia.org/wiki/Oracle_Template_Library Wikipedia]
 
 原生支持的数据库：Oracle、SQL Server、DB2、Informix、TimesTen, MAX/DB；另支持 ODBC。
 
@@ -2359,7 +2359,7 @@ POCO 前面已经介绍过。它提供了 MongoDB 的封装类
 
 Home：[http://www.unixodbc.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/UnixODBC 英文]
+Links：[https://en.wikipedia.org/wiki/UnixODBC Wikipedia]
 
 诞生于1999年，实现了全套的 ODBC 架构，包括：驱动管理器、相关的 GUI 界面和命令行界面。支持多种操作系统。
 
@@ -2381,7 +2381,7 @@ POCO 前面已经介绍过。它提供了操作 ODBC 的封装类。
 
 Home：[http://www.codesynthesis.com/products/odb]
 
-Wikipedia：[https://en.wikipedia.org/wiki/ODB_%28C%2B%2B%29 英文]
+Links：[https://en.wikipedia.org/wiki/ODB_%28C%2B%2B%29 Wikipedia]
 
 它的特色是：可以根据 C++ 类定义自动生成数据库的表结构。
 
@@ -2444,7 +2444,7 @@ Home：[https://github.com/paulftw/hiberlite]
 
 Home：[https://httpd.apache.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Apache_HTTP_Server 英文]、[https://zh.wikipedia.org/wiki/Apache_HTTP_Server 中文]
+Links：[https://en.wikipedia.org/wiki/Apache_HTTP_Server Wikipedia] [https://zh.wikipedia.org/wiki/Apache_HTTP_Server 维基百科]
 
 大名鼎鼎的 Apache，诞生于1995年，采用 C 和 C++ 开发。长期作为 Web Server 市场份额的老大。
 
@@ -2452,7 +2452,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Apache_HTTP_Server 英文]、[https:/
 
 Home：[http://nginx.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Nginx 英文]、[https://zh.wikipedia.org/wiki/Nginx 中文]
+Links：[https://en.wikipedia.org/wiki/Nginx Wikipedia] [https://zh.wikipedia.org/wiki/Nginx 维基百科]
 
 Web Server 的后起之秀，诞生于2002年，采用 C 语言开发。其市场份额如今排名第二。
 
@@ -2517,7 +2517,7 @@ POCO 前面已经介绍过。它提供了 HTTP Client 的封装类。
 
 Home：[https://www.webkit.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/WebKit 英文]、[https://zh.wikipedia.org/wiki/WebKit 中文]
+Links：[https://en.wikipedia.org/wiki/WebKit Wikipedia] [https://zh.wikipedia.org/wiki/WebKit 维基百科]
 
 它是很多浏览器使用的渲染引擎，基于 C++ 开发。
 
@@ -2525,7 +2525,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/WebKit 英文]、[https://zh.wikipedi
 
 Home：[https://developer.mozilla.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Gecko_(software) 英文]、[https://zh.wikipedia.org/wiki/Gecko 中文]
+Links：[https://en.wikipedia.org/wiki/Gecko_(software) Wikipedia] [https://zh.wikipedia.org/wiki/Gecko 维基百科]
 
 它是 Firefox 的渲染引擎，基于 C++ 开发，由 Mozilla 社区维护。
 
@@ -2535,7 +2535,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Gecko_(software) 英文]、[https://z
 
 Home：[https://bitbucket.org/chromiumembedded/cef]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Chromium_Embedded_Framework 英文]
+Links：[https://en.wikipedia.org/wiki/Chromium_Embedded_Framework Wikipedia]
 
 如其名，它提供了嵌入 Chrome 浏览器的框架。采用 C++ 开发。好几个商业公司（Google、Adobe、Facebook、Evernote...）的产品用到它。
 
@@ -2559,7 +2559,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Chromium_Embedded_Framework 英文]
 
 Home：[http://phantomjs.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/PhantomJS 英文]
+Links：[https://en.wikipedia.org/wiki/PhantomJS Wikipedia]
 
 2011年才诞生的。基于 C++ 开发，整合了 WebKit。
 
@@ -2603,7 +2603,7 @@ SHA256().CalculateDigest(abDigest, pbData, nDataLen);
 
 Home：[https://www.openssl.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/OpenSSL 英文]、[https://zh.wikipedia.org/wiki/OpenSSL 中文]
+Links：[https://en.wikipedia.org/wiki/OpenSSL Wikipedia] [https://zh.wikipedia.org/wiki/OpenSSL 维基百科]
 
 OpenSSL 基于 C 语言开发，在加密领域那可是大名鼎鼎。大部分常用的加密算法（对称、非对称）和散列算法，它都支持。
 
@@ -2613,7 +2613,7 @@ OpenSSL 基于 C 语言开发，在加密领域那可是大名鼎鼎。大部分
 
 Home：[http://www.libressl.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/LibreSSL 英文]、[https://zh.wikipedia.org/wiki/LibreSSL 中文]
+Links：[https://en.wikipedia.org/wiki/LibreSSL Wikipedia] [https://zh.wikipedia.org/wiki/LibreSSL 维基百科]
 
 OpenSSL 爆出“心脏滴血漏洞”之后，OpenBSD 社区的程序员复制了 OpenSSL 版本 1.0.1g 的代码，然后另起炉灶。
 
@@ -2623,7 +2623,7 @@ LibreSSL 的主要目标是“安全性”，其维护人员删除了原 OpenSSL
 
 Home：[http://gnutls.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/GnuTLS 英文]
+Links：[https://en.wikipedia.org/wiki/GnuTLS Wikipedia]
 
 采用 C 语言开发，名气也挺大。如其名，主要提供 TLS/SSL 的相关功能。
 
@@ -2631,7 +2631,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/GnuTLS 英文]
 
 Home：[http://nacl.cr.yp.to/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/NaCl_%28software%29 英文]
+Links：[https://en.wikipedia.org/wiki/NaCl_%28software%29 Wikipedia]
 
 这个名称是“Networking and Cryptography library”的缩写。
 
@@ -2805,7 +2805,7 @@ Home：[http://www.7-zip.org/sdk.html]
 
 Home：[http://icculus.org/physfs/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/PhysicsFS 英文]
+Links：[https://en.wikipedia.org/wiki/PhysicsFS Wikipedia]
 
 针对不同的压缩/归档格式，提供了类似 VFS 的抽象封装层。主要用于游戏开发中。
 
@@ -2827,7 +2827,7 @@ Home：[https://github.com/google/zopfli]
 
 Home：[http://www.nih.at/libzip/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Libzip 英文]
+Links：[https://en.wikipedia.org/wiki/Libzip Wikipedia]
 
 用 C 语言开发的库，基于 zlib 库。
 
@@ -2853,7 +2853,7 @@ Home：[http://bzip.org/]
 
 Home：[http://zlib.net/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Zlib 英文]、[https://zh.wikipedia.org/wiki/Zlib 中文]
+Links：[https://en.wikipedia.org/wiki/Zlib Wikipedia] [https://zh.wikipedia.org/wiki/Zlib 维基百科]
 
 C 语言实现，诞生于1995年，被大量的开源项目使用（OpenSSL、OpenSSH、Apache、PostgreSQL、Git、libpng......）。
 
@@ -2891,7 +2891,7 @@ Home：[https://google.github.io/snappy/]
 
 Home：[https://github.com/google/brotli]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Brotli 英文]
+Links：[https://en.wikipedia.org/wiki/Brotli Wikipedia]
 
 由 Google 开发的压缩格式，压缩率很高（据说高于 LZMA 和 bz2）。
 
@@ -2903,7 +2903,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Brotli 英文]
 
 Home：[https://github.com/lzfse/lzfse]
 
-Wikipedia：[https://zh.wikipedia.org/wiki/LZFSE 中文]
+Links：[https://zh.wikipedia.org/wiki/LZFSE 维基百科]
 
 由苹果开发的压缩格式。苹果称它的压缩率与“ZLib level 5”相似，但速度快2至3倍。
 
@@ -2917,7 +2917,7 @@ Wikipedia：[https://zh.wikipedia.org/wiki/LZFSE 中文]
 
 Home：[http://www.libexpat.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Expat_(library) 英文]
+Links：[https://en.wikipedia.org/wiki/Expat_(library) Wikipedia]
 
 基于 C 语言实现，诞生于1998年。很多知名的开源项目（Apache Server、Firefox、Python、PHP、Perl）用到它。
 
@@ -2925,7 +2925,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Expat_(library) 英文]
 
 Home：[http://xmlsoft.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Libxml2 英文]
+Links：[https://en.wikipedia.org/wiki/Libxml2 Wikipedia]
 
 基于 C 语言实现，诞生于1999年。提供了多种语言（C++、Python、Ruby、Common Lisp、PHP、Perl）的 API 绑定。
 
@@ -2969,7 +2969,7 @@ Home：[http://podofo.sourceforge.net/]
 
 Home：[http://libharu.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/LibHaru 英文]
+Links：[https://en.wikipedia.org/wiki/LibHaru Wikipedia]
 
 它是基于 C 语言开发的跨平台库，可以用来生成 PDF 文件格式。
 
@@ -3046,7 +3046,7 @@ Home：[http://www.mare.ee/indrek/libchmxx/]
 
 Home：[http://imagemagick.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/ImageMagick 英文]、[https://zh.wikipedia.org/wiki/ImageMagick 中文]
+Links：[https://en.wikipedia.org/wiki/ImageMagick Wikipedia] [https://zh.wikipedia.org/wiki/ImageMagick 维基百科]
 
 ImageMagick 可说是最强大的开源图片处理工具集，采用 C 语言编写。诞生于1990年，其开发至今依然非常活跃。支持非常多的操作系统平台。
 
@@ -3097,7 +3097,7 @@ ImageMagick 前面已经介绍过。它支持非常多的图片格式（[http://
 
 Home：[http://cairographics.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Cairo_%28graphics%29 英文]、[https://zh.wikipedia.org/wiki/Cairo_(%E7%B9%AA%E5%9C%96) 中文]
+Links：[https://en.wikipedia.org/wiki/Cairo_%28graphics%29 Wikipedia] [https://zh.wikipedia.org/wiki/Cairo_(%E7%B9%AA%E5%9C%96) 维基百科]
 
 它提供了矢量图像的渲染功能。支持多种后端输出（Win32 GDI、OpenGL、Xlib、XCB、PDF、PNG、SVG ......）。
 
@@ -3113,7 +3113,7 @@ Home：[http://cairographics.org/cairomm/]
 
 Home：[https://github.com/google/skia]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Skia_Graphics_Engine 英文]、[https://zh.wikipedia.org/wiki/Skia_Graphics_Library 中文]
+Links：[https://en.wikipedia.org/wiki/Skia_Graphics_Engine Wikipedia] [https://zh.wikipedia.org/wiki/Skia_Graphics_Library 维基百科]
 
 它是 Google 基于 C++ 开发的图像渲染库。支持多种后端输出（rasterization、OpenGL、PDF、SVG、SWF ......）。
 
@@ -3131,7 +3131,7 @@ Home：[http://pbrt.org/]
 
 Home：[http://opencv.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/OpenCV 英文]、[https://zh.wikipedia.org/wiki/OpenCV 中文]
+Links：[https://en.wikipedia.org/wiki/OpenCV Wikipedia] [https://zh.wikipedia.org/wiki/OpenCV 维基百科]
 
 它是一个跨平台的计算机视觉库，由 Intel 发起并参与开发。开发语言是 C 和 C++。
 
@@ -3147,7 +3147,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/OpenCV 英文]、[https://zh.wikipedi
 
 Home：[http://ffmpeg.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/FFmpeg 英文]、[https://zh.wikipedia.org/wiki/FFmpeg 中文]
+Links：[https://en.wikipedia.org/wiki/FFmpeg Wikipedia] [https://zh.wikipedia.org/wiki/FFmpeg 维基百科]
 
 名气非常大的开源多媒体框架，基于 C 和汇编开发，支持多种操作系统。
 
@@ -3167,7 +3167,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/FFmpeg 英文]、[https://zh.wikipedi
 
 Home：[http://libav.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Libav 英文]
+Links：[https://en.wikipedia.org/wiki/Libav Wikipedia]
 
 它是2011年从 FFmpeg 派生出来的。基于 C 语言开发，支持多种操作系统。
 
@@ -3187,7 +3187,7 @@ Home：[http://ffmpeg.org/]
 
 Home：[http://www.portaudio.com/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/PortAudio 英文]
+Links：[https://en.wikipedia.org/wiki/PortAudio Wikipedia]
 
 PortAudio 是 PortMedia 的组成部分，提供了音频的播放和录制功能。支持多种底层 API（ALSA、DirectSound、WASAPI、ASIO...）
 
@@ -3195,7 +3195,7 @@ PortAudio 是 PortMedia 的组成部分，提供了音频的播放和录制功�
 
 Home：[http://www.openal.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/OpenAL 英文]、[https://zh.wikipedia.org/wiki/OpenAL 中文]
+Links：[https://en.wikipedia.org/wiki/OpenAL Wikipedia] [https://zh.wikipedia.org/wiki/OpenAL 维基百科]
 
 C 语言开发的 3D 音效库，跨平台。最初由 Loki Software 开发。Loki 倒闭以后，这个项目由开源社区继续维护。
 
@@ -3207,7 +3207,7 @@ C 语言开发的 3D 音效库，跨平台。最初由 Loki Software 开发。Lo
 
 <h4>id Tech 系列</h4>
 
-Wikipedia：[https://en.wikipedia.org/wiki/Id_Tech 英文]
+Links：[https://en.wikipedia.org/wiki/Id_Tech Wikipedia]
 
 这个系列来自于大名鼎鼎的 [https://en.wikipedia.org/wiki/Id_Software id Software 公司]，由同样大名鼎鼎约翰·卡马克打造。
 
@@ -3229,7 +3229,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Id_Tech 英文]
 
 Home：[http://www.crystalspace3d.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Crystal_Space 英文]
+Links：[https://en.wikipedia.org/wiki/Crystal_Space Wikipedia]
 
 以 C++ 编写，功能包括：2D 和 3D 渲染、音效、AI... 它的物理引擎基于 ODE 和 Bullet
 
@@ -3237,7 +3237,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Crystal_Space 英文]
 
 Home：[http://www.blender.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Game_Blender 英文]、[https://zh.wikipedia.org/wiki/Game_Blender 中文]
+Links：[https://en.wikipedia.org/wiki/Game_Blender Wikipedia] [https://zh.wikipedia.org/wiki/Game_Blender 维基百科]
 
 它是 [https://en.wikipedia.org/wiki/Blender_%28software%29 Blender] 的组成部分，以 C++ 编写，使用 Python 脚本扩展。功能包括：3D 渲染、碰撞检测、角色编辑器、音效、网络通讯、AI、...
 
@@ -3245,7 +3245,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Game_Blender 英文]、[https://zh.wi
 
 Home：[http://www.panda3d.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Panda3D 英文]
+Links：[https://en.wikipedia.org/wiki/Panda3D Wikipedia]
 
 以 C++ 编写，用 Python 脚本扩展。虽然它的名字有“3D”，但它不仅仅是 3D 引擎，还包括了其它功能（碰撞检测、音效、关卡编辑器...）。
 
@@ -3255,7 +3255,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Panda3D 英文]
 
 Home：[http://www.ogre3d.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/OGRE 英文]、[https://zh.wikipedia.org/wiki/OGRE 中文]
+Links：[https://en.wikipedia.org/wiki/OGRE Wikipedia] [https://zh.wikipedia.org/wiki/OGRE 维基百科]
 
 著名的 3D 渲染引擎，C++ 开发，诞生于2005年。支持很多操作系统（包括两大手机操作系统）。很多商业游戏用到它。
 
@@ -3265,7 +3265,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/OGRE 英文]、[https://zh.wikipedia.
 
 Home：[http://mesa3d.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Mesa_%28computer_graphics%29 英文]、[https://zh.wikipedia.org/wiki/Mesa_3D 中文]
+Links：[https://en.wikipedia.org/wiki/Mesa_%28computer_graphics%29 Wikipedia] [https://zh.wikipedia.org/wiki/Mesa_3D 维基百科]
 
 使用 C 语言开发，它是针对 OpenGL 规范的【纯软件】实现（大部分 OpenGL 的实现都用到了显卡硬件）。
 
@@ -3275,7 +3275,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Mesa_%28computer_graphics%29 英文]�
 
 Home：[http://www.bulletphysics.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Bullet_%28software%29 英文]、[https://zh.wikipedia.org/wiki/Bullet 中文]
+Links：[https://en.wikipedia.org/wiki/Bullet_%28software%29 Wikipedia] [https://zh.wikipedia.org/wiki/Bullet 维基百科]
 
 采用 C 和 C++ 开发。电影《2012》用到它，游戏“侠盗猎车手”、“荒野大镖客”用到它。
 
@@ -3283,7 +3283,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Bullet_%28software%29 英文]、[http
 
 Home：[http://www.box2d.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Box2D 英文]、[https://zh.wikipedia.org/wiki/Box2D 中文]
+Links：[https://en.wikipedia.org/wiki/Box2D Wikipedia] [https://zh.wikipedia.org/wiki/Box2D 维基百科]
 
 基于 C++ 开发的2维物理引擎。“愤怒的小鸟”用到它。
 
@@ -3291,7 +3291,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Box2D 英文]、[https://zh.wikipedia
 
 Home：[http://www.ode.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Open_Dynamics_Engine 英文]、[https://zh.wikipedia.org/wiki/Open_Dynamics_Engine 中文]
+Links：[https://en.wikipedia.org/wiki/Open_Dynamics_Engine Wikipedia] [https://zh.wikipedia.org/wiki/Open_Dynamics_Engine 维基百科]
 
 诞生于2001年，采用 C 和 C++ 开发。
 
@@ -3299,7 +3299,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Open_Dynamics_Engine 英文]、[https
 
 Home：[http://www.newtondynamics.com/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Newton_Game_Dynamics 英文]
+Links：[https://en.wikipedia.org/wiki/Newton_Game_Dynamics Wikipedia]
 
 基于 C++ 开发。
 
@@ -3313,7 +3313,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Newton_Game_Dynamics 英文]
 
 Home：[https://www.gnu.org/software/gsl/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/GNU_Scientific_Library 英文]
+Links：[https://en.wikipedia.org/wiki/GNU_Scientific_Library Wikipedia]
 
 由 GNU 官方提供，包括：复数、多项式、矩阵、线性代数、特征向量、快速傅里叶变换、统计、模拟退火......
 
@@ -3341,7 +3341,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“�
 
 Home：[https://gmplib.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library 英文]、[https://zh.wikipedia.org/wiki/GNU%E5%A4%9A%E9%87%8D%E7%B2%BE%E5%BA%A6%E8%BF%90%E7%AE%97%E5%BA%93 中文]
+Links：[https://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library Wikipedia] [https://zh.wikipedia.org/wiki/GNU%E5%A4%9A%E9%87%8D%E7%B2%BE%E5%BA%A6%E8%BF%90%E7%AE%97%E5%BA%93 维基百科]
 
 基于 C 语言的高精度数值运算库，诞生于1991年，非常老牌。
 
@@ -3431,7 +3431,7 @@ std::cout << v2 << std::endl;
 
 Home：[http://blitz.sourceforge.net/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Blitz%2B%2B 英文]
+Links：[https://en.wikipedia.org/wiki/Blitz%2B%2B Wikipedia]
 
 它是基于 C++ 实现的。其特色是：采用“模板元编程”的技术进行编译时计算，从而优化了性能。
 
@@ -3439,7 +3439,7 @@ Wikipedia：[https://en.wikipedia.org/wiki/Blitz%2B%2B 英文]
 
 Home：[http://arma.sourceforge.net/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/Armadillo_%28C%2B%2B_library%29 英文]
+Links：[https://en.wikipedia.org/wiki/Armadillo_%28C%2B%2B_library%29 Wikipedia]
 
 类似 Blitz++，Armadillo 也用了“模板元编程”的技术。
 
@@ -3479,7 +3479,7 @@ Dlib 前面已经介绍过。它提供了线性代数相关的封装类。
 
 Home：[http://swig.org/]
 
-Wikipedia：[https://en.wikipedia.org/wiki/SWIG 英文]
+Links：[https://en.wikipedia.org/wiki/SWIG Wikipedia]
 
 这是一个很老牌的、有名气的工具，它可以把多种语言（Java、Python、C#、Ruby、PHP、Perl、Lua、Go ......）整合到 C/C++ 中。
 
