@@ -290,6 +290,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“�
 <source lang="cpp">
 &#35;include <iostream>
 &#35;include <boost/format.hpp>
+
 using std::cout;
 using boost::format;
 
@@ -347,6 +348,7 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“�
 代码示例——基于正则式进行匹配和替换
 <source lang="cpp">
 &#35;include <boost/regex.hpp>
+
 using std::string;
 using namespace boost;
 
@@ -384,6 +386,7 @@ Home：[https://github.com/google/re2]
 代码示例——基于正则式进行匹配
 <source lang="cpp">
 &#35;include <re2/re2.h>
+
 int i;
 string s;
 assert(RE2::FullMatch("test:1234", "(\\w+):(\\d+)", &s, &i));
@@ -719,11 +722,13 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，用来辅助�
 &#35;include <iostream>
 &#35;include <boost/function.hpp>
 
-boost::function<int(const char*)> f = std::atoi;
-std::cout << f("42") << '\n';
+using namespace std;
 
-f = std::strlen;
-std::cout << f("42") << '\n';
+boost::function<int(const char*)> f = atoi;
+cout << f("42") << '\n';
+
+f = strlen;
+cout << f("42") << '\n';
 </source>
 
 <h4>Boost.Lambda</h4>
@@ -741,10 +746,11 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“�
 &#35;include <iostream>
 &#35;include <boost/lambda/lambda.hpp>
 
-std::vector<int> v;
+using namespace std;
+
+vector<int> v;
 // 此处填充 v
-std::for_each(v.begin(), v.end(),
-    std::cout << boost::lambda::_1 << "\n");
+for_each(v.begin(), v.end(), cout << boost::lambda::_1 << "\n");
 </source>
 
 == 3.4 元编程（Metaprogramming） ==
@@ -1316,7 +1322,8 @@ Links：[https://en.wikipedia.org/wiki/Getopt Wikipedia]
 &#35;include <stdio.h>     /* for printf */
 &#35;include <stdlib.h>    /* for exit */
 &#35;include <unistd.h>    /* for getopt */
-int main(int argc, char** argv)
+
+int main(int argc, char* argv[])
 {
     int digit_optind = 0;
     int aopt = 0, bopt = 0;
@@ -1410,7 +1417,7 @@ Links：[https://en.wikipedia.org/wiki/Pcap Wikipedia]
 &#35;include <stdio.h>
 &#35;include <pcap.h>
 
-int main(int argc, char* argv[])
+int main()
 {
     pcap_t* handle;            /* Session handle */
     char* dev;            /* The device to sniff on */
@@ -1680,7 +1687,7 @@ ZeroMQ 是一个轻量级、跨平台的开源库，提供了高性能、异步�
 <source lang="cpp">
 &#35;include <zhelpers.hpp>
 
-int main(int argc, char* argv[])
+int main()
 {
     zmq::context_t context(1);
 
@@ -1772,7 +1779,6 @@ Links：[https://en.wikipedia.org/wiki/Libevent Wikipedia] [https://zh.wikipedia
 &#35;include <stdio.h>
 &#35;include <stdlib.h>
 &#35;include <unistd.h>
-
 &#35;include <event.h>
 &#35;include <evhttp.h>
 
@@ -1785,7 +1791,7 @@ void generic_request_handler(struct evhttp_request* req, void* arg)
     evbuffer_free(return_buffer);
 }
 
-int main(int argc, char** argv)
+int main()
 {
     short          http_port = 8080;
     char*          http_addr = "127.0.0.1";
@@ -2319,7 +2325,7 @@ MongoDB 前面已经介绍过。这是其官方提供的 API。
 &#35;include <bson.h>
 &#35;include <mongoc.h>
 
-int main(int argc, char* argv[])
+int main()
 {
     mongoc_init();
 
@@ -3415,7 +3421,9 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，实现了 BLA
 &#35;include <boost/numeric/ublas/matrix.hpp>
 &#35;include <boost/numeric/ublas/io.hpp>
 
+using namespace std;
 using namespace boost::numeric::ublas;
+
 vector<double> v(2);
 v(0) = 1; v(1) = 2;
 
@@ -3424,7 +3432,7 @@ m(0,0) = 0; m(0,1) = 1;
 m(1,0) = 2; m(1,1) = 3;
 
 vector<double> v2 = prod(m, v);
-std::cout << v2 << std::endl;
+cout << v2 << endl;
 </source>
 
 <h4>Blitz++</h4>
