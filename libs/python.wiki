@@ -712,7 +712,7 @@ Home：[http://www.seleniumhq.org/]
 
 selenium是一个非常优秀的用于爬虫、Web自动化测试测试的框架。
 
-代码示例（模拟登录）
+代码示例——模拟登录
 <source lang="python">
 
 from selenium import webdriver
@@ -731,6 +731,7 @@ driver.quit()
 Home：[https://scrapy.org/]
 
 Links：[https://en.wikipedia.org/wiki/Scrapy]
+
 Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。
 
 
