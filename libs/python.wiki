@@ -893,6 +893,19 @@ Home：[https://bitbucket.org/jaraco/irc]
 
 IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库。
 
+<h4>pyTelegramBotAPI</h4>
+
+Home：[https://github.com/eternnoir/pyTelegramBotAPI]
+
+一个简单、易用的 [https://core.telegram.org/bots TelegramBot] 封装。
+
+<h4>Telethon</h4>
+
+Home：[https://github.com/LonamiWebs/Telethon]
+
+纯 Python 3 的 [https://telegram.org/ Telegram] 客户端封装。
+
+
 === 5.3.6 远程控制 ===
 
 <h4>telnetlib</h4>
@@ -1713,7 +1726,7 @@ Home：[https://github.com/google/keyczar]
 
 Home：[https://passlib.readthedocs.io/en/stable/index.html]
 
-passlib是一个久经考验的非常成熟的跨平台的散列函数库，他所提供的功能包括随机盐密码的生成与验证，两步验证等。
+passlib是一个久经考验的非常成熟的跨平台的散列函数库，它所提供的功能包括随机盐密码的生成与验证，两步验证等。
 
 代码示例——验证随机盐密码
 <source lang="python">
