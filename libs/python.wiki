@@ -424,6 +424,50 @@ Home：[https://pypi.python.org/pypi/setuptools]
 
 这套工具可以帮助你进行第三方库的管理（下载、编译、安装、升级、卸载）
 
+
+== 3.8 系统管理 ==
+
+<h4>sys</h4>
+【标准库】
+
+这个模块可供访问由解释器使用或维护的变量和与解释器进行交互的函数。
+
+代码示例
+<source lang="python">
+sys.argv # 命令行参数List，第一个元素是程序本身路径
+sys.exit(n) # 退出程序，正常退出时exit(0)
+sys.version # 获取Python解释程序的版本信息
+</source>
+
+<h4>platform</h4>
+【标准库】
+
+这个模块提供了很多用于获取操作系统的信息的功能。
+
+代码示例
+<source lang="python">
+import platform
+
+platform.platform()   # 获取操作系统名称及版本号，'Windows-7-6.1.7601-SP1'
+platform.version()    # 获取操作系统版本号，'6.1.7601'
+platform.architecture()   # 获取操作系统的位数，('32bit', 'WindowsPE')
+</source>
+
+<h4>psutil</h4>
+
+Home：[https://github.com/giampaolo/psutil]
+
+psutil(Python system and process utilities)是一个跨平台的进程管理和系统工具的python库，可以处理系统CPU，memory，disks，network等信息。主要用于系统资源的监控，分析，以及对进程进行一定的管理。
+
+代码示例
+<source lang="python">
+import psutil
+
+psutil.cpu_count()  # 获取CPU数量
+psutil.cpu_freq()   # 获取CPU频率
+psutil.virtual_memory()     # 获取内存信息
+</source>
+
 ----
 
 = 4 Web =
@@ -561,6 +605,36 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     app.run()
 </source>
 
+<h4>Flask</h4>
+
+Home：[http://flask.pocoo.org/]
+
+Links：[https://zh.wikipedia.org/wiki/Flask]
+
+轻量级Web应用框架。基于Werkzeug WSGI工具箱和Jinja2 模板引擎。
+
+代码示例——Hello world
+<source lang="python">
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
+if __name__ == '__main__':
+    app.run()
+
+</source>
+
+<h4>Tornado</h4>
+
+Home：[http://www.tornadoweb.org/en/stable/]
+
+Links：[https://zh.wikipedia.org/wiki/Tornado]
+
+同样也是轻量级的Web框架，类似Web.py，但是异步非阻塞IO的处理方式使其拥有较为出色的抗负载能力。
+
 == 4.4 Web前端 & JS整合 ==
 
 <h4>Pyjamas & pyjs</h4>
@@ -631,6 +705,35 @@ Home：[https://github.com/google/pywebsocket]
 这是 Google 提供的 [https://zh.wikipedia.org/wiki/WebSocket WebSocket] 服务端。
 
 该项目包含一个可独立运行的 server 以及一个 Apache 扩展模块（mod_pywebsocket）。
+
+<h4>selenium</h4>
+
+Home：[http://www.seleniumhq.org/]
+
+selenium是一个非常优秀的用于爬虫、Web自动化测试测试的框架。
+
+代码示例——模拟登录
+<source lang="python">
+
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get('http://192.168.1.1')
+driver.find_element_by_xpath('//*[@id="lgPwd"]').send_keys('123456')
+driver.find_element_by_xpath('//*[@id="loginSub"]').click()
+driver.quit()
+</source>
+
+
+<h4>scrapy</h4>
+
+Home：[https://scrapy.org/]
+
+Links：[https://en.wikipedia.org/wiki/Scrapy]
+
+Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。
+
 
 ----
 
@@ -761,6 +864,21 @@ with pysftp.Connection("hostxxx", username="userxxx", password="xxxxxx") as sftp
 
 封装 POP3（Post Office Protocol v3）协议
 
+<h4>yagmail</h4>
+
+Home：[https://github.com/kootenpv/yagmail]
+
+一个非常简单易用的用来发送邮件的第三方库。
+
+代码示例
+<source lang="python">
+import yagmail
+yag = yagmail.SMTP()
+contents = ['This is the body, and here is just text http://somedomain/image.png',
+            'You can find an audio file attached.', '/local/path/song.mp3']
+yag.send('to@someone.com', 'subject', contents)
+</source>
+
 === 5.3.5 即时通讯 ===
 
 <h4>jabber.py</h4>
@@ -774,6 +892,19 @@ Jabber（又称 XMPP）是IM（即时通信）协议的标准。这是用 Python
 Home：[https://bitbucket.org/jaraco/irc]
 
 IRC 是 Internet Relay Chat 的缩写。这是用 Python 封装的第三方库。
+
+<h4>pyTelegramBotAPI</h4>
+
+Home：[https://github.com/eternnoir/pyTelegramBotAPI]
+
+一个简单、易用的 [https://core.telegram.org/bots TelegramBot] 封装。
+
+<h4>Telethon</h4>
+
+Home：[https://github.com/LonamiWebs/Telethon]
+
+纯 Python 3 的 [https://telegram.org/ Telegram] 客户端封装。
+
 
 === 5.3.6 远程控制 ===
 
@@ -812,6 +943,22 @@ print tn.read_all()
 Home：[https://github.com/citronneur/rdpy]
 
 纯 Python 实现的 RDP（[https://en.wikipedia.org/wiki/Remote_Desktop_Protocol 微软远程桌面协议]）和 VNC（[https://en.wikipedia.org/wiki/Virtual_Network_Computing Virtual Network Computing]）客户端，依赖于 Twisted 库
+
+<h4>paramiko</h4>
+
+Home：[http://www.paramiko.org/]
+
+paramiko是用python语言写的一个模块，遵循SSH2协议，支持以加密和认证的方式，进行远程服务器的连接。除了SSH协议之外，paramiko还支持SFTP。
+
+代码示例
+<source lang="python">
+import paramiko
+ssh = paramiko.SSHClient()
+
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect("IP",  port, "username", "password")
+</source>
+
 
 === 5.3.7 （其它） ===
 
@@ -1525,6 +1672,13 @@ Home：[http://code.enthought.com/chaco/]
 
 这是一个商业公司维护的库，主要提供2维图表。效果图在“[http://docs.enthought.com/chaco/user_manual/annotated_examples.html 这里]”。
 
+
+<h4>Plotly</h4>
+
+Home：[https://plot.ly/d3-js-for-python-and-pandas-charts/]
+
+plotly是现代平台的敏捷商业智能和数据科学库，它作为一款开源的绘图库，可以应用于Python、R、MATLAB、Excel、JavaScript和jupyter等多种语言
+
 ----
 
 = 8 信息安全 =
@@ -1566,6 +1720,31 @@ Home：[https://github.com/google/keyczar]
 这是 Google 提供的加密库，同时提供 C++、Java、Python 三种语言的实现。
 
 它提供了比较高层的 API， 使用者无需关心太多的细节。
+
+
+<h4>passlib</h4>
+
+Home：[https://passlib.readthedocs.io/en/stable/index.html]
+
+passlib是一个久经考验的非常成熟的跨平台的散列函数库，它所提供的功能包括随机盐密码的生成与验证，两步验证等。
+
+代码示例——验证随机盐密码
+<source lang="python">
+>>> # import the hash algorithm
+>>> from passlib.hash import pbkdf2_sha256
+
+>>> # generate new salt, and hash a password
+>>> hash = pbkdf2_sha256.hash("toomanysecrets")
+>>> hash
+'$pbkdf2-sha256$29000$N2YMIWQsBWBMae09x1jrPQ$1t8iyB2A.WF/Z5JZv.lfCIhXXN33N23OSgQYThBYRfk'
+
+>>> # verifying the password
+>>> pbkdf2_sha256.verify("toomanysecrets", hash)
+True
+>>> pbkdf2_sha256.verify("joshua", hash)
+False
+</source>
+
 
 == 8.2 访问控制 ==
 
@@ -1718,6 +1897,15 @@ Home：[http://lxml.de/]
 【标准库】
 
 以回调方式解析 HTML/XHTML 文件内容。
+
+<h4>beautifulsoup</h4>
+
+Home：[https://www.crummy.com/software/BeautifulSoup/bs4/doc/]
+
+Links：[https://zh.wikipedia.org/zh-cn/Beautiful_Soup]
+
+Beautiful Soup 是一个可以从HTML 或XML 文件中提取数据的Python 库，爬虫利器，通常与requests或者selenium配合。
+
 
 == 9.4 PDF ==
 
