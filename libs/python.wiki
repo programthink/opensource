@@ -296,7 +296,7 @@ threading.Thread(target=my_thread).start()
 <source lang="python">
 import threading
 import time
-from &#95;&#95;future&#95;&#95; import print_function
+from __future__ import print_function
 
 class MyThread(threading.Thread) :
     def run(self) :
@@ -304,7 +304,7 @@ class MyThread(threading.Thread) :
         time.sleep(3)
         print("{} finished!".format(self.getName()))
 
-if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+if __name__ == "__main__" :
     for n in range(10) :
         mythread = MyThread(name = "Thread-{}".format(n + 1))
         mythread.start()
@@ -322,8 +322,8 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 代码示例——启动命令行进程，并获取该进程的标准输出
 <source lang="python">
 import subprocess
-output = subprocess.check_output(["dir"])  &#35; 获取当前目录的内容
-output = subprocess.check_output(["netstat", "-an"])  &#35; 获取当前网络链接
+output = subprocess.check_output(["dir"])  # 获取当前目录的内容
+output = subprocess.check_output(["netstat", "-an"])  # 获取当前网络链接
 </source>
 
 <h4>multiprocessing</h4>
@@ -343,7 +343,7 @@ def f(lock, n) :
     print("hello world %d" % n)
     lock.release()
 
-if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+if __name__ == "__main__" :
     lock = Lock()
     for num in range(10):
         Process(target=f, args=(lock, num)).start()
@@ -366,7 +366,7 @@ map = mmap.mmap(-1, 13)
 map.write("Hello, world")
 
 pid = os.fork()
-if pid == 0 :  &#35; 子进程
+if pid == 0 :  # 子进程
     map.seek(0)
     print(map.readline())
     map.close()
@@ -424,10 +424,10 @@ Home：[https://pypi.python.org/pypi/setuptools]
 
 这套工具可以帮助你进行第三方库的管理（下载、编译、安装、升级、卸载）
 
-
 == 3.8 系统管理 ==
 
 <h4>sys</h4>
+
 【标准库】
 
 这个模块可供访问由解释器使用或维护的变量和与解释器进行交互的函数。
@@ -440,6 +440,7 @@ sys.version # 获取Python解释程序的版本信息
 </source>
 
 <h4>platform</h4>
+
 【标准库】
 
 这个模块提供了很多用于获取操作系统的信息的功能。
@@ -600,7 +601,7 @@ class index:
     def GET(self):
         return "Hello, world!"
 
-if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+if __name__ == "__main__" :
     app = web.application(urls, globals())
     app.run()
 </source>
@@ -609,7 +610,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 Home：[http://flask.pocoo.org/]
 
-Links：[https://zh.wikipedia.org/wiki/Flask]
+Links：[https://zh.wikipedia.org/wiki/Flask 维基百科]
 
 轻量级Web应用框架。基于Werkzeug WSGI工具箱和Jinja2 模板引擎。
 
@@ -624,14 +625,13 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run()
-
 </source>
 
 <h4>Tornado</h4>
 
 Home：[http://www.tornadoweb.org/en/stable/]
 
-Links：[https://zh.wikipedia.org/wiki/Tornado]
+Links：[https://zh.wikipedia.org/wiki/Tornado 维基百科]
 
 同样也是轻量级的Web框架，类似Web.py，但是异步非阻塞IO的处理方式使其拥有较为出色的抗负载能力。
 
@@ -677,15 +677,15 @@ import PyV8
 
 ctxt1 = PyV8.JSContext()
 ctxt1.enter()
-ctxt1.eval("1+2")  &#35; 对 JS 表达式求值
+ctxt1.eval("1+2")  # 对 JS 表达式求值
 
-class Global(PyV8.JSClass) :  &#35; 定义一个兼容 JS 的类
+class Global(PyV8.JSClass) :  # 定义一个兼容 JS 的类
     def hello(self) :
         print("Hello, world")
 
-ctxt2 = PyV8.JSContext(Global())  &#35; 创建一个 JS 上下文，传入 Global 类的对象
+ctxt2 = PyV8.JSContext(Global())  # 创建一个 JS 上下文，传入 Global 类的对象
 ctxt2.enter()                    
-ctxt2.eval("hello()")  &#35; 调用 hello() 函数
+ctxt2.eval("hello()")  # 调用 hello() 函数
 </source>
 
 <h4>PyWebKitGtk</h4>
@@ -714,26 +714,22 @@ selenium是一个非常优秀的用于爬虫、Web自动化测试测试的框架
 
 代码示例——模拟登录
 <source lang="python">
-
 from selenium import webdriver
 
 driver = webdriver.Chrome()
-
 driver.get('http://192.168.1.1')
 driver.find_element_by_xpath('//*[@id="lgPwd"]').send_keys('123456')
 driver.find_element_by_xpath('//*[@id="loginSub"]').click()
 driver.quit()
 </source>
 
-
 <h4>scrapy</h4>
 
 Home：[https://scrapy.org/]
 
-Links：[https://en.wikipedia.org/wiki/Scrapy]
+Links：[https://en.wikipedia.org/wiki/Scrapy Wikipedia]
 
 Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。
-
 
 ----
 
@@ -753,10 +749,10 @@ Links：[https://en.wikipedia.org/wiki/Scapy Wikipedia]
 
 代码示例
 <source lang="python">
-&#35; 传统的 ping 扫描（网络层）
+# 传统的 ping 扫描（网络层）
 ans,unans = sr(IP(dst="192.168.1.1-254")/ICMP())
 
-&#35; 局域网内的 ARP 扫描（链路层）
+# 局域网内的 ARP 扫描（链路层）
 ans,unans = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst="192.168.1.0/24"), timeout=2)
 </source>
 
@@ -821,10 +817,10 @@ body = buffer.getvalue()
 <source lang="python">
 from ftplib import FTP
 
-ftp = FTP("ftp.debian.org")  &#35; 连接服务器（如果不指定端口号，则用默认端口号 21）
-ftp.login()                  &#35; 登录（如果不指定用户名和密码，则用匿名登录）
-ftp.cwd("debian")            &#35; 切换到 "debian" 目录
-ftp.retrlines("LIST")        &#35; 列出当前目录的内容
+ftp = FTP("ftp.debian.org")  # 连接服务器（如果不指定端口号，则用默认端口号 21）
+ftp.login()                  # 登录（如果不指定用户名和密码，则用匿名登录）
+ftp.cwd("debian")            # 切换到 "debian" 目录
+ftp.retrlines("LIST")        # 列出当前目录的内容
 ftp.quit()
 </source>
 
@@ -839,9 +835,9 @@ Home：[https://bitbucket.org/dundeemt/pysftp]
 import pysftp
 
 with pysftp.Connection("hostxxx", username="userxxx", password="xxxxxx") as sftp :
-    with sftp.cd("public")              &#35; 服务端当前目录切换到 public
-        sftp.put("/my/local/filename")  &#35; 上传某个本地文件到服务端的 public 目录
-    sftp.get_r("myfiles", "/local")     &#35; 递归复制某个服务端的目录到本地
+    with sftp.cd("public")              # 服务端当前目录切换到 public
+        sftp.put("/my/local/filename")  # 上传某个本地文件到服务端的 public 目录
+    sftp.get_r("myfiles", "/local")     # 递归复制某个服务端的目录到本地
 </source>
 
 === 5.3.4 电子邮件 ===
@@ -905,7 +901,6 @@ Home：[https://github.com/LonamiWebs/Telethon]
 
 纯 Python 3 的 [https://telegram.org/ Telegram] 客户端封装。
 
-
 === 5.3.6 远程控制 ===
 
 <h4>telnetlib</h4>
@@ -958,7 +953,6 @@ ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect("IP",  port, "username", "password")
 </source>
-
 
 === 5.3.7 （其它） ===
 
@@ -1057,7 +1051,7 @@ Home：[https://github.com/tonysimpson/nanomsg-python]
 
 代码示例——Hello world
 <source lang="python">
-from &#95;&#95;future&#95;&#95; import print_function
+from __future__ import print_function
 from nanomsg import Socket, PAIR, PUB
 
 s1 = Socket(PAIR)
@@ -1230,7 +1224,7 @@ sqlite3 从 Python 2.5 版本开始加入到标准库中。通过它，你可以
 代码示例——创建一个内存数据库，建表并插入记录
 <source lang="python">
 import sqlite3
-conn = sqlite3.connect(":memory:")  &#35; ":memory:" 表示这是一个内存数据库
+conn = sqlite3.connect(":memory:")  # ":memory:" 表示这是一个内存数据库
 cursor = conn.cursor()
 cursor.execute("CREATE TABLE person (name text, age int)")
 cursor.execute("INSERT INTO stocks VALUES ('TOM',20)")
@@ -1324,7 +1318,7 @@ from sqlalchemy.orm import relation, sessionmaker
 Base = declarative_base()
 
 class Movie(Base) :
-    &#95;&#95;tablename&#95;&#95; = "movies"
+    __tablename__ = "movies"
 
     id = Column(Integer, primary_key=True)
     title = Column(String(255), nullable=False)
@@ -1332,23 +1326,23 @@ class Movie(Base) :
     directed_by = Column(Integer, ForeignKey("directors.id"))
     director = relation("Director", backref="movies", lazy=False)
 
-    def &#95;&#95;init&#95;&#95;(self, title=None, year=None) :
+    def __init__(self, title=None, year=None) :
         self.title = title
         self.year = year
 
-    def &#95;&#95;repr&#95;&#95;(self) :
+    def __repr__(self) :
         return "Movie(%r, %r, %r)" % (self.title, self.year, self.director)
 
 class Director(Base) :
-    &#95;&#95;tablename&#95;&#95; = "directors"
+    __tablename__ = "directors"
 
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False, unique=True)
 
-    def &#95;&#95;init&#95;&#95;(self, name=None) :
+    def __init__(self, name=None) :
         self.name = name
 
-    def &#95;&#95;repr&#95;&#95;(self) :
+    def __repr__(self) :
         return "Director(%r)" % (self.name)
 
 Base.metadata.create_all(create_engine("dbms://user:pwd@host/dbname"))
@@ -1393,14 +1387,14 @@ class Person(Model) :
     birthday = DateField()
     is_relative = BooleanField()
     class Meta :
-        database = db  &#35; This model uses the "test.db".
+        database = db  # This model uses the "test.db".
 
 class Pet(Model) :
     owner = ForeignKeyField(Person, related_name="pets")
     name = CharField()
     animal_type = CharField()
     class Meta :
-        database = db  &#35; This model uses the "test.db".
+        database = db  # This model uses the "test.db".
 
 db.connect()
 db.create_tables([Person, Pet])
@@ -1428,7 +1422,7 @@ Python2 的模块名叫 Tkinter，到 Python3 模块名改为 tkinter
 <source lang="python">
 from Tkinter import *
 
-if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+if __name__ == "__main__" :
     root = Tk()
     label = Label(root, text="Hello, world")
     label.pack()
@@ -1462,7 +1456,7 @@ class App(wx.App) :
         self.SetTopWindow(self.frame)
         return True
 
-if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+if __name__ == "__main__" :
     app = App()
     app.MainLoop()
 </source>
@@ -1491,7 +1485,7 @@ pygtk.require("2.0")
 import gtk
 
 class HelloWorld :
-    def &#95;&#95;init&#95;&#95;(self) :
+    def __init__(self) :
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window.connect("delete_event", self.delete_event)
         self.window.connect("destroy", self.destroy)
@@ -1518,7 +1512,7 @@ class HelloWorld :
     def destroy(self, widget, data=None) :
         gtk.main_quit()
 
-if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+if __name__ == "__main__" :
     hello = HelloWorld()
     hello.main()
 </source>
@@ -1534,8 +1528,8 @@ Home：[https://live.gnome.org/PyGObject]
 from gi.repository import Gtk
 
 class MyWindow(Gtk.Window):
-    def &#95;&#95;init&#95;&#95;(self):
-        Gtk.Window.&#95;&#95;init&#95;&#95;(self, title="Hello World")
+    def __init__(self):
+        Gtk.Window.__init__(self, title="Hello World")
 
         self.button = Gtk.Button(label="Click Here")
         self.button.connect("clicked", self.on_button_clicked)
@@ -1567,7 +1561,7 @@ Links：[https://en.wikipedia.org/wiki/PyQt Wikipedia] [https://zh.wikipedia.org
 import sys
 from PyQt4.QtGui import *
 
-if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
+if __name__ == "__main__" :
     app = QApplication(sys.argv)
     window = QWidget()
 
@@ -1672,7 +1666,6 @@ Home：[http://code.enthought.com/chaco/]
 
 这是一个商业公司维护的库，主要提供2维图表。效果图在“[http://docs.enthought.com/chaco/user_manual/annotated_examples.html 这里]”。
 
-
 <h4>Plotly</h4>
 
 Home：[https://plot.ly/d3-js-for-python-and-pandas-charts/]
@@ -1721,7 +1714,6 @@ Home：[https://github.com/google/keyczar]
 
 它提供了比较高层的 API， 使用者无需关心太多的细节。
 
-
 <h4>passlib</h4>
 
 Home：[https://passlib.readthedocs.io/en/stable/index.html]
@@ -1744,7 +1736,6 @@ True
 >>> pbkdf2_sha256.verify("joshua", hash)
 False
 </source>
-
 
 == 8.2 访问控制 ==
 
@@ -1783,14 +1774,14 @@ JSON 格式源自 JavaScript，如今在 Web 开发中广为应用。
 import json
 
 json.dumps(["foo", {"bar": ("baz", None, 1.0, 2)}])
-&#35; JSON 编码
-&#35; 得到如下【字符串】
-&#35; """["foo", {"bar": ["baz", null, 1.0, 2]}]"""
+# JSON 编码
+# 得到如下【字符串】
+# """["foo", {"bar": ["baz", null, 1.0, 2]}]"""
 
 json.loads("""["foo", {"bar":["baz", null, 1.0, 2]}]""")
-&#35; JSON 解码
-&#35; 得到如下【对象】
-&#35; [u"foo", {u"bar": [u"baz", None, 1.0, 2]}]
+# JSON 解码
+# 得到如下【对象】
+# [u"foo", {u"bar": [u"baz", None, 1.0, 2]}]
 </source>
 
 === 9.1.3 YAML ===
@@ -1902,10 +1893,9 @@ Home：[http://lxml.de/]
 
 Home：[https://www.crummy.com/software/BeautifulSoup/bs4/doc/]
 
-Links：[https://zh.wikipedia.org/zh-cn/Beautiful_Soup]
+Links：[https://zh.wikipedia.org/zh-cn/Beautiful_Soup 维基百科]
 
 Beautiful Soup 是一个可以从HTML 或XML 文件中提取数据的Python 库，爬虫利器，通常与requests或者selenium配合。
-
 
 == 9.4 PDF ==
 
@@ -2105,11 +2095,11 @@ Home：[https://github.com/xflr6/graphviz]
 from graphviz import Digraph
 
 dot = Digraph(comment='The Round Table')
-&#35; 添加节点
+# 添加节点
 dot.node('A', 'King Arthur')
 dot.node('B', 'Sir Bedevere the Wise')
 dot.node('L', 'Sir Lancelot the Brave')
-&#35; 添加连线
+# 添加连线
 dot.edges(['AB', 'AL'])
 dot.edge('B', 'L', constraint='false')
 </source>
@@ -2196,14 +2186,14 @@ Links：[https://en.wikipedia.org/wiki/NumPy Wikipedia] [https://zh.wikipedia.or
 
 代码示例
 <source lang="python">
-&#35; 以下是传统 Python 写法，冗长且速度较慢
+# 以下是传统 Python 写法，冗长且速度较慢
 a = range(10000000)
 b = range(10000000)
 c = []
 for i in range(len(a)) :
     c.append(a[i] + b[i])
 
-&#35; 以下是 NumPy 的写法，简洁且速度飞快
+# 以下是 NumPy 的写法，简洁且速度飞快
 import numpy as np
 a = np.arange(10000000)
 b = np.arange(10000000)
