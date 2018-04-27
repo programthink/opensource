@@ -629,7 +629,7 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
 
 <h4>Tornado</h4>
 
-Home：[http://www.tornadoweb.org/en/stable/]
+Home：[http://www.tornadoweb.org/]
 
 Links：[https://zh.wikipedia.org/wiki/Tornado 维基百科]
 
@@ -1669,7 +1669,7 @@ Home：[http://code.enthought.com/chaco/]
 
 <h4>Plotly</h4>
 
-Home：[https://plot.ly/d3-js-for-python-and-pandas-charts/]
+Home：[https://plot.ly/]
 
 plotly是现代平台的敏捷商业智能和数据科学库，它作为一款开源的绘图库，可以应用于Python、R、MATLAB、Excel、JavaScript和jupyter等多种语言
 
@@ -1717,7 +1717,7 @@ Home：[https://github.com/google/keyczar]
 
 <h4>passlib</h4>
 
-Home：[https://passlib.readthedocs.io/en/stable/index.html]
+Home：[https://bitbucket.org/ecollins/passlib/]
 
 passlib是一个久经考验的非常成熟的跨平台的散列函数库，它所提供的功能包括随机盐密码的生成与验证，两步验证等。
 
@@ -1892,7 +1892,7 @@ Home：[http://lxml.de/]
 
 <h4>beautifulsoup</h4>
 
-Home：[https://www.crummy.com/software/BeautifulSoup/bs4/doc/]
+Home：[https://www.crummy.com/software/BeautifulSoup/]
 
 Links：[https://zh.wikipedia.org/zh-cn/Beautiful_Soup 维基百科]
 
