@@ -612,7 +612,7 @@ Home：[http://flask.pocoo.org/]
 
 Links：[https://zh.wikipedia.org/wiki/Flask 维基百科]
 
-轻量级Web应用框架。基于Werkzeug WSGI工具箱和Jinja2 模板引擎。
+轻量级 Web 应用框架。基于 Werkzeug WSGI 工具箱和 Jinja2 模板引擎。
 
 代码示例——Hello world
 <source lang="python">
@@ -633,7 +633,7 @@ Home：[http://www.tornadoweb.org/]
 
 Links：[https://zh.wikipedia.org/wiki/Tornado 维基百科]
 
-同样也是轻量级的Web框架，类似Web.py，但是异步非阻塞IO的处理方式使其拥有较为出色的抗负载能力。
+同样也是轻量级的 Web 框架，类似 Web.py。提供异步非阻塞 IO 的处理方式使其拥有较为出色的抗负载能力。
 
 == 4.4 Web前端 & JS整合 ==
 
@@ -710,7 +710,7 @@ Home：[https://github.com/google/pywebsocket]
 
 Home：[http://www.seleniumhq.org/]
 
-selenium是一个非常优秀的用于爬虫、Web自动化测试测试的框架。
+selenium 是一个非常优秀的框架，用于爬虫和 Web 自动化测试。
 
 代码示例——模拟登录
 <source lang="python">
@@ -729,7 +729,9 @@ Home：[https://scrapy.org/]
 
 Links：[https://en.wikipedia.org/wiki/Scrapy Wikipedia]
 
-Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。
+Scrapy 是一个为了爬取网站数据，提取结构性数据而编写的应用框架。
+
+可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。
 
 ----
 
@@ -900,7 +902,7 @@ Home：[https://github.com/eternnoir/pyTelegramBotAPI]
 
 Home：[https://github.com/LonamiWebs/Telethon]
 
-纯 Python 3 的 [https://telegram.org/ Telegram] 客户端封装。
+纯 Python3 的 [https://telegram.org/ Telegram] 客户端封装。
 
 === 5.3.6 远程控制 ===
 
@@ -944,7 +946,9 @@ Home：[https://github.com/citronneur/rdpy]
 
 Home：[http://www.paramiko.org/]
 
-paramiko是用python语言写的一个模块，遵循SSH2协议，支持以加密和认证的方式，进行远程服务器的连接。除了SSH协议之外，paramiko还支持SFTP。
+paramiko 是用 python 语言写的一个模块，遵循SSH2协议，支持以加密和认证的方式，进行远程服务器的连接。
+
+除了 SSH 协议之外，paramiko 还支持SFTP。
 
 代码示例
 <source lang="python">
@@ -1671,7 +1675,9 @@ Home：[http://code.enthought.com/chaco/]
 
 Home：[https://plot.ly/]
 
-plotly是现代平台的敏捷商业智能和数据科学库，它作为一款开源的绘图库，可以应用于Python、R、MATLAB、Excel、JavaScript和jupyter等多种语言
+plotly 是现代平台的敏捷商业智能和数据科学库。
+
+它作为一款开源的绘图库，可以应用于 Python、R、MATLAB、Excel、JavaScript、jupyter 等多种语言。
 
 ----
 
@@ -1719,7 +1725,7 @@ Home：[https://github.com/google/keyczar]
 
 Home：[https://bitbucket.org/ecollins/passlib/]
 
-passlib是一个久经考验的非常成熟的跨平台的散列函数库，它所提供的功能包括随机盐密码的生成与验证，两步验证等。
+passlib 是一个久经考验的非常成熟的跨平台的散列函数库，它所提供的功能包括随机盐密码的生成与验证，两步验证等。
 
 代码示例——验证随机盐密码
 <source lang="python">
@@ -1896,7 +1902,9 @@ Home：[https://www.crummy.com/software/BeautifulSoup/]
 
 Links：[https://zh.wikipedia.org/zh-cn/Beautiful_Soup 维基百科]
 
-Beautiful Soup 是一个可以从HTML 或XML 文件中提取数据的Python 库，爬虫利器，通常与requests或者selenium配合。
+Beautiful Soup 可以从 HTML 或 XML 文件中提取数据。
+
+它是写”爬虫“的利器，通常与 requests 或 selenium 配合。
 
 == 9.4 PDF ==
 
