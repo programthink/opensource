@@ -870,7 +870,7 @@ Home：[https://github.com/kootenpv/yagmail]
 <source lang="python">
 import yagmail
 
-yag = yagmail.SMTP()
+yag = yagmail.SMTP("my_gmail_username", "my_gmail_password")
 contents = ["This is the body, and here is just text http://somedomain/image.png",
             "You can find an audio file attached.', '/local/path/song.mp3"]
 yag.send("to@someone.com", "subject", contents)
