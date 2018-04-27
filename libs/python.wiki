@@ -412,7 +412,9 @@ platform.architecture()  # 获取操作系统的架构，例如：("32bit", "Win
 
 Home：[https://github.com/giampaolo/psutil]
 
-psutil(Python system and process utilities)是一个跨平台的进程管理和系统工具的python库，可以处理系统CPU，memory，disks，network等信息。主要用于系统资源的监控，分析，以及对进程进行一定的管理。
+psutil（Python system and process utilities）是一个跨平台的进程管理和系统工具库，可以处理”CPU、内存、磁盘、网络、用户“等信息。
+
+主要用于系统资源的监控，分析，以及对进程进行一定的管理。
 
 代码示例
 <source lang="python">
@@ -420,7 +422,20 @@ import psutil
 
 psutil.cpu_count()       # 获取 CPU 数量
 psutil.cpu_freq()        # 获取 CPU 频率
+
 psutil.virtual_memory()  # 获取内存信息
+psutil.swap_memory()     # 获取交换分区（换页文件）信息
+
+psutil.disk_partitions() # 获取分区信息
+psutil.disk_usage('/')   # 获取某分区的使用情况
+
+psutil.users()           # 获取用户信息
+
+p = psutil.Process(pid)  # 根据给定的 pid 获得进程对象
+p.name()                 # 进程名
+p.exe()                  # 可执行程序的全路径
+p.cwd()                  # 进程的当前目录
+p.cmdline()              # 启动进程的命令行参数
 </source>
 
 == 3.6 Linux & Unix 系统相关 ==
