@@ -378,53 +378,7 @@ if pid == 0 :  # 子进程
 
 用于进程信号处理的标准库（主要用于 Linux & UNIX 系统）。
 
-== 3.5 Linux & Unix 系统相关 ==
-
-<h4>syslog</h4>
-
-【标准库】
-
-通过它可以很方便地跟 POSIX 的 syslog 服务进行交互。
-
-== 3.6 Windows 系统相关 ==
-
-<h4>PyWin32</h4>
-
-Home：[http://python.net/crew/mhammond/win32/]
-
-这个第三方库封装了 Windows API 及 COM API。通过它可以方便地用 Python 进行 Windows 编程（调用 COM 组件、编写 Windows 服务、等）。
-
-== 3.7 程序打包 ==
-
-<h4>PyInstaller</h4>
-
-Home：[http://www.pyinstaller.org/]
-
-PyInstaller 可以把你的 Python 代码制作成独立运行的程序（不依赖 Python 环境就可以运行）。
-
-该工具支持多种操作系统，包括：Windows、Linux、Mac OS X、Solaris、AIX、等。
-
-<h4>py2exe</h4>
-
-Home：[http://www.py2exe.org/]
-
-Links：[https://en.wikipedia.org/wiki/Py2exe Wikipedia]
-
-py2exe 的功能类似 PyInstaller，但只支持 Windows 平台。
-
-<h4>py2app</h4>
-
-Home：[https://bitbucket.org/ronaldoussoren/py2app]
-
-它很类似于 [http://www.py2exe.org/ py2exe]，差别在于 [http://www.py2exe.org/ py2exe] 支持 Windows 平台，而 [https://bitbucket.org/ronaldoussoren/py2app py2app] 支持 Mac OS X 平台。
-
-<h4>EasyInstall & Setuptools</h4>
-
-Home：[https://pypi.python.org/pypi/setuptools]
-
-这套工具可以帮助你进行第三方库的管理（下载、编译、安装、升级、卸载）
-
-== 3.8 系统管理 ==
+== 3.5 获取系统信息 ==
 
 <h4>sys</h4>
 
@@ -468,6 +422,52 @@ psutil.cpu_count()       # 获取 CPU 数量
 psutil.cpu_freq()        # 获取 CPU 频率
 psutil.virtual_memory()  # 获取内存信息
 </source>
+
+== 3.6 Linux & Unix 系统相关 ==
+
+<h4>syslog</h4>
+
+【标准库】
+
+通过它可以很方便地跟 POSIX 的 syslog 服务进行交互。
+
+== 3.7 Windows 系统相关 ==
+
+<h4>PyWin32</h4>
+
+Home：[http://python.net/crew/mhammond/win32/]
+
+这个第三方库封装了 Windows API 及 COM API。通过它可以方便地用 Python 进行 Windows 编程（调用 COM 组件、编写 Windows 服务、等）。
+
+== 3.8 程序打包 ==
+
+<h4>PyInstaller</h4>
+
+Home：[http://www.pyinstaller.org/]
+
+PyInstaller 可以把你的 Python 代码制作成独立运行的程序（不依赖 Python 环境就可以运行）。
+
+该工具支持多种操作系统，包括：Windows、Linux、Mac OS X、Solaris、AIX、等。
+
+<h4>py2exe</h4>
+
+Home：[http://www.py2exe.org/]
+
+Links：[https://en.wikipedia.org/wiki/Py2exe Wikipedia]
+
+py2exe 的功能类似 PyInstaller，但只支持 Windows 平台。
+
+<h4>py2app</h4>
+
+Home：[https://bitbucket.org/ronaldoussoren/py2app]
+
+它很类似于 [http://www.py2exe.org/ py2exe]，差别在于 [http://www.py2exe.org/ py2exe] 支持 Windows 平台，而 [https://bitbucket.org/ronaldoussoren/py2app py2app] 支持 Mac OS X 平台。
+
+<h4>EasyInstall & Setuptools</h4>
+
+Home：[https://pypi.python.org/pypi/setuptools]
+
+这套工具可以帮助你进行第三方库的管理（下载、编译、安装、升级、卸载）
 
 ----
 
