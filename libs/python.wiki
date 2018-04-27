@@ -296,7 +296,7 @@ threading.Thread(target=my_thread).start()
 <source lang="python">
 import threading
 import time
-from __future__ import print_function
+from &#95;&#95;future&#95;&#95; import print_function
 
 class MyThread(threading.Thread) :
     def run(self) :
@@ -304,7 +304,7 @@ class MyThread(threading.Thread) :
         time.sleep(3)
         print("{} finished!".format(self.getName()))
 
-if __name__ == "__main__" :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     for n in range(10) :
         mythread = MyThread(name = "Thread-{}".format(n + 1))
         mythread.start()
@@ -343,7 +343,7 @@ def f(lock, n) :
     print("hello world %d" % n)
     lock.release()
 
-if __name__ == "__main__" :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     lock = Lock()
     for num in range(10):
         Process(target=f, args=(lock, num)).start()
@@ -434,9 +434,9 @@ Home：[https://pypi.python.org/pypi/setuptools]
 
 代码示例
 <source lang="python">
-sys.argv # 命令行参数List，第一个元素是程序本身路径
-sys.exit(n) # 退出程序，正常退出时exit(0)
-sys.version # 获取Python解释程序的版本信息
+sys.argv     # 命令行参数 List，第一个元素是程序本身路径
+sys.exit(0)  # 退出程序，正常退出时用 0 表示退出码
+sys.version  # 获取 Python 解释程序的版本信息
 </source>
 
 <h4>platform</h4>
@@ -449,9 +449,9 @@ sys.version # 获取Python解释程序的版本信息
 <source lang="python">
 import platform
 
-platform.platform()   # 获取操作系统名称及版本号，'Windows-7-6.1.7601-SP1'
-platform.version()    # 获取操作系统版本号，'6.1.7601'
-platform.architecture()   # 获取操作系统的位数，('32bit', 'WindowsPE')
+platform.platform()      # 获取操作系统名称及版本号，例如："Windows-7-6.1.7601-SP1"
+platform.version()       # 获取操作系统版本号，例如："6.1.7601"
+platform.architecture()  # 获取操作系统的架构，例如：("32bit", "WindowsPE")
 </source>
 
 <h4>psutil</h4>
@@ -464,9 +464,9 @@ psutil(Python system and process utilities)是一个跨平台的进程管理和�
 <source lang="python">
 import psutil
 
-psutil.cpu_count()  # 获取CPU数量
-psutil.cpu_freq()   # 获取CPU频率
-psutil.virtual_memory()     # 获取内存信息
+psutil.cpu_count()       # 获取 CPU 数量
+psutil.cpu_freq()        # 获取 CPU 频率
+psutil.virtual_memory()  # 获取内存信息
 </source>
 
 ----
@@ -571,8 +571,8 @@ Links：[https://en.wikipedia.org/wiki/CherryPy Wikipedia]
 <source lang="python">
 import cherrypy
 
-class HelloWorld(object):
-    def index(self):
+class HelloWorld(object) :
+    def index(self) :
         return "Hello World!"
     index.exposed = True
 
@@ -597,11 +597,11 @@ urls = (
     "/", "index"
 )
 
-class index:
-    def GET(self):
+class index :
+    def GET(self) :
         return "Hello, world!"
 
-if __name__ == "__main__" :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     app = web.application(urls, globals())
     app.run()
 </source>
@@ -617,13 +617,13 @@ Links：[https://zh.wikipedia.org/wiki/Flask 维基百科]
 代码示例——Hello world
 <source lang="python">
 from flask import Flask
-app = Flask(__name__)
+app = Flask(&#95;&#95;name&#95;&#95;)
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+app.route("/")
+def hello_world() :
+    return “Hello World!"
 
-if __name__ == '__main__':
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     app.run()
 </source>
 
@@ -717,8 +717,8 @@ selenium是一个非常优秀的用于爬虫、Web自动化测试测试的框架
 from selenium import webdriver
 
 driver = webdriver.Chrome()
-driver.get('http://192.168.1.1')
-driver.find_element_by_xpath('//*[@id="lgPwd"]').send_keys('123456')
+driver.get("http://192.168.1.1")
+driver.find_element_by_xpath('//*[@id="lgPwd"]').send_keys("123456")
 driver.find_element_by_xpath('//*[@id="loginSub"]').click()
 driver.quit()
 </source>
@@ -869,10 +869,11 @@ Home：[https://github.com/kootenpv/yagmail]
 代码示例
 <source lang="python">
 import yagmail
+
 yag = yagmail.SMTP()
-contents = ['This is the body, and here is just text http://somedomain/image.png',
-            'You can find an audio file attached.', '/local/path/song.mp3']
-yag.send('to@someone.com', 'subject', contents)
+contents = ["This is the body, and here is just text http://somedomain/image.png",
+            "You can find an audio file attached.', '/local/path/song.mp3"]
+yag.send("to@someone.com", "subject", contents)
 </source>
 
 === 5.3.5 即时通讯 ===
@@ -948,8 +949,8 @@ paramiko是用python语言写的一个模块，遵循SSH2协议，支持以加�
 代码示例
 <source lang="python">
 import paramiko
-ssh = paramiko.SSHClient()
 
+ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect("IP",  port, "username", "password")
 </source>
@@ -1051,7 +1052,7 @@ Home：[https://github.com/tonysimpson/nanomsg-python]
 
 代码示例——Hello world
 <source lang="python">
-from __future__ import print_function
+from &#95;&#95;future&#95;&#95; import print_function
 from nanomsg import Socket, PAIR, PUB
 
 s1 = Socket(PAIR)
@@ -1318,7 +1319,7 @@ from sqlalchemy.orm import relation, sessionmaker
 Base = declarative_base()
 
 class Movie(Base) :
-    __tablename__ = "movies"
+    &#95;&#95;tablename&#95;&#95; = "movies"
 
     id = Column(Integer, primary_key=True)
     title = Column(String(255), nullable=False)
@@ -1326,23 +1327,23 @@ class Movie(Base) :
     directed_by = Column(Integer, ForeignKey("directors.id"))
     director = relation("Director", backref="movies", lazy=False)
 
-    def __init__(self, title=None, year=None) :
+    def &#95;&#95;init&#95;&#95;(self, title=None, year=None) :
         self.title = title
         self.year = year
 
-    def __repr__(self) :
+    def &#95;&#95;repr&#95;&#95;(self) :
         return "Movie(%r, %r, %r)" % (self.title, self.year, self.director)
 
 class Director(Base) :
-    __tablename__ = "directors"
+    &#95;&#95;tablename&#95;&#95; = "directors"
 
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False, unique=True)
 
-    def __init__(self, name=None) :
+    def &#95;&#95;init&#95;&#95;(self, name=None) :
         self.name = name
 
-    def __repr__(self) :
+    def &#95;&#95;repr&#95;&#95;(self) :
         return "Director(%r)" % (self.name)
 
 Base.metadata.create_all(create_engine("dbms://user:pwd@host/dbname"))
@@ -1422,7 +1423,7 @@ Python2 的模块名叫 Tkinter，到 Python3 模块名改为 tkinter
 <source lang="python">
 from Tkinter import *
 
-if __name__ == "__main__" :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     root = Tk()
     label = Label(root, text="Hello, world")
     label.pack()
@@ -1456,7 +1457,7 @@ class App(wx.App) :
         self.SetTopWindow(self.frame)
         return True
 
-if __name__ == "__main__" :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     app = App()
     app.MainLoop()
 </source>
@@ -1485,7 +1486,7 @@ pygtk.require("2.0")
 import gtk
 
 class HelloWorld :
-    def __init__(self) :
+    def &#95;&#95;init&#95;&#95;(self) :
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window.connect("delete_event", self.delete_event)
         self.window.connect("destroy", self.destroy)
@@ -1512,7 +1513,7 @@ class HelloWorld :
     def destroy(self, widget, data=None) :
         gtk.main_quit()
 
-if __name__ == "__main__" :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     hello = HelloWorld()
     hello.main()
 </source>
@@ -1528,8 +1529,8 @@ Home：[https://live.gnome.org/PyGObject]
 from gi.repository import Gtk
 
 class MyWindow(Gtk.Window):
-    def __init__(self):
-        Gtk.Window.__init__(self, title="Hello World")
+    def &#95;&#95;init&#95;&#95;(self):
+        Gtk.Window.&#95;&#95;init&#95;&#95;(self, title="Hello World")
 
         self.button = Gtk.Button(label="Click Here")
         self.button.connect("clicked", self.on_button_clicked)
@@ -1561,7 +1562,7 @@ Links：[https://en.wikipedia.org/wiki/PyQt Wikipedia] [https://zh.wikipedia.org
 import sys
 from PyQt4.QtGui import *
 
-if __name__ == "__main__" :
+if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
     app = QApplication(sys.argv)
     window = QWidget()
 
