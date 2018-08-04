@@ -753,6 +753,35 @@ vector<int> v;
 for_each(v.begin(), v.end(), cout << boost::lambda::_1 << "\n");
 </source>
 
+<h4>simple_match</h4>
+
+Home：[https://github.com/jbandela/simple_match]
+
+这个库是为了提供类似 Rust 语言中的 match 语法。
+
+（不懂 Rust 的同学，可以把 match 语法视作增强版的 switch/case）
+
+代码示例
+<source lang="cpp">
+&#35;include <iostream>
+&#35;include <simple_match/simple_match.hpp>
+using namespace simple_match;
+using namespace simple_match::placeholders;
+
+int x = 0;
+while (true)
+{
+    std::cin >> x;
+    match(x,
+        1, []() { std::cout << "one\n"; },
+        2, []() { std::cout << "two\n"; },
+        _x < 10, [](auto&& n) { std::cout << n << " is less than 10\n"; },
+        10 < _x < 20,	[](auto&& n) { std::cout << n << " is between 10 and 20 exclusive\n"; },
+        _, []() { std::cout << "NOT match\n"; }
+    );
+}
+</source>
+
 == 3.4 元编程（Metaprogramming） ==
 
 （不知道何为“元编程”，可以先看[https://zh.wikipedia.org/wiki/%E5%85%83%E7%BC%96%E7%A8%8B 维基百科]）
