@@ -2517,6 +2517,28 @@ Docs：[http://pocoproject.org/docs/package-Net.HTTPClient.html]
 
 POCO 前面已经介绍过。它提供了 HTTP Client 的封装类。
 
+<h4>cpr</h4>
+
+Home：[https://github.com/whoshuu/cpr]
+
+类似 Python 的 [http://docs.python-requests.org/ Requests 库]，以【优雅的语法】实现 HTTP 请求。
+
+代码示例——HTTP GET
+<source lang="cpp">
+&#35;include <cpr/cpr.h>
+
+int main()
+{
+    auto r = cpr::Get(cpr::Url{"https://api.github.com/repos/whoshuu/cpr/contributors"},
+                      cpr::Authentication{"user", "pass"},
+                      cpr::Parameters{{"anon", "true"}, {"key", "value"}});
+    r.status_code;                  // 200
+    r.header["content-type"];       // application/json; charset=utf-8
+    r.text;                         // JSON text string
+    return 0;
+}
+</source>
+
 == 10.3 浏览器引擎 ==
 
 <h4>WebKit</h4>
