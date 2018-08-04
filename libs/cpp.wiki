@@ -1388,6 +1388,57 @@ Boost 前面已经介绍过。这是 Boost 的其中一个子库，提供了“�
 
 它的功能很丰富，但是比较重型。
 
+<h4>docopt</h4>
+
+Home：[https://github.com/docopt/docopt.cpp]
+
+这是一个很有创意的库，提供了一种【全新】的方式来处理命令行参数。
+
+你只需定义好命令行的帮助文本（usage），该库会根据 usage 文本自动分析出命令行参数的定义。
+
+也就是说：用了这个库，就无需再写一大堆 parse 命令行参数的代码 :)
+
+代码示例
+<source lang="cpp">
+&#35;include <iostream>
+&#35;include <docopt.h>
+
+static const char USAGE[] =
+R"(Naval Fate.
+
+    Usage:
+      naval_fate ship new <name>...
+      naval_fate ship <name> move <x> <y> [--speed=<kn>]
+      naval_fate ship shoot <x> <y>
+      naval_fate mine (set|remove) <x> <y> [--moored | --drifting]
+      naval_fate (-h | --help)
+      naval_fate --version
+
+    Options:
+      -h --help     Show this screen.
+      --version     Show version.
+      --speed=<kn>  Speed in knots [default: 10].
+      --moored      Moored (anchored) mine.
+      --drifting    Drifting mine.
+)";
+
+int main(int argc, const char* argv[])
+{
+    std::map<std::string, docopt::value> args
+        = docopt::docopt(USAGE,
+                         { argv + 1, argv + argc },
+                         true,               // 是否显示帮助
+                         "Naval Fate 2.0");  // 版本号
+
+    for(auto const& arg : args)
+    {
+        std::cout << arg.first <<  arg.second << std::endl;
+    }
+
+return 0;
+}
+</source>
+
 == 7.2 文本终端 ==
 
 <h4>ncurses</h4>
