@@ -3073,6 +3073,18 @@ Home：[http://podofo.sourceforge.net/]
 
 它既支持 PDF 文件的生成，也支持 PDF 内容的提取。它同时还提供[http://podofo.sourceforge.net/tools.html 一堆命令行的小工具]，用来操作 PDF 文件。
 
+<h4>Poppler</h4>
+
+Home：[https://poppler.freedesktop.org/]
+
+Links：[https://en.wikipedia.org/wiki/Poppler_%28software%29 Wikipedia]
+
+派生自 Xpdf 3.0 的开源库，用于渲染 PDF 的内容。很多开源的 PDF 阅读软件用到它。
+
+在开源界，它第一个【完整】实现了 ISO 32000-1（PDF 的 ISO 标准）。
+
+它内置了若干命令行工具（poppler-utils），可以用来进行 PDF 的内容提取和格式转换。
+
 <h4>LibHaru</h4>
 
 Home：[http://libharu.org/]
