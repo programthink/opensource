@@ -1330,6 +1330,18 @@ Home：[http://wxmathplot.sourceforge.net/]
 
 看名称就知道它是跟 wxWidgets 搭配的。效果图参见“[http://wxmathplot.sourceforge.net/screenshot.shtml 这里]”
 
+== 6.3 文本编辑 ==
+
+<h4>Scintilla</h4>
+
+Home：[https://scintilla.org/]
+
+Links：[https://en.wikipedia.org/wiki/Scintilla_(software) Wikipedia]
+
+功能【超强】的文本编辑组件，支持：词法高亮、代码折叠、自动补全、动态提示......（基本上你能想到的，它都已经有了）
+
+不光功能齐全，还支持各种主流的操作系统平台。很多编辑器/IDE 用到它。
+
 ----
 
 = 7 文本用户界面（TUI） =
