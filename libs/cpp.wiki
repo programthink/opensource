@@ -3650,6 +3650,16 @@ BOOST_PYTHON_MODULE(hello_ext)
 // print(hello_ext.greet())
 </source>
 
+<h4>Cython</h4>
+
+Home：[http://cython.org/]
+
+Links：[https://en.wikipedia.org/wiki/Cython Wikipedia]
+
+Cython 提供了一种机制（编译器）编译 Python 代码为【原生代码】。编译后的原生代码是个 Python 的 module（扩展名是 pyd 或 so），可以在常规的 Python 环境中用 import 语句加载。如此一来，既得到了类似 C/C++ 的高性能，又保留了 Python 语法的简介性。
+
+另外，它也提供了把 C/C++ 代码编译为 Python 模块的机制。
+
 ----
 
 = 18 （其它） =
