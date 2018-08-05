@@ -3726,6 +3726,57 @@ int main(int argc, char* argv[])
 }
 </source>
 
+<h4>nbind</h4>
+
+Home：[https://github.com/charto/nbind]
+
+把 C++ 代码编译为 JS 的 package。编译方式支持“原生二进制”或“asm.js”。
+
+编译需要依赖 Node.js，运行环境支持 Node.js 或浏览器。
+
+代码示例——C++ 代码
+<source lang="cpp">
+&#35;include <string>
+&#35;include <iostream>
+
+struct Greeter
+{
+    static void sayHello(std::string name)
+    {
+        std::cout << "Hello, " << name << "\n";
+    }
+};
+
+// 建立绑定
+&#35;include <nbind/nbind.h>
+
+NBIND_CLASS(Greeter)
+{
+    method(sayHello);
+}
+</source>
+
+代码示例——node.js 环境调用代码
+<source lang="javascript">
+var nbind = require("nbind");
+var lib = nbind.init().lib;
+lib.Greeter.sayHello("you");
+</source>
+
+代码示例——浏览器环境调用代码
+<source lang="html">
+<script src="nbind.js"></script>
+<script>
+  nbind.init(
+    function(err, binding)
+    {
+      var lib = binding.lib;
+      lib.Greeter.sayHello("you");
+    }
+  );
+</script>
+</source>
+
 ----
 
 = 18 （其它） =
