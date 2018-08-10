@@ -378,7 +378,35 @@ if pid == 0 :  # 子进程
 
 用于进程信号处理的标准库（主要用于 Linux & UNIX 系统）。
 
-== 3.5 获取系统信息 ==
+== 3.5 操作硬件 ==
+
+<h4>keyboard</h4>
+
+Home：[https://github.com/boppreh/keyboard]
+
+顾名思义，这个库让你可以进行各种键盘相关的操作，包括：模拟按键、键盘钩子（hook），按键记录及重放。
+
+支持复杂的组合键。纯 python 代码代码，同时支持 Windows 和 Linux。
+
+代码示例
+<source lang="python">
+import keyboard
+
+&#35; 模拟按键。
+keyboard.press_and_release("shift+s, space")
+
+&#35; 模拟按键，并执行相应代码。
+keyboard.add_hotkey("page up, page down", lambda: keyboard.write("xxxx"))
+
+&#35; 等待特定按键，然后继续执行。
+keyboard.wait("esc")
+
+&#35; 记录按键，直到用户按了 ESC；然后以3倍速重放刚才记录的按键。
+recorded = keyboard.record(until="esc")
+keyboard.play(recorded, speed_factor=3)
+</source>
+
+== 3.6 获取系统信息 ==
 
 <h4>sys</h4>
 
@@ -438,7 +466,7 @@ p.cwd()                  # 进程的当前目录
 p.cmdline()              # 启动进程的命令行参数
 </source>
 
-== 3.6 Linux & Unix 系统相关 ==
+== 3.7 Linux & Unix 系统相关 ==
 
 <h4>syslog</h4>
 
@@ -446,7 +474,7 @@ p.cmdline()              # 启动进程的命令行参数
 
 通过它可以很方便地跟 POSIX 的 syslog 服务进行交互。
 
-== 3.7 Windows 系统相关 ==
+== 3.8 Windows 系统相关 ==
 
 <h4>PyWin32</h4>
 
@@ -454,7 +482,7 @@ Home：[http://python.net/crew/mhammond/win32/]
 
 这个第三方库封装了 Windows API 及 COM API。通过它可以方便地用 Python 进行 Windows 编程（调用 COM 组件、编写 Windows 服务、等）。
 
-== 3.8 程序打包 ==
+== 3.9 程序打包 ==
 
 <h4>PyInstaller</h4>
 
