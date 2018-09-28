@@ -2016,6 +2016,11 @@ PyWin32 前面已经介绍过。它可以基于 [https://en.wikipedia.org/wiki/C
 （本地需要安装 Office）
 
 === 9.5.2 Excel（xls、xlsx） ===
+<h4>XlsxWriter</h4>
+
+Home：[https://xlsxwriter.readthedocs.io/]
+
+能很好地写入Excel XLSX文件，但不能读取或者修改现有的XLSX文件。
 
 <h4>pyExcelerator</h4>
 
