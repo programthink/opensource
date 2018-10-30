@@ -349,6 +349,18 @@ if &#95;&#95;name&#95;&#95; == "&#95;&#95;main&#95;&#95;" :
         Process(target=f, args=(lock, num)).start()
 </source>
 
+<h4>sh</h4>
+
+Home：[https://github.com/amoffat/sh]
+
+这个项目可以用来取代标准库中的 subprocess；同时兼容 Python2 和 Python3。
+
+代码示例
+<source lang="python">
+from sh import ifconfig
+print(ifconfig("wlan0"))
+</source>
+
 == 3.4 本地进程间通信（IPC） ==
 
 <h4>mmap</h4>
