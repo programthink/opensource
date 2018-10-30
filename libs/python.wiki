@@ -739,15 +739,17 @@ Home：[https://github.com/jmalonzo/pywebkitgtk]
 
 PyWebKitGtk 则提供了对 WebKitGtk 的 Python 封装。
 
-== 4.6 （其它） ==
+== 4.6 WebSocket ==
 
 <h4>pywebsocket</h4>
 
 Home：[https://github.com/google/pywebsocket]
 
-这是 Google 提供的 [https://zh.wikipedia.org/wiki/WebSocket WebSocket] 服务端。
+这是 Google 提供的 [https://zh.wikipedia.org/wiki/WebSocket WebSocket]【服务端】。
 
 该项目包含一个可独立运行的 server 以及一个 Apache 扩展模块（mod_pywebsocket）。
+
+== 4.7 （其它） ==
 
 <h4>selenium</h4>
 
