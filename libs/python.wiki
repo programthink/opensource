@@ -355,10 +355,27 @@ Home：[https://github.com/amoffat/sh]
 
 这个项目可以用来取代标准库中的 subprocess；同时兼容 Python2 和 Python3。
 
-代码示例
+使用它可以写出比 subprocess 更简洁、更优雅的代码。
+
+代码示例——获取命令输出
 <source lang="python">
 from sh import ifconfig
 print(ifconfig("wlan0"))
+</source>
+
+代码示例——命令行参数
+<source lang="python">
+from sh import curl
+&#35; 传统风格
+curl("https://program-think.blogspot.com/", "-o", "test.html", "--silent")
+&#35; 命名参数风格
+curl("https://program-think.blogspot.com/", o="test.html", silent=True)
+</source>
+
+代码示例——管道
+<source lang="python">
+from sh import ls, wc
+print(wc(ls("/etc", "-1"), "-l"))
 </source>
 
 == 3.4 本地进程间通信（IPC） ==
