@@ -750,11 +750,45 @@ Home：[https://github.com/google/pywebsocket]
 
 该项目包含一个可独立运行的 server 以及一个 Apache 扩展模块（mod_pywebsocket）。
 
+<h4>AutobahnPython</h4>
+
+Home：[https://github.com/crossbario/autobahn-python]
+
+这是 [http://crossbar.io/autobahn Autobahn] 项目的子项目，同时提供了 WebSocket 的“服务端 & 客户端”。
+
+它兼容 Python2 和 Python3，另外还兼容 PyPy 和 Jython。
+
+网络方面，它可以跟“asyncio 标准库”以及“[https://en.wikipedia.org/wiki/Twisted_%28software%29 Twisted]”整合。
+
+除了实现 WebSocket 协议，它还完整实现了 WAMP（Web Application Messaging Protocol）。
+
+代码示例——Echo Server
+<source lang="python">
+from autobahn.twisted.websocket import WebSocketServerProtocol
+
+class MyServerProtocol(WebSocketServerProtocol) :
+    def onConnect(self, request) :
+        print("Client connecting: {}".format(request.peer))
+
+    def onOpen(self) :
+        print("WebSocket connection open.")
+
+    def onMessage(self, payload, isBinary) :
+        if isBinary :
+            print("Binary message received: {} bytes".format(len(payload)))
+        else:
+            print("Text message received: {}".format(payload.decode("utf8")))
+        self.sendMessage(payload, isBinary)
+
+    def onClose(self, wasClean, code, reason) :
+        print("WebSocket connection closed: {}".format(reason))
+</source>
+
 <h4>ws4py</h4>
 
 Home：[https://github.com/Lawouach/WebSocket-for-Python]
 
-此项目同时提供了 WebSocket 的“服务端 & 客户端”；并同时支持 Python2 和 Python3。
+此项目同时提供了 WebSocket 的“服务端 & 客户端”；并同时兼容 Python2 和 Python3。
 
 其【服务端】可以跟“CherryPy、gevent、wsgiref、asyncio”整合；其【客户端】可以跟“Tornado、gevent”整合。
 
