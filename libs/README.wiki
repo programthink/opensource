@@ -5,4 +5,4 @@
 为了方便查找，根据“编程语言”归类。（目前先整理两个编程语言，今后有空再补充其它语言）
 
 * [/libs/cpp.wiki C/C++]
-* [/libs/python.wiki Python]
+* [/libs/python.wiki Python3]
