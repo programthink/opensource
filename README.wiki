@@ -12,3 +12,20 @@
 == 开源软件 ==
 
 （俺会抽空整理）
+
+English Translation
+
+My collection of open source projects
+Open source library and sample code
+This directory is placed: a list of open source code libraries for programmers (including sample codes).
+
+In order to facilitate the search, they are classified according to the "programming language". (At present, we will organize two programming languages ​​first, and we will add other languages ​​when we have time in the future)
+
+
+** [/libs/cpp.wiki C/C++]
+** [/libs/python.wiki Python]
+
+
+== Open source software ==
+
+(I will take the time to organize)
